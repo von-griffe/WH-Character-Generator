@@ -28,37 +28,61 @@ class Careers extends React.Component {
     }
 
     getClass = () => {
-        return Object.keys(this.state.props.default).map((quotes, index) => {
-            return <option value={quotes}>{quotes}</option>
+        return Object.keys(this.state.props.default).map((quotes, key) => {
+            return <option key={key} value={quotes}>{quotes}</option>
         })
     };
 
     getCareers = (value) => {
         const career = (this.state.props.default[value])[0];
-        return Object.keys(career).map((items, index) => {
-            console.log(items);
-            return <option value={items}>{items}</option>
+        console.log(career);
+
+        return Object.keys(career).map((items, key) => {
+            return <option key={key} value={items}>{items}</option>
         })
     };
 
-
-    getCareersPath = () => {
-        return null
+    getCareersPath = (value, value2) => {
+        const path = (this.state.props.default[value])[0];
+        console.log(path[value2][0]);
+        return Object.keys(path[value2][0]).map((quotes, key) => {
+            return <option key={key} value={quotes}>{quotes}</option>
+        })
     };
 
 
     handleChange = (event) => {
        return this.setState({
             value: event.target.value
-
         });
     };
 
 
     render() {
+        console.log((this.state.props.default));
 
+        if( this.state.value === "academics" ||
+            this.state.value === "ranger" ||
+            this.state.value === "rouges" ||
+            this.state.value === "warrior") {
+             return <div>
+                    <select onChange={this.handleChange}>
+                        <option value="" disabled selected>Wybierz klasę</option>
+                        {this.getClass()}
+                    </select>
 
-        if( this.state.value === "academics" ) {
+                    <select onChange={this.handleChange}>
+                        <option value="" disabled selected>Wybierz profesję</option>
+                        {this.getCareers(this.state.value)}
+                    </select>
+                </div>
+        } else if(this.state.value === "Apothecar" ||
+            this.state.value === "Engineer" ||
+            this.state.value === "Wizard" ||
+            this.state.value === "Physician"||
+            this.state.value === "Bunty Hunter") {
+            console.log(this.state.value);
+
             return <div>
                 <select onChange={this.handleChange}>
                     <option value="" disabled selected>Wybierz klasę</option>
@@ -67,12 +91,17 @@ class Careers extends React.Component {
 
                 <select onChange={this.handleChange}>
                     <option value="" disabled selected>Wybierz profesję</option>
-                    {this.getCareers(this.state.value)}
+                    {this.getCareers("academics")}
                 </select>
 
+                <select onChange={this.handleChange}>
+                    <option value="" disabled selected>Wybierz poziom profesji</option>
+                    {this.getCareersPath("academics", this.state.value)}
+                </select>
             </div>
-        }
-        if( this.state.value === "Wizard") {
+        } else if(this.state.value === "Wizard’s Apprentice") {
+            console.log(this.state.value);
+
             return <div>
                 <select onChange={this.handleChange}>
                     <option value="" disabled selected>Wybierz klasę</option>
@@ -81,13 +110,15 @@ class Careers extends React.Component {
 
                 <select onChange={this.handleChange}>
                     <option value="" disabled selected>Wybierz profesję</option>
-                    {this.getCareersPath()}
-
+                    {this.getCareers("academics")}
                 </select>
 
+                <select onChange={this.handleChange}>
+                    <option value="" disabled selected>Wybierz poziom profesji</option>
+                    {this.getCareersPath("academics", "Wizard")}
+                </select>
             </div>
         }
-
         return <div>
             <select onChange={this.handleChange}>
                 <option value="" disabled selected>Wybierz klasę</option>

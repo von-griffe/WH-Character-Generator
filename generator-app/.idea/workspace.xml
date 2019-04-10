@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9fcf879-41e1-480b-9868-c8e692b725b2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Careers.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/careers.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Careers.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Careers.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Characteristics.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Characteristics.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/careers.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/careers.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../src/App.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../src/index.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../src/index.html" beforeDir="false" />
@@ -48,18 +47,25 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/data/careers.json">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="180">
-                  <caret line="249" column="4" lean-forward="true" selection-start-line="249" selection-start-column="4" selection-end-line="249" selection-end-column="4" />
+                <state relative-caret-position="165">
+                  <caret line="263" column="9" lean-forward="true" selection-start-line="263" selection-start-column="9" selection-end-line="263" selection-end-column="21" />
                   <folding>
+                    <element signature="e#59#1717#0" />
+                    <element signature="e#1731#3399#0" />
                     <element signature="e#41#1557#0" />
-                    <element signature="e#1576#3092#0" />
                     <element signature="e#3116#4632#0" />
-                    <element signature="e#1611#2710#0" />
-                    <element signature="e#1658#1960#0" />
-                    <element signature="e#1994#2325#0" />
-                    <element signature="e#2348#2692#0" />
-                    <element signature="e#2734#3877#0" />
-                    <element signature="e#3892#5417#0" />
+                    <element signature="e#5135#6330#0" />
+                    <element signature="e#6364#7559#0" />
+                    <element signature="e#7585#8780#0" />
+                    <element signature="e#8806#10001#0" />
+                    <element signature="e#2765#3867#0" />
+                    <element signature="e#11274#12473#0" />
+                    <element signature="e#12492#13691#0" />
+                    <element signature="e#13710#14909#0" />
+                    <element signature="e#3916#5407#0" />
+                    <element signature="e#16623#18239#0" />
+                    <element signature="e#18263#19879#0" />
+                    <element signature="e#19903#21519#0" />
                   </folding>
                 </state>
               </provider>
@@ -97,11 +103,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/App.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="141">
-                  <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-                  <folding>
-                    <element signature="e#0#26#0" expanded="true" />
-                  </folding>
+                <state>
+                  <caret column="26" lean-forward="true" selection-start-column="26" selection-end-column="26" />
                 </state>
               </provider>
             </entry>
@@ -118,11 +121,10 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Characteristics.jsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="698">
-                  <caret line="116" lean-forward="true" selection-start-line="116" selection-end-line="116" />
+                <state relative-caret-position="569">
+                  <caret line="99" column="9" lean-forward="true" selection-start-line="99" selection-start-column="9" selection-end-line="99" selection-end-column="9" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
-                    <element signature="e#1425#5557#0" />
                   </folding>
                 </state>
               </provider>
@@ -131,8 +133,11 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Careers.jsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="493">
-                  <caret line="88" column="9" selection-start-line="88" selection-start-column="9" selection-end-line="88" selection-end-column="9" />
+                <state relative-caret-position="226">
+                  <caret line="42" column="6" selection-start-line="42" selection-start-column="6" selection-end-line="42" selection-end-column="6" />
+                  <folding>
+                    <element signature="e#164#709#0" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -198,7 +203,7 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="130" />
+    <option name="x" value="-15" />
     <option name="y" value="23" />
     <option name="width" value="1282" />
     <option name="height" value="877" />
@@ -289,12 +294,12 @@
       <workItem from="1553159334362" duration="4776000" />
       <workItem from="1554022381978" duration="9098000" />
       <workItem from="1554461232767" duration="27698000" />
-      <workItem from="1554588933691" duration="35101000" />
+      <workItem from="1554588933691" duration="52484000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103501000" />
+    <option name="totallyTimeSpent" value="120884000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -306,7 +311,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="130" y="23" width="1282" height="877" extended-state="0" />
+    <frame x="-15" y="23" width="1282" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" x="40" y="24" width="230" height="616" id="Project" order="0" sideWeight="0.49868765" type="FLOATING" weight="0.14260563" />
@@ -322,7 +327,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32939634" />
       <window_info anchor="bottom" id="Inspection Results" order="9" weight="0.3299363" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4989429" weight="0.53543305" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.4989429" visible="true" weight="0.39238846" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Favorites" order="12" sideWeight="0.5010571" side_tool="true" weight="0.32939634" />
       <window_info anchor="bottom" id="Quokka" order="13" />
@@ -339,7 +344,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/App.js</url>
-          <line>6</line>
+          <line>7</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
@@ -364,6 +369,18 @@
           <line>3</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/Characteristics.jsx</url>
+          <line>65</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/App.js</url>
+          <line>11</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -414,6 +431,13 @@
     <entry file="file://$PROJECT_DIR$/src/Race.jsx">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="26" lean-forward="true" selection-start-column="26" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="55">
@@ -421,10 +445,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
+    <entry file="file://$PROJECT_DIR$/src/Characteristics.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+        <state relative-caret-position="569">
+          <caret line="99" column="9" lean-forward="true" selection-start-line="99" selection-start-column="9" selection-end-line="99" selection-end-column="9" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -433,37 +457,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/data/careers.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="249" column="4" lean-forward="true" selection-start-line="249" selection-start-column="4" selection-end-line="249" selection-end-column="4" />
+        <state relative-caret-position="165">
+          <caret line="263" column="9" lean-forward="true" selection-start-line="263" selection-start-column="9" selection-end-line="263" selection-end-column="21" />
           <folding>
+            <element signature="e#59#1717#0" />
+            <element signature="e#1731#3399#0" />
             <element signature="e#41#1557#0" />
-            <element signature="e#1576#3092#0" />
             <element signature="e#3116#4632#0" />
-            <element signature="e#1611#2710#0" />
-            <element signature="e#1658#1960#0" />
-            <element signature="e#1994#2325#0" />
-            <element signature="e#2348#2692#0" />
-            <element signature="e#2734#3877#0" />
-            <element signature="e#3892#5417#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Characteristics.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="698">
-          <caret line="116" lean-forward="true" selection-start-line="116" selection-end-line="116" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <element signature="e#1425#5557#0" />
+            <element signature="e#5135#6330#0" />
+            <element signature="e#6364#7559#0" />
+            <element signature="e#7585#8780#0" />
+            <element signature="e#8806#10001#0" />
+            <element signature="e#2765#3867#0" />
+            <element signature="e#11274#12473#0" />
+            <element signature="e#12492#13691#0" />
+            <element signature="e#13710#14909#0" />
+            <element signature="e#3916#5407#0" />
+            <element signature="e#16623#18239#0" />
+            <element signature="e#18263#19879#0" />
+            <element signature="e#19903#21519#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Careers.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="88" column="9" selection-start-line="88" selection-start-column="9" selection-end-line="88" selection-end-column="9" />
+        <state relative-caret-position="226">
+          <caret line="42" column="6" selection-start-line="42" selection-start-column="6" selection-end-line="42" selection-end-column="6" />
+          <folding>
+            <element signature="e#164#709#0" />
+          </folding>
         </state>
       </provider>
     </entry>
