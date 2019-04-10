@@ -1,0 +1,374 @@
+{
+  "academics": [
+    {
+      "Wizard": [
+        {
+          "Wizard’s Apprentice": [
+            {
+              "profession": "Trapper",
+              "ws": "true",
+              "bs": "",
+              "s": "",
+              "t": "",
+              "i": "",
+              "agi": "",
+              "dex": "",
+              "int": "true",
+              "wp": "true",
+              "fel": ""
+            }
+          ],
+          "Wizard": [
+            {
+              "profession": "Trapper",
+              "ws": "true",
+              "bs": "",
+              "s": "",
+              "t": "",
+              "i": "",
+              "agi": "true",
+              "dex": "",
+              "int": "true",
+              "wp": "true",
+              "fel": ""
+            }
+          ],
+          "Master Wizard": [
+            {
+              "profession": "Master Wizard",
+              "ws": "",
+              "bs": "true",
+              "s": "true",
+              "t": "true",
+              "i": "true",
+              "agi": "",
+              "dex": "true",
+              "int": "true",
+              "wp": "",
+              "fel": "true"
+            }
+          ],
+          "Wizard Lord": [
+            {
+              "profession": "Wizard Lord ",
+              "ws": "",
+              "bs": "true",
+              "s": "true",
+              "t": "true",
+              "i": "true",
+              "agi": "",
+              "dex": "true",
+              "int": "true",
+              "wp": "",
+              "fel": "true"
+            }
+          ]
+        }
+      ],
+      "Engineer": [
+        {
+          "Student Engineer": [
+            {
+              "profession": "Student Engineer",
+              "ws": "true",
+              "bs": "",
+              "s": "",
+              "t": "",
+              "i": "",
+              "agi": "",
+              "dex": "",
+              "int": "true",
+              "wp": "true",
+              "fel": ""
+            }
+          ],
+          "Engineer": [
+            {
+              "profession": "Engineer",
+              "ws": "true",
+              "bs": "",
+              "s": "",
+              "t": "",
+              "i": "",
+              "agi": "true",
+              "dex": "",
+              "int": "true",
+              "wp": "true",
+              "fel": ""
+            }
+          ],
+          "Master Engineer": [
+            {
+              "profession": "Master Engineer",
+              "ws": "",
+              "bs": "true",
+              "s": "true",
+              "t": "true",
+              "i": "true",
+              "agi": "",
+              "dex": "true",
+              "int": "true",
+              "wp": "",
+              "fel": "true"
+            }
+          ],
+          "Chartered Engineer": [
+            {
+              "profession": "Chartered Engineer",
+              "ws": "",
+              "bs": "true",
+              "s": "true",
+              "t": "true",
+              "i": "true",
+              "agi": "",
+              "dex": "true",
+              "int": "true",
+              "wp": "",
+              "fel": "true"
+            }
+          ]
+        }
+      ],
+      "Physician": [
+        {
+          "Physician’s Apprentice": [
+            {
+              "profession": "Physician’s Apprentice",
+              "ws": "true",
+              "bs": "",
+              "s": "",
+              "t": "",
+              "i": "",
+              "agi": "",
+              "dex": "",
+              "int": "true",
+              "wp": "true",
+              "fel": ""
+            }
+          ],
+          "Physician": [
+            {
+              "profession": "Physician",
+              "ws": "true",
+              "bs": "",
+              "s": "",
+              "t": "",
+              "i": "",
+              "agi": "true",
+              "dex": "",
+              "int": "true",
+              "wp": "true",
+              "fel": ""
+            }
+          ],
+          "Doktor": [
+            {
+              "profession": "Doktor",
+              "ws": "",
+              "bs": "true",
+              "s": "true",
+              "t": "true",
+              "i": "true",
+              "agi": "",
+              "dex": "true",
+              "int": "true",
+              "wp": "",
+              "fel": "true"
+            }
+          ],
+          "Court Physician": [
+            {
+              "profession": "Court Physician",
+              "ws": "",
+              "bs": "true",
+              "s": "true",
+              "t": "true",
+              "i": "true",
+              "agi": "",
+              "dex": "true",
+              "int": "true",
+              "wp": "",
+              "fel": "true"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "ranger": [
+    {
+      "bountyHunter": [
+        {
+          "Trapper": [
+            {
+              "profession": "Trapper",
+              "ws": "",
+              "bs": "",
+              "s": "true",
+              "t": "true",
+              "i": "",
+              "agi": "",
+              "dex": "",
+              "int": "",
+              "wp": "",
+              "fel": ""
+            }
+          ],
+          "Hunter": [
+            {
+              "profession": "Hunter",
+              "ws": "",
+              "bs": "true",
+              "s": "true",
+              "t": "true",
+              "i": "",
+              "agi": "",
+              "dex": "",
+              "int": "",
+              "wp": "",
+              "fel": ""
+            }
+          ],
+          "tracker": [
+            {
+              "profession": "tracker",
+              "ws": "",
+              "bs": "true",
+              "s": "true",
+              "t": "true",
+              "i": "true",
+              "agi": "",
+              "dex": "true",
+              "int": "true",
+              "wp": "",
+              "fel": ""
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "rouges": [
+    {
+      "Zlodziej": [
+        {
+          "1Zlodziej": [
+            {
+              "profession": "Trapper",
+              "ws": "",
+              "bs": "",
+              "s": "true",
+              "t": "true",
+              "i": "",
+              "agi": "",
+              "dex": "",
+              "int": "",
+              "wp": "",
+              "fel": ""
+            }
+          ],
+          "2Hunter": [
+            {
+              "profession": "Hunter",
+              "ws": "",
+              "bs": "true",
+              "s": "true",
+              "t": "true",
+              "i": "",
+              "agi": "",
+              "dex": "",
+              "int": "",
+              "wp": "",
+              "fel": ""
+            }
+          ],
+          "3tracker": [
+            {
+              "profession": "tracker",
+              "ws": "",
+              "bs": "true",
+              "s": "true",
+              "t": "true",
+              "i": "true",
+              "agi": "",
+              "dex": "true",
+              "int": "true",
+              "wp": "",
+              "fel": ""
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "warrior": [
+    {
+      "knight": [
+        {
+          "Squire": [
+            {
+              "profession": "Trapper",
+              "ws": "",
+              "bs": "",
+              "s": "true",
+              "t": "true",
+              "i": "",
+              "agi": "",
+              "dex": "",
+              "int": "",
+              "wp": "",
+              "fel": ""
+            }
+          ],
+          "Knight": [
+            {
+              "profession": "Hunter",
+              "ws": "",
+              "bs": "true",
+              "s": "true",
+              "t": "true",
+              "i": "",
+              "agi": "",
+              "dex": "",
+              "int": "",
+              "wp": "",
+              "fel": ""
+            }
+          ],
+          "First Knight ": [
+            {
+              "profession": "tracker",
+              "ws": "",
+              "bs": "true",
+              "s": "true",
+              "t": "true",
+              "i": "true",
+              "agi": "",
+              "dex": "true",
+              "int": "true",
+              "wp": "",
+              "fel": ""
+            }
+          ],
+          "Knight of the Inner Circle": [
+            {
+              "profession": "tracker",
+              "ws": "",
+              "bs": "true",
+              "s": "true",
+              "t": "true",
+              "i": "true",
+              "agi": "",
+              "dex": "true",
+              "int": "true",
+              "wp": "",
+              "fel": ""
+            }
+          ]
+
+        }
+      ]
+    }
+  ]
+}
+
