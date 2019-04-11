@@ -1,5 +1,5 @@
 {
-    "academics": [
+    "Academics": [
       {
         "Apothecary": [
           {
@@ -259,7 +259,7 @@
         ]
       }
     ],
-    "ranger": [
+    "Ranger": [
       {
         "Bunty Hunter": [
           {
@@ -459,7 +459,7 @@
         ]
       }
     ],
-    "rouges": [
+    "Rouges": [
       {
         "Bawd": [
           {
@@ -659,7 +659,7 @@
         ]
       }
     ],
-    "warrior": [
+    "Warrior": [
       {
         "Cavalryman": [
           {

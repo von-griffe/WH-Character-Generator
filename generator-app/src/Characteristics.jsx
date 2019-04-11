@@ -119,7 +119,8 @@ class Characteristics extends React.Component {
 
     render() {
         return <div>
-            <select value={this.state.value} id={"race"} onChange={this.handleChange}>
+            <select onChange={this.handleChange}>
+                <option value="" disabled selected>Wybierz rasę</option>
                 {this.getRace()}
             </select>
 

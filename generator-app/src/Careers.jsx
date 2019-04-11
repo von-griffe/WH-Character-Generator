@@ -29,6 +29,7 @@ class Careers extends React.Component {
 
     getClass = () => {
         return Object.keys(this.state.props.default).map((quotes, key) => {
+            console.log(quotes);
             return <option key={key} value={quotes}>{quotes}</option>
         })
     };
@@ -61,10 +62,10 @@ class Careers extends React.Component {
     render() {
         console.log((this.state.props.default));
 
-        if( this.state.value === "academics" ||
-            this.state.value === "ranger" ||
-            this.state.value === "rouges" ||
-            this.state.value === "warrior") {
+        if( this.state.value === "Academics" ||
+            this.state.value === "Ranger" ||
+            this.state.value === "Rouges" ||
+            this.state.value === "Warrior") {
              return <div>
                     <select onChange={this.handleChange}>
                         <option value="" disabled selected>Wybierz klasę</option>
@@ -76,7 +77,7 @@ class Careers extends React.Component {
                         {this.getCareers(this.state.value)}
                     </select>
                 </div>
-        } else if(this.state.value === "Apothecar" ||
+        } else if( this.state.value === "Apothecar" ||
             this.state.value === "Engineer" ||
             this.state.value === "Wizard" ||
             this.state.value === "Physician"||
@@ -91,15 +92,18 @@ class Careers extends React.Component {
 
                 <select onChange={this.handleChange}>
                     <option value="" disabled selected>Wybierz profesję</option>
-                    {this.getCareers("academics")}
+                    {this.getCareers("Academics")}
                 </select>
 
                 <select onChange={this.handleChange}>
                     <option value="" disabled selected>Wybierz poziom profesji</option>
-                    {this.getCareersPath("academics", this.state.value)}
+                    {this.getCareersPath("Academics", this.state.value)}
                 </select>
             </div>
-        } else if(this.state.value === "Wizard’s Apprentice") {
+        } else if(this.state.value === "Wizard’s Apprentice" ||
+            this.state.value === "Wizard’s Apprentice"
+
+        ) {
             console.log(this.state.value);
 
             return <div>
@@ -110,13 +114,15 @@ class Careers extends React.Component {
 
                 <select onChange={this.handleChange}>
                     <option value="" disabled selected>Wybierz profesję</option>
-                    {this.getCareers("academics")}
+                    {this.getCareers("Academics")}
                 </select>
 
                 <select onChange={this.handleChange}>
                     <option value="" disabled selected>Wybierz poziom profesji</option>
-                    {this.getCareersPath("academics", "Wizard")}
+                    {this.getCareersPath("Academics", "Wizard")}
                 </select>
+                <div>{this.state.value}</div>
+
             </div>
         }
         return <div>
