@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9fcf879-41e1-480b-9868-c8e692b725b2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Careers.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Careers.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Characteristics.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Characteristics.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data/careers.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/careers.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../src/App.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../src/index.css" beforeDir="false" />
@@ -46,8 +44,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/data/careers.json">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="380">
-                  <caret line="510" column="23" lean-forward="true" selection-start-line="510" selection-start-column="23" selection-end-line="510" selection-end-column="23" />
+                <state relative-caret-position="705">
+                  <caret line="400" column="28" lean-forward="true" selection-start-line="400" selection-start-column="28" selection-end-line="400" selection-end-column="28" />
                   <folding>
                     <element signature="e#23#1563#0" />
                     <element signature="e#59#1717#0" />
@@ -56,11 +54,10 @@
                     <element signature="e#3431#5062#0" />
                     <element signature="e#3116#4632#0" />
                     <element signature="e#3126#4624#0" />
-                    <element signature="e#1581#2720#0" />
                     <element signature="e#5135#6330#0" />
                     <element signature="e#6364#7559#0" />
-                    <element signature="e#7585#8780#0" />
                     <element signature="e#8806#10001#0" />
+                    <element signature="e#11703#17023#0" />
                     <element signature="e#11274#12473#0" />
                     <element signature="e#14169#15771#0" />
                     <element signature="e#13710#14909#0" />
@@ -123,8 +120,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Characteristics.jsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="195">
-                  <caret line="30" selection-start-line="30" selection-end-line="30" />
+                <state relative-caret-position="322">
+                  <caret line="63" column="6" lean-forward="true" selection-start-line="63" selection-start-column="6" selection-end-line="63" selection-end-column="6" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
                   </folding>
@@ -135,13 +132,12 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Careers.jsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+                <state relative-caret-position="600">
+                  <caret line="121" column="39" selection-start-line="121" selection-start-column="39" selection-end-line="121" selection-end-column="39" />
                   <folding>
                     <element signature="e#1059#1285#0" />
                     <element signature="e#1480#1561#0" />
                     <element signature="e#1377#1458#0" />
-                    <element signature="e#2620#3805#0" />
                   </folding>
                 </state>
               </provider>
@@ -202,9 +198,9 @@
         <option value="$PROJECT_DIR$/src/Characteristics.js" />
         <option value="$PROJECT_DIR$/src/careers.json" />
         <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/src/Characteristics.jsx" />
         <option value="$PROJECT_DIR$/src/Careers.jsx" />
         <option value="$PROJECT_DIR$/src/data/careers.json" />
-        <option value="$PROJECT_DIR$/src/Characteristics.jsx" />
       </list>
     </option>
   </component>
@@ -304,12 +300,12 @@
       <workItem from="1553159334362" duration="4776000" />
       <workItem from="1554022381978" duration="9098000" />
       <workItem from="1554461232767" duration="27698000" />
-      <workItem from="1554588933691" duration="108354000" />
+      <workItem from="1554588933691" duration="110212000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="176754000" />
+    <option name="totallyTimeSpent" value="178612000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -450,41 +446,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Careers.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+        <state relative-caret-position="600">
+          <caret line="121" column="39" selection-start-line="121" selection-start-column="39" selection-end-line="121" selection-end-column="39" />
           <folding>
             <element signature="e#1059#1285#0" />
             <element signature="e#1480#1561#0" />
             <element signature="e#1377#1458#0" />
-            <element signature="e#2620#3805#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/careers.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="510" column="23" lean-forward="true" selection-start-line="510" selection-start-column="23" selection-end-line="510" selection-end-column="23" />
-          <folding>
-            <element signature="e#23#1563#0" />
-            <element signature="e#59#1717#0" />
-            <element signature="e#1731#3399#0" />
-            <element signature="e#3419#5072#0" />
-            <element signature="e#3431#5062#0" />
-            <element signature="e#3116#4632#0" />
-            <element signature="e#3126#4624#0" />
-            <element signature="e#1581#2720#0" />
-            <element signature="e#5135#6330#0" />
-            <element signature="e#6364#7559#0" />
-            <element signature="e#7585#8780#0" />
-            <element signature="e#8806#10001#0" />
-            <element signature="e#11274#12473#0" />
-            <element signature="e#14169#15771#0" />
-            <element signature="e#13710#14909#0" />
-            <element signature="e#3892#5417#0" />
-            <element signature="e#16623#18239#0" />
-            <element signature="e#18263#19879#0" />
-            <element signature="e#19903#21519#0" />
           </folding>
         </state>
       </provider>
@@ -498,10 +465,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Characteristics.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="322">
+          <caret line="63" column="6" lean-forward="true" selection-start-line="63" selection-start-column="6" selection-end-line="63" selection-end-column="6" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/careers.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="400" column="28" lean-forward="true" selection-start-line="400" selection-start-column="28" selection-end-line="400" selection-end-column="28" />
+          <folding>
+            <element signature="e#23#1563#0" />
+            <element signature="e#59#1717#0" />
+            <element signature="e#1731#3399#0" />
+            <element signature="e#3419#5072#0" />
+            <element signature="e#3431#5062#0" />
+            <element signature="e#3116#4632#0" />
+            <element signature="e#3126#4624#0" />
+            <element signature="e#5135#6330#0" />
+            <element signature="e#6364#7559#0" />
+            <element signature="e#8806#10001#0" />
+            <element signature="e#11703#17023#0" />
+            <element signature="e#11274#12473#0" />
+            <element signature="e#14169#15771#0" />
+            <element signature="e#13710#14909#0" />
+            <element signature="e#3892#5417#0" />
+            <element signature="e#16623#18239#0" />
+            <element signature="e#18263#19879#0" />
+            <element signature="e#19903#21519#0" />
           </folding>
         </state>
       </provider>

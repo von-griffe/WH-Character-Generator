@@ -361,9 +361,9 @@
         ],
         "Road Warden": [
           {
-            "Trapper": [
+            "Toll Keeper": [
               {
-                "profession": "Trapper",
+                "Custodian": "Toll Keeper",
                 "ws": "",
                 "bs": "",
                 "s": "true",
@@ -378,7 +378,7 @@
             ],
             "Hunter": [
               {
-                "profession": "Hunter",
+                "Road Warden": "Road Warden",
                 "ws": "",
                 "bs": "true",
                 "s": "true",
@@ -391,9 +391,24 @@
                 "fel": ""
               }
             ],
-            "tracker": [
+            "Road Sergeant ": [
               {
-                "profession": "tracker",
+                "profession": "Road Sergeant",
+                "ws": "",
+                "bs": "true",
+                "s": "true",
+                "t": "true",
+                "i": "true",
+                "agi": "",
+                "dex": "true",
+                "int": "true",
+                "wp": "",
+                "fel": ""
+              }
+            ],
+            "Road Captain": [
+              {
+                "profession": "Road Captain",
                 "ws": "",
                 "bs": "true",
                 "s": "true",
@@ -410,9 +425,9 @@
         ],
         "Witch Hunter": [
           {
-            "Trapper": [
+            "Interrogator ": [
               {
-                "profession": "Trapper",
+                "profession": "Interrogator ",
                 "ws": "",
                 "bs": "",
                 "s": "true",
@@ -425,9 +440,9 @@
                 "fel": ""
               }
             ],
-            "Hunter": [
+            "Witch Hunter": [
               {
-                "profession": "Hunter",
+                "profession": "Witch Hunter",
                 "ws": "",
                 "bs": "true",
                 "s": "true",
@@ -440,9 +455,24 @@
                 "fel": ""
               }
             ],
-            "tracker": [
+            "Inquisitor": [
               {
-                "profession": "tracker",
+                "profession": "Inquisitor",
+                "ws": "",
+                "bs": "true",
+                "s": "true",
+                "t": "true",
+                "i": "true",
+                "agi": "",
+                "dex": "true",
+                "int": "true",
+                "wp": "",
+                "fel": ""
+              }
+            ],
+            "Witchfinder General": [
+              {
+                "profession": "Witchfinder General",
                 "ws": "",
                 "bs": "true",
                 "s": "true",
