@@ -463,7 +463,7 @@
       {
         "Bawd": [
           {
-            "1Zlodziej": [
+            "Hustler": [
               {
                 "profession": "Trapper",
                 "ws": "",
@@ -478,7 +478,7 @@
                 "fel": ""
               }
             ],
-            "2Hunter": [
+            "Bawd": [
               {
                 "profession": "Hunter",
                 "ws": "",
@@ -493,7 +493,22 @@
                 "fel": ""
               }
             ],
-            "3tracker": [
+            "Procurer": [
+              {
+                "profession": "tracker",
+                "ws": "",
+                "bs": "true",
+                "s": "true",
+                "t": "true",
+                "i": "true",
+                "agi": "",
+                "dex": "true",
+                "int": "true",
+                "wp": "",
+                "fel": ""
+              }
+            ],
+            "Ringleader": [
               {
                 "profession": "tracker",
                 "ws": "",
@@ -512,7 +527,7 @@
         ],
         "Charlatan": [
           {
-            "1Zlodziej": [
+            "Swindler": [
               {
                 "profession": "Trapper",
                 "ws": "",
@@ -527,7 +542,22 @@
                 "fel": ""
               }
             ],
-            "2Hunter": [
+            "Charlatan": [
+              {
+                "profession": "Trapper",
+                "ws": "",
+                "bs": "",
+                "s": "true",
+                "t": "true",
+                "i": "",
+                "agi": "",
+                "dex": "",
+                "int": "",
+                "wp": "",
+                "fel": ""
+              }
+            ],
+            "Con Artist ": [
               {
                 "profession": "Hunter",
                 "ws": "",
@@ -542,7 +572,7 @@
                 "fel": ""
               }
             ],
-            "3tracker": [
+            "Scoundrel": [
               {
                 "profession": "tracker",
                 "ws": "",
@@ -561,7 +591,7 @@
         ],
         "Fence": [
           {
-            "1Zlodziej": [
+            "Fencer": [
               {
                 "profession": "Trapper",
                 "ws": "",
@@ -576,7 +606,7 @@
                 "fel": ""
               }
             ],
-            "2Hunter": [
+            "Duellist": [
               {
                 "profession": "Hunter",
                 "ws": "",
@@ -591,9 +621,24 @@
                 "fel": ""
               }
             ],
-            "3tracker": [
+            "Duelmaster": [
               {
                 "profession": "tracker",
+                "ws": "",
+                "bs": "true",
+                "s": "true",
+                "t": "true",
+                "i": "true",
+                "agi": "",
+                "dex": "true",
+                "int": "true",
+                "wp": "",
+                "fel": ""
+              }
+            ],
+            "Duelmaster": [
+              {
+                "profession": "Judicial Champion ",
                 "ws": "",
                 "bs": "true",
                 "s": "true",
@@ -610,7 +655,7 @@
         ],
         "Grave Robber": [
           {
-            "1Zlodziej": [
+            "Body Snatcher": [
               {
                 "profession": "Trapper",
                 "ws": "",
@@ -625,7 +670,7 @@
                 "fel": ""
               }
             ],
-            "2Hunter": [
+            "Grave Robber": [
               {
                 "profession": "Hunter",
                 "ws": "",
@@ -640,7 +685,7 @@
                 "fel": ""
               }
             ],
-            "3tracker": [
+            "Tomb Robber ": [
               {
                 "profession": "tracker",
                 "ws": "",

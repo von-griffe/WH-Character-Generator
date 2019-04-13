@@ -5,7 +5,7 @@ class Careers extends React.Component {
         super(props);
         console.log(props);
         this.state = {
-            value: [],
+            value: "",
             warrior: "Warrior",
             ranger: "Ranger",
             academics: "Academics",
@@ -119,6 +119,8 @@ class Careers extends React.Component {
 
     render() {
 
+        console.log(this.getKeyCareer());
+
         if (this.state.props.default.hasOwnProperty(this.state.value)) {
             return <div>
                 <select onChange={this.handleChange}>
@@ -163,5 +165,4 @@ class Careers extends React.Component {
         </div>
     }
 }
-
 export default Careers
