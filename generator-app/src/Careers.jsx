@@ -2,8 +2,8 @@ import React from 'react';
 
 class Careers extends React.Component {
     constructor(props) {
-        console.log(props)
         super(props);
+        console.log(props);
         this.state = {
             value: [],
             warrior: "Warrior",
@@ -24,114 +24,144 @@ class Careers extends React.Component {
                 wp: "10",
                 fel: "10",
             }],
-        }
+        };
     }
 
-    getClass = () => {
-        return Object.keys(this.state.props.default).map((quotes, key) => {
-            console.log(quotes);
-            return <option key={key} value={quotes}>{quotes}</option>
-        })
-    };
-
-    getCareers = (value) => {
-        const career = (this.state.props.default[value])[0];
-        console.log(career);
-
-        return Object.keys(career).map((items, key) => {
-            return <option key={key} value={items}>{items}</option>
-        })
-    };
-
-    getCareersPath = (value, value2) => {
-        const path = (this.state.props.default[value])[0];
-        console.log(path[value2][0]);
-        return Object.keys(path[value2][0]).map((quotes, key) => {
-            return <option key={key} value={quotes}>{quotes}</option>
-        })
-    };
-
-
     handleChange = (event) => {
-       return this.setState({
-            value: event.target.value
+        return this.setState({
+            value: (event.target.value)
         });
     };
 
+    renderClass = () => {
+        return Object.keys(this.state.props.default).map((key,  index) => {
+            return <option key={index} value={key}>{key}</option>
+        })
+    };
+
+    renderCareers = (value) => {
+
+        if (value === undefined) {
+
+            if ((this.getKeyCareer()[0]).hasOwnProperty(this.state.value)){
+
+                return Object.keys(this.state.props.default["Academics"][0]).map((key, i) => {
+                    return <option key={i} value={key}>{key}</option>
+                });
+            } else if ((this.getKeyCareer()[1]).hasOwnProperty(this.state.value)){
+
+                return Object.keys(this.state.props.default["Ranger"][0]).map((key, i) => {
+                    return <option key={i} value={key}>{key}</option>
+                });
+            } else if ((this.getKeyCareer()[2]).hasOwnProperty(this.state.value)){
+
+                return Object.keys(this.state.props.default["Rouges"][0]).map((key, i) => {
+                    return <option key={i} value={key}>{key}</option>
+                });
+            } else if ((this.getKeyCareer()[3]).hasOwnProperty(this.state.value)) {
+
+                return Object.keys(this.state.props.default["Warrior"][0]).map((key, i) => {
+                    return <option key={i} value={key}>{key}</option>
+                });
+            }
+
+        } else {
+            return Object.keys(this.state.props.default[value][0]).map((key, i) => {
+                return <option key={i} value={key}>{key}</option>
+            });
+        }
+    };
+
+    getKeyCareer = () => {
+        return Object.keys(this.state.props.default).map((key, index) => {
+            let objCareers = this.state.props.default[key][0];
+            return objCareers;
+        });
+    };
+
+    getCareerLevel = () => {
+
+        if ((this.getKeyCareer()[0]).hasOwnProperty(this.state.value)){
+
+            return Object.keys((this.state.props.default["Academics"][0])[this.state.value][0]).map((key, index) => {
+                return <div key={index} value={key} > <span>{index + 1}</span> {key }</div>
+            });
+
+        } else if ((this.getKeyCareer()[1]).hasOwnProperty(this.state.value)){
+
+            return Object.keys((this.state.props.default["Ranger"][0])[this.state.value][0]).map((key, index) => {
+                return <div key={index} value={key} > <span>{index + 1}</span> {key}</div>
+            });
+
+        } else if ((this.getKeyCareer()[2]).hasOwnProperty(this.state.value)){
+
+            return Object.keys((this.state.props.default["Rouges"][0])[this.state.value][0]).map((key, index) => {
+                return <div key={index} value={key} > <span>{index + 1}</span> {key }</div>
+            });
+
+        } else if ((this.getKeyCareer()[3]).hasOwnProperty(this.state.value)) {
+
+            return Object.keys((this.state.props.default["Warrior"][0])[this.state.value][0]).map((key, index) => {
+                return <div key={index} value={key} > <span>{index + 1}</span> {key }</div>
+            });
+        }
+    };
+
+
+    renderAllCareers = () => {
+
+        return Object.keys(this.state.props.default).map((key, i) => {
+            return Object.keys(this.state.props.default[key][0]).map((key, i) => {
+                return <option key={i} value={key}>{key}</option>
+            });
+        });
+    };
 
     render() {
-        console.log((this.state.props.default));
 
-        if( this.state.value === "Academics" ||
-            this.state.value === "Ranger" ||
-            this.state.value === "Rouges" ||
-            this.state.value === "Warrior") {
-             return <div>
-                    <select onChange={this.handleChange}>
-                        <option value="" disabled selected>Wybierz klasę</option>
-                        {this.getClass()}
-                    </select>
-
-                    <select onChange={this.handleChange}>
-                        <option value="" disabled selected>Wybierz profesję</option>
-                        {this.getCareers(this.state.value)}
-                    </select>
-                </div>
-        } else if( this.state.value === "Apothecar" ||
-            this.state.value === "Engineer" ||
-            this.state.value === "Wizard" ||
-            this.state.value === "Physician"||
-            this.state.value === "Bunty Hunter") {
-            console.log(this.state.value);
-
+        if (this.state.props.default.hasOwnProperty(this.state.value)) {
             return <div>
                 <select onChange={this.handleChange}>
                     <option value="" disabled selected>Wybierz klasę</option>
-                    {this.getClass()}
+                    {this.renderClass()}
                 </select>
-
                 <select onChange={this.handleChange}>
                     <option value="" disabled selected>Wybierz profesję</option>
-                    {this.getCareers("Academics")}
+                    {this.renderCareers(this.state.value)}
                 </select>
 
-                <select onChange={this.handleChange}>
-                    <option value="" disabled selected>Wybierz poziom profesji</option>
-                    {this.getCareersPath("Academics", this.state.value)}
-                </select>
             </div>
-        } else if(this.state.value === "Wizard’s Apprentice" ||
-            this.state.value === "Wizard’s Apprentice"
 
+        } else if ((this.getKeyCareer()[0]).hasOwnProperty(this.state.value) ||
+            (this.getKeyCareer()[1]).hasOwnProperty(this.state.value) ||
+            (this.getKeyCareer()[2]).hasOwnProperty(this.state.value) ||
+            (this.getKeyCareer()[3]).hasOwnProperty(this.state.value)
         ) {
-            console.log(this.state.value);
 
             return <div>
                 <select onChange={this.handleChange}>
                     <option value="" disabled selected>Wybierz klasę</option>
-                    {this.getClass()}
+                    {this.renderClass()}
                 </select>
 
                 <select onChange={this.handleChange}>
                     <option value="" disabled selected>Wybierz profesję</option>
-                    {this.getCareers("Academics")}
+                    {this.renderCareers()}
                 </select>
 
-                <select onChange={this.handleChange}>
-                    <option value="" disabled selected>Wybierz poziom profesji</option>
-                    {this.getCareersPath("Academics", "Wizard")}
-                </select>
-                <div>{this.state.value}</div>
+                <div>{"wybrana profesja: "} {this.state.value}</div>
+                <div>{"poziom postaci: "}  {this.getCareerLevel()}</div>
 
             </div>
         }
+
         return <div>
             <select onChange={this.handleChange}>
-                <option value="" disabled selected>Wybierz klasę</option>
-                {this.getClass()}
+                <option value="" disabled selected>Wybierz klase</option>
+                {this.renderClass()}
             </select>
         </div>
     }
 }
-export default Careers
 
+export default Careers

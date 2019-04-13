@@ -663,7 +663,7 @@
       {
         "Cavalryman": [
           {
-            "Squire": [
+            "Horseman": [
               {
                 "profession": "Trapper",
                 "ws": "",
@@ -678,7 +678,7 @@
                 "fel": ""
               }
             ],
-            "Knight": [
+            "Cavalryman": [
               {
                 "profession": "Hunter",
                 "ws": "",
@@ -693,7 +693,7 @@
                 "fel": ""
               }
             ],
-            "First Knight ": [
+            "Cavalry Sergeant": [
               {
                 "profession": "tracker",
                 "ws": "",
@@ -708,7 +708,7 @@
                 "fel": ""
               }
             ],
-            "Knight of the Inner Circle": [
+            "Cavalry Officer": [
               {
                 "profession": "tracker",
                 "ws": "",
@@ -727,9 +727,9 @@
         ],
         "Guard": [
           {
-            "Squire": [
+            "Sentry": [
               {
-                "profession": "Trapper",
+                "profession": "Sentry — Silver 1",
                 "ws": "",
                 "bs": "",
                 "s": "true",
@@ -742,7 +742,7 @@
                 "fel": ""
               }
             ],
-            "Knight": [
+            "Guard": [
               {
                 "profession": "Hunter",
                 "ws": "",
@@ -757,7 +757,7 @@
                 "fel": ""
               }
             ],
-            "First Knight ": [
+            "Honour Guard": [
               {
                 "profession": "tracker",
                 "ws": "",
@@ -772,7 +772,7 @@
                 "fel": ""
               }
             ],
-            "Knight of the Inner Circle": [
+            "Guard Officer": [
               {
                 "profession": "tracker",
                 "ws": "",

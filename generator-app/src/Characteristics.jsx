@@ -1,7 +1,8 @@
 import React from 'react';
-
 import Careers from "./Careers";
 import * as data from "./data/careers";
+
+// const data = require("./data/careers.json")
 
 class Characteristics extends React.Component {
     constructor(props) {
@@ -28,6 +29,23 @@ class Characteristics extends React.Component {
         }
     }
 
+    // getData = () => {
+    //     return fetch('../data/careers.json')
+    //         .then((response)=> response.json())
+    //         .then((responseJson) => {
+    //             alert(responseJson);
+    //             })
+    //         .catch((error) => {
+    //             console.error(error)
+    //         });
+    // }
+    // componentDidMount() {
+    //     this.getData();
+    //     console.log(this.getData())
+    // }
+
+
+
     getRace = () => {
         return Object.keys(this.state).map((key, index) => {
             if (index < 3) {
@@ -37,7 +55,6 @@ class Characteristics extends React.Component {
             }
         })
     };
-
 
     handleChange = (event) => {
         console.log(event.target.value);
