@@ -12,7 +12,7 @@ class Characteristics extends React.Component {
             human: "Human",
             elf: "Elf",
             dwarf: "Dwarf",
-            value: [],
+            value: false,
             checkRace:"Wybierz rase",
             characteristics: [{
                 race: "choose your race",
@@ -119,22 +119,39 @@ class Characteristics extends React.Component {
     };
 
     render() {
-        return <div>
-            <Select
-                onChange={this.handleChange}
-                render={this.getRace()}
-                title={this.state.checkRace}
-            />
-            <Careers
-                propsData={this.props.propsData}
-            />
-            <div>
-                <button onClick={this.handleClick}>Wylosuj cechy</button>
+        if (this.state.value === false ) {
+            return <div>
+                <Select
+                    onChange={this.handleChange}
+                    render={this.getRace()}
+                    title={this.state.checkRace}
+                />
+                <div>
+                    <div> {this.getBaseNumbers()} </div>
+                </div>
             </div>
-            <div>
-                <div> {this.getBaseNumbers()} </div>
+        } else {
+            return <div>
+                <Select
+                    onChange={this.handleChange}
+                    render={this.getRace()}
+                    title={this.state.checkRace}
+                />
+                <Careers
+                    propsData={this.props.propsData}
+                />
+                <div>
+                    <button onClick={this.handleClick}>Wylosuj cechy</button>
+                </div>
+                <div>
+                    <div> {this.getBaseNumbers()} </div>
+                </div>
             </div>
-        </div>
+
+        }
+
+
+
     }
 }
 
