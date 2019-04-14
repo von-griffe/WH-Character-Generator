@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9fcf879-41e1-480b-9868-c8e692b725b2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Careers.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Careers.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Characteristics.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Characteristics.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/Checkbox.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/Checkbox.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../src/App.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../src/index.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../src/index.html" beforeDir="false" />
@@ -82,8 +86,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/App.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="240">
-                  <caret line="16" selection-start-line="16" selection-end-line="16" />
+                <state relative-caret-position="165">
+                  <caret line="11" selection-start-line="11" selection-end-line="11" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
                   </folding>
@@ -103,10 +107,11 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Characteristics.jsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="257">
-                  <caret line="157" column="22" selection-start-line="157" selection-start-column="22" selection-end-line="157" selection-end-column="22" />
+                <state relative-caret-position="143">
+                  <caret line="124" column="4" selection-start-line="124" selection-start-column="4" selection-end-line="124" selection-end-column="4" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
+                    <element signature="e#1921#6125#0" />
                   </folding>
                 </state>
               </provider>
@@ -115,11 +120,29 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Careers.jsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1115">
-                  <caret line="91" column="46" selection-start-line="91" selection-start-column="46" selection-end-line="91" selection-end-column="46" />
+                <state relative-caret-position="326">
+                  <caret line="97" column="57" selection-start-line="97" selection-start-column="49" selection-end-line="97" selection-end-column="57" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/shared/Checkbox.jsx">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="240">
+                  <caret line="16" column="17" lean-forward="true" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/shared/Select.jsx">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="315">
+                  <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
                 </state>
               </provider>
             </entry>
@@ -160,13 +183,13 @@
       <find>getKeyCareer</find>
       <find>console.log</find>
       <find>getKeyCareer()</find>
-      <find>console</find>
-      <find>getClassName</find>
       <find>getClassName</find>
       <find>renderCareers</find>
       <find>titleClass</find>
       <find>getCareersTab</find>
       <find>props.propsData</find>
+      <find>console</find>
+      <find>handleInputChange</find>
     </findStrings>
     <replaceStrings>
       <replace>Ws</replace>
@@ -187,10 +210,10 @@
         <option value="$PROJECT_DIR$/src/Characteristics.js" />
         <option value="$PROJECT_DIR$/src/careers.json" />
         <option value="$PROJECT_DIR$/src/Shared/Checkbox.jsx" />
-        <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/data/careers.json" />
-        <option value="$PROJECT_DIR$/src/shared/Checkbox.jsx" />
         <option value="$PROJECT_DIR$/src/shared/Select.jsx" />
+        <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/src/shared/Checkbox.jsx" />
         <option value="$PROJECT_DIR$/src/Careers.jsx" />
         <option value="$PROJECT_DIR$/src/Characteristics.jsx" />
       </list>
@@ -294,12 +317,12 @@
       <workItem from="1554022381978" duration="9098000" />
       <workItem from="1554461232767" duration="27698000" />
       <workItem from="1554588933691" duration="150446000" />
-      <workItem from="1555234219204" duration="2521000" />
+      <workItem from="1555234219204" duration="4768000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="221367000" />
+    <option name="totallyTimeSpent" value="223614000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -314,7 +337,7 @@
     <frame x="0" y="28" width="1344" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" x="40" y="24" width="230" height="616" id="Project" order="0" sideWeight="0.49868765" type="FLOATING" weight="0.14260563" />
+      <window_info active="true" content_ui="combo" x="40" y="24" width="230" height="616" id="Project" order="0" sideWeight="0.49868765" type="FLOATING" visible="true" weight="0.14260563" />
       <window_info id="Structure" order="1" side_tool="true" visible="true" weight="0.18291761" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -327,7 +350,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32939634" />
       <window_info anchor="bottom" id="Inspection Results" order="9" weight="0.3299363" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.4989429" visible="true" weight="0.29396325" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4989429" visible="true" weight="0.29396325" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Favorites" order="12" sideWeight="0.5010571" side_tool="true" weight="0.32939634" />
       <window_info anchor="bottom" id="Quokka" order="13" />
@@ -368,12 +391,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/Characteristics.jsx</url>
-          <line>67</line>
+          <line>66</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/App.js</url>
-          <line>11</line>
+          <line>14</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
@@ -392,23 +415,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Race.jsx">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/shared/Checkbox.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-          <folding>
-            <element signature="e#219#418#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/shared/Select.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.css">
       <provider selected="true" editor-type-id="text-editor" />
@@ -449,6 +455,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/shared/Select.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -458,18 +471,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/shared/Checkbox.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="17" lean-forward="true" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Careers.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1115">
-          <caret line="91" column="46" selection-start-line="91" selection-start-column="46" selection-end-line="91" selection-end-column="46" />
+        <state relative-caret-position="326">
+          <caret line="97" column="57" selection-start-line="97" selection-start-column="49" selection-end-line="97" selection-end-column="57" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -478,10 +498,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Characteristics.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="157" column="22" selection-start-line="157" selection-start-column="22" selection-end-line="157" selection-end-column="22" />
+        <state relative-caret-position="143">
+          <caret line="124" column="4" selection-start-line="124" selection-start-column="4" selection-end-line="124" selection-end-column="4" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#1921#6125#0" />
           </folding>
         </state>
       </provider>

@@ -3,33 +3,24 @@ import React from 'react';
 class Checkbox extends React.Component {
 
     constructor(props) {
+
+        console.log("to jest props", props);
         super(props);
         this.state = {
-            check: false
         }
 
     }
 
-    handleInputChange(event) {
-        const target = event.target;
-        const value = target.type === 'checkbox' ? target.checked : target.value;
-        const name = target.name;
-        this.setState({
-            [name]: value
-        });
-    }
-
 
     render() {
-
         return (
             <div>
                 <label>
                     <input
-                        name="isGoing"
+                        name="Level checkbox"
                         type="checkbox"
-                        checked={this.state.check}
-                        onChange={this.handleInputChange} />
+                        checked={this.props.checked}
+                        onChange={this.props.onChange} />
                     />
                 </label>
             </div>

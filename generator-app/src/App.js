@@ -8,6 +8,9 @@ const data = careerData;
 
 class App extends React.Component {
 
+
+
+
     render() {
         return <div className="App">
             <Characteristics propsData={data}/>

@@ -93,19 +93,16 @@ class Careers extends React.Component {
                 if (item.name === this.state.value) {
                     return item.levels.map((el, index) => {
                         console.log(el.name);
-                        return <div> { el.name } </div>
+                        return <div> <CheckBox
+                            checked = {false}
+                            onChange={this.props.onChange}
+                        />
+                        { el.name } </div>
                     })
                 }
             })
         })
     };
-
-    // renderProfessionState = () => {
-    //     return this.getProfessionStats().map((el, i) => {
-    //         console.log(el);
-    //     })
-    // };
-
 
     render() {
 
@@ -147,10 +144,6 @@ class Careers extends React.Component {
                     {this.state.value}
                 </div>
                 <div>
-                    <CheckBox
-                        type="checkbox"
-                        onChange={this.handleInputChange}
-                    />
                     {this.getProfessionStats()}
                 </div>
 

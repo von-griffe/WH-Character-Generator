@@ -7,13 +7,13 @@ import Select from "./shared/Select";
 class Characteristics extends React.Component {
     constructor(props) {
         super(props);
-        // console.log(props);
         this.state = {
             human: "Human",
             elf: "Elf",
             dwarf: "Dwarf",
             value: false,
             event: false,
+            check: false,
             checkRace:"Wybierz rase",
             characteristics: [{
                 race: "choose your race",
@@ -48,7 +48,6 @@ class Characteristics extends React.Component {
 
     getBaseNumbers = () => {
         return this.state.characteristics.map((quotes) => {
-            console.log(quotes);
             return Object.keys(quotes).map((key, index) => {
                 if (index > 0) {
                     return <div key={index}>
@@ -122,6 +121,10 @@ class Characteristics extends React.Component {
         }
     };
 
+    handleInputChange = () => {
+
+    };
+
     render() {
 
         console.log(this.state);
@@ -140,11 +143,9 @@ class Characteristics extends React.Component {
                     render={this.getRace()}
                     title={this.state.checkRace}
                 />
-
                 <div>
                     <button onClick={this.handleClick}>Wylosuj cechy</button>
                 </div>
-
             </div>
         } else {
             return <div>
@@ -157,9 +158,9 @@ class Characteristics extends React.Component {
                     <button onClick={this.handleClick}>Wylosuj cechy</button>
                 </div>
                 <Careers
+                    onChange={this.handleInputChange()}
                     propsData={this.props.propsData}
                 />
-
                 <div>
                     <div> {this.getBaseNumbers()} </div>
                 </div>
