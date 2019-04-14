@@ -88,8 +88,8 @@ class Careers extends React.Component {
 
     getProfessionStats = () => {
         return this.getCareerName().map((el, index) => {
-            el.map((item,index) => {
-                return
+           return el.map((item,index) => {
+                console.log("item",item.name);
                 if (item.name === this.state.value) {
                     return item.levels.map((el, index) => {
                         console.log(el.name);
