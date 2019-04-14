@@ -13,7 +13,7 @@ class Characteristics extends React.Component {
             dwarf: "Dwarf",
             value: false,
             event: false,
-            check: false,
+            checked: false,
             checkRace:"Wybierz rase",
             characteristics: [{
                 race: "choose your race",
@@ -43,7 +43,14 @@ class Characteristics extends React.Component {
 
     handleChange = (event) => {
         console.log(event.target.value);
-        this.setState({value: event.target.value});
+        this.setState({
+            value: event.target.value,
+
+        });
+    };
+
+    handleInputChange = (event) => {
+        this.setState({ checked: !this.state.checked})
     };
 
     getBaseNumbers = () => {
@@ -121,13 +128,9 @@ class Characteristics extends React.Component {
         }
     };
 
-    handleInputChange = () => {
-
-    };
 
     render() {
 
-        console.log(this.state);
         if (this.state.value === false ) {
             return <div>
                 <Select
@@ -158,14 +161,14 @@ class Characteristics extends React.Component {
                     <button onClick={this.handleClick}>Wylosuj cechy</button>
                 </div>
                 <Careers
-                    onChange={this.handleInputChange()}
+                    onChange={this.handleInputChange}
                     propsData={this.props.propsData}
+                    props
                 />
                 <div>
                     <div> {this.getBaseNumbers()} </div>
                 </div>
             </div>
-
         }
     }
 }

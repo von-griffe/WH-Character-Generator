@@ -32,7 +32,6 @@ class Careers extends React.Component {
 
     }
 
-
     handleChange = (event) => {
         return this.setState({
             value: (event.target.value)
@@ -40,14 +39,12 @@ class Careers extends React.Component {
         });
     };
 
-
     getClassName = () => {
         return Object.keys(this.props.propsData).map((key, index) => {
             let objCareers = this.props.propsData[key];
             return objCareers.name;
         });
     };
-
 
     getCareerName = () => {
         return Object.keys(this.props.propsData).map((key, index) => {
@@ -85,19 +82,23 @@ class Careers extends React.Component {
         })
     };
 
-
     getProfessionStats = () => {
         return this.getCareerName().map((el, index) => {
            return el.map((item,index) => {
+
                 console.log("item",item.name);
                 if (item.name === this.state.value) {
                     return item.levels.map((el, index) => {
                         console.log(el.name);
-                        return <div key={index}> <CheckBox
-                            checked = {false}
-                            onChange={this.props.onChange}
-                        />
-                        { el.name } </div>
+                        return <div key={index}>
+                            <CheckBox
+
+                                checked = {this.props.onChange}
+                                onChange={this.props.onChange}
+
+                            /> { el.name }
+
+                        </div>
                     })
                 }
             })
@@ -105,6 +106,7 @@ class Careers extends React.Component {
     };
 
     render() {
+        console.log(this.props.onChange);
 
         if (this.getClassName().indexOf(this.state.value) > -1) {
             return <div>
