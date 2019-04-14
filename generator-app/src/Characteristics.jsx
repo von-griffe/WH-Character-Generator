@@ -13,6 +13,7 @@ class Characteristics extends React.Component {
             elf: "Elf",
             dwarf: "Dwarf",
             value: false,
+            event: false,
             checkRace:"Wybierz rase",
             characteristics: [{
                 race: "choose your race",
@@ -67,6 +68,7 @@ class Characteristics extends React.Component {
     handleClick = () => {
         if (this.state.value === this.state.elf) {
             this.setState(() => ({
+                event:true,
                 characteristics: [{
                     race: "Elf",
                     ws: parseInt("30") + Math.floor((Math.random() * 10) + 1) + Math.floor((Math.random() * 10) + 1),
@@ -84,6 +86,7 @@ class Characteristics extends React.Component {
         }
         if (this.state.value === this.state.dwarf) {
             this.setState(() => ({
+                event:true,
                 characteristics: [{
                     race: "Dwarf",
                     ws: parseInt("30") + Math.floor((Math.random() * 10) + 1) + Math.floor((Math.random() * 10) + 1),
@@ -101,6 +104,7 @@ class Characteristics extends React.Component {
         }
         if (this.state.value === this.state.human) {
             this.setState(() => ({
+                event:true,
                 characteristics: [{
                     race: "Human",
                     ws: parseInt("20") + Math.floor((Math.random() * 10) + 1) + Math.floor((Math.random() * 10) + 1),
@@ -119,6 +123,8 @@ class Characteristics extends React.Component {
     };
 
     render() {
+
+        console.log(this.state);
         if (this.state.value === false ) {
             return <div>
                 <Select
@@ -126,9 +132,19 @@ class Characteristics extends React.Component {
                     render={this.getRace()}
                     title={this.state.checkRace}
                 />
+            </div>
+        } else if (this.state.event === false) {
+            return <div>
+                <Select
+                    onChange={this.handleChange}
+                    render={this.getRace()}
+                    title={this.state.checkRace}
+                />
+
                 <div>
-                    <div> {this.getBaseNumbers()} </div>
+                    <button onClick={this.handleClick}>Wylosuj cechy</button>
                 </div>
+
             </div>
         } else {
             return <div>
@@ -137,21 +153,19 @@ class Characteristics extends React.Component {
                     render={this.getRace()}
                     title={this.state.checkRace}
                 />
-                <Careers
-                    propsData={this.props.propsData}
-                />
                 <div>
                     <button onClick={this.handleClick}>Wylosuj cechy</button>
                 </div>
+                <Careers
+                    propsData={this.props.propsData}
+                />
+
                 <div>
                     <div> {this.getBaseNumbers()} </div>
                 </div>
             </div>
 
         }
-
-
-
     }
 }
 
