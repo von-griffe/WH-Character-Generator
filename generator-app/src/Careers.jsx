@@ -35,7 +35,6 @@ class Careers extends React.Component {
     handleChange = (event) => {
         return this.setState({
             value: (event.target.value)
-
         });
     };
 

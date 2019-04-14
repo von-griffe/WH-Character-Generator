@@ -1,20 +1,41 @@
 import React from 'react';
 import Careers from "./Careers";
-import Select from "./shared/Select";
+import {withStyles} from "@material-ui/core";
+import NativeSelect from "./shared/MultiSelect.jsx";
+import Button from '@material-ui/core/Button';
+import PropTypes from "prop-types";
 
-// const data = require("./data/careers.json")
+
+const styles = theme => ({
+    root: {
+        width: '50%',
+        margin: "auto",
+        borderRadius: "5px",
+        boxShadow: "0 2px 2px 1px rgba(0, 0, 0, 0.15)"
+    },
+
+    button: {
+        marginTop: theme.spacing.unit,
+        marginRight: theme.spacing.unit,
+    },
+    actionsContainer: {
+        marginBottom: theme.spacing.unit * 2,
+    },
+    resetContainer: {
+        padding: theme.spacing.unit * 3,
+    },
+});
+
 
 class Characteristics extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            human: "Human",
-            elf: "Elf",
-            dwarf: "Dwarf",
+            name: "",
             value: false,
             event: false,
             checked: false,
-            checkRace:"Wybierz rase",
+            checkRace: "Wybierz rase",
             characteristics: [{
                 race: "choose your race",
                 ws: "10",
@@ -31,50 +52,9 @@ class Characteristics extends React.Component {
         }
     }
 
-    getRace = () => {
-        return Object.keys(this.state).map((key, index) => {
-            if (index < 3) {
-                return <option key={index} value={this.state.key}>{this.state[key]}</option>
-            } else {
-                return null
-            }
-        })
-    };
-
-    handleChange = (event) => {
-        console.log(event.target.value);
-        this.setState({
-            value: event.target.value,
-
-        });
-    };
-
-    handleInputChange = (event) => {
-        this.setState({ checked: !this.state.checked})
-    };
-
-    getBaseNumbers = () => {
-        return this.state.characteristics.map((quotes) => {
-            return Object.keys(quotes).map((key, index) => {
-                if (index > 0) {
-                    return <div key={index}>
-                        <div>{key.toUpperCase()} | {parseInt(quotes[key])} | </div>
-                    </div>;
-                }
-                else if (index === 0) {
-                    return <div key={index}>
-                        <span> rasa: </span>
-                        <p>{(quotes[key])}</p>
-                    </div>
-                }
-            })
-        })
-    };
-
     handleClick = () => {
-        if (this.state.value === this.state.elf) {
+        if (this.state.value === "Elf") {
             this.setState(() => ({
-                event:true,
                 characteristics: [{
                     race: "Elf",
                     ws: parseInt("30") + Math.floor((Math.random() * 10) + 1) + Math.floor((Math.random() * 10) + 1),
@@ -90,9 +70,8 @@ class Characteristics extends React.Component {
                 }]
             }));
         }
-        if (this.state.value === this.state.dwarf) {
+        else if (this.state.value === "Dwarf") {
             this.setState(() => ({
-                event:true,
                 characteristics: [{
                     race: "Dwarf",
                     ws: parseInt("30") + Math.floor((Math.random() * 10) + 1) + Math.floor((Math.random() * 10) + 1),
@@ -108,9 +87,8 @@ class Characteristics extends React.Component {
                 }]
             }));
         }
-        if (this.state.value === this.state.human) {
+        else if (this.state.value === "Human") {
             this.setState(() => ({
-                event:true,
                 characteristics: [{
                     race: "Human",
                     ws: parseInt("20") + Math.floor((Math.random() * 10) + 1) + Math.floor((Math.random() * 10) + 1),
@@ -128,50 +106,79 @@ class Characteristics extends React.Component {
         }
     };
 
+    getRace = () => {
+        return this.props.propsRace.map((key,index) => {
+            return <option key={index} value={key}>{key}</option>
+        })
+    };
+
+    handleChange = name => (event) => {
+        this.setState({[name]: event.target.value});
+    };
+
+    handleInputChange = (event) => {
+        return null
+        // this.setState({checked: event.target.checked});
+    };
+
+    getBaseNumbers = () => {
+        return this.state.characteristics.map((quotes) => {
+            return Object.keys(quotes).map((key, index) => {
+              return (index > 0) ?
+                  <div key={index}>
+                      <div>{key.toUpperCase()} | {parseInt(quotes[key])} |</div>
+                  </div>
+                  :
+                  <div key={index}>
+                      <span> rasa: </span>
+                      <p>{(quotes[key])}</p>
+                  </div>
+            })
+        })
+    };
+
+    renderSection = () => {
+       return (this.state.value === false) ?
+            <NativeSelect
+                onChange={this.handleChange('value')}
+                renderRace={this.getRace}
+                title={this.state.value}
+            />
+            :
+           <div>
+               <NativeSelect onChange={this.handleChange('value')}
+                             renderRace={this.getRace}
+                             title={this.state.value}/>
+                             <Button
+                                 onClick={this.handleClick}
+                                 variant="contained"
+                                 color="secondary">
+                                 Roll stats
+                             </Button>
+           </div>
+    };
 
     render() {
+        const { classes } = this.props;
 
-        if (this.state.value === false ) {
-            return <div>
-                <Select
-                    onChange={this.handleChange}
-                    render={this.getRace()}
-                    title={this.state.checkRace}
-                />
-            </div>
-        } else if (this.state.event === false) {
-            return <div>
-                <Select
-                    onChange={this.handleChange}
-                    render={this.getRace()}
-                    title={this.state.checkRace}
-                />
-                <div>
-                    <button onClick={this.handleClick}>Wylosuj cechy</button>
-                </div>
-            </div>
-        } else {
-            return <div>
-                <Select
-                    onChange={this.handleChange}
-                    render={this.getRace()}
-                    title={this.state.checkRace}
-                />
-                <div>
-                    <button onClick={this.handleClick}>Wylosuj cechy</button>
-                </div>
-                <Careers
-                    onChange={this.handleInputChange}
+        return <div className={classes.root} >
+                <div className={classes.resetContainer} >
+                    {this.renderSection()}
+                    <Careers
+                    onChange={this.handleInputChange('checked')}
                     propsData={this.props.propsData}
                     props
                 />
-                <div>
-                    <div> {this.getBaseNumbers()} </div>
-                </div>
+                <div> {this.getBaseNumbers()} </div>
             </div>
-        }
+        </div>
     }
 }
 
-export default Characteristics
+
+Characteristics.propTypes = {
+    classes: PropTypes.object,
+};
+
+export default withStyles(styles)(Characteristics)
 

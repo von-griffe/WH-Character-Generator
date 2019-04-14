@@ -1,19 +1,20 @@
 import React from 'react';
-import Characteristics from './Characteristics.jsx'
-import careerData from './data/careers.json'
-import './App.css';
+import Stepper from "./shared/Stepper.jsx";
+
+import styles2 from './App.css';
+import styles from "./characteristics.scss";
 
 
-const data = careerData;
 
 class App extends React.Component {
 
 
 
-
     render() {
-        return <div className="App">
-            <Characteristics propsData={data}/>
+        return <div className={styles2.App}>
+            <section className={styles.section}>
+            <Stepper/>
+            </section>
         </div>
     }
 }
