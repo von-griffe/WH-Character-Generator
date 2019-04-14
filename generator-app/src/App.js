@@ -1,6 +1,6 @@
 import React from 'react';
 import Characteristics from './Characteristics.jsx'
-import  * as careerData from './data/careers.json'
+import careerData from './data/careers.json'
 import './App.css';
 
 
@@ -10,11 +10,9 @@ class App extends React.Component {
 
     render() {
         return <div className="App">
-            <Characteristics propsData={JSON.stringify(data)}/>
+            <Characteristics propsData={data}/>
         </div>
     }
 }
 
 export default App;
-
-

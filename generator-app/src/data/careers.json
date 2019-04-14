@@ -1,40 +1,42 @@
-{
-    "Academics": [
+[
+  {
+    "name": "Academics",
+    "careers": [
       {
-        "Apothecary": [
+        "name": "Apothecary",
+        "levels": [
           {
-            "Physician’s Apprentice": [
-              {
-                "profession": "Physician’s Apprentice",
-                "ws": "true",
-                "bs": "",
-                "s": "",
-                "t": "",
-                "i": "",
-                "agi": "",
-                "dex": "",
-                "int": "true",
-                "wp": "true",
-                "fel": ""
-              }
-            ],
-            "Physician": [
-              {
-                "profession": "Physician",
-                "ws": "true",
-                "bs": "",
-                "s": "",
-                "t": "",
-                "i": "",
-                "agi": "true",
-                "dex": "",
-                "int": "true",
-                "wp": "true",
-                "fel": ""
-              }
-            ],
+            "name": "Physician’s Apprentice",
+            "profession": "Physician’s Apprentice",
+            "ws": "true",
+            "bs": "",
+            "s": "",
+            "t": "",
+            "i": "",
+            "agi": "",
+            "dex": "",
+            "int": "true",
+            "wp": "true",
+            "fel": ""
+          },
+          {
+            "name": "Physician",
+            "profession": "Physician",
+            "ws": "true",
+            "bs": "",
+            "s": "",
+            "t": "",
+            "i": "",
+            "agi": "true",
+            "dex": "",
+            "int": "true",
+            "wp": "true",
+            "fel": ""
+          },
+          {
             "Doktor": [
               {
+                "name": "Doktor",
                 "profession": "Doktor",
                 "ws": "",
                 "bs": "true",
@@ -47,952 +49,958 @@
                 "wp": "",
                 "fel": "true"
               }
-            ],
-            "Court Physician": [
-              {
-                "profession": "Court Physician",
-                "ws": "",
-                "bs": "true",
-                "s": "true",
-                "t": "true",
-                "i": "true",
-                "agi": "",
-                "dex": "true",
-                "int": "true",
-                "wp": "",
-                "fel": "true"
-              }
             ]
-          }
-        ],
-        "Engineer": [
+          },
           {
-            "Student Engineer": [
-              {
-                "profession": "Student Engineer",
-                "ws": "true",
-                "bs": "",
-                "s": "",
-                "t": "",
-                "i": "",
-                "agi": "",
-                "dex": "",
-                "int": "true",
-                "wp": "true",
-                "fel": ""
-              }
-            ],
-            "Engineer": [
-              {
-                "profession": "Engineer",
-                "ws": "true",
-                "bs": "",
-                "s": "",
-                "t": "",
-                "i": "",
-                "agi": "true",
-                "dex": "",
-                "int": "true",
-                "wp": "true",
-                "fel": ""
-              }
-            ],
-            "Master Engineer": [
-              {
-                "profession": "Master Engineer",
-                "ws": "",
-                "bs": "true",
-                "s": "true",
-                "t": "true",
-                "i": "true",
-                "agi": "",
-                "dex": "true",
-                "int": "true",
-                "wp": "",
-                "fel": "true"
-              }
-            ],
-            "Chartered Engineer": [
-              {
-                "profession": "Chartered Engineer",
-                "ws": "",
-                "bs": "true",
-                "s": "true",
-                "t": "true",
-                "i": "true",
-                "agi": "",
-                "dex": "true",
-                "int": "true",
-                "wp": "",
-                "fel": "true"
-              }
-            ]
+            "name": "Court Physician",
+            "profession": "Court Physician",
+            "ws": "",
+            "bs": "true",
+            "s": "true",
+            "t": "true",
+            "i": "true",
+            "agi": "",
+            "dex": "true",
+            "int": "true",
+            "wp": "",
+            "fel": "true"
           }
-        ],
-        "Wizard": [
+        ]
+      },
+      {
+      "name": "Engineer",
+      "levels": [
+        {
+          "name": "Student Engineer",
+          "profession": "Student Engineer",
+          "ws": "true",
+          "bs": "",
+          "s": "",
+          "t": "",
+          "i": "",
+          "agi": "",
+          "dex": "",
+          "int": "true",
+          "wp": "true",
+          "fel": ""
+        },
+        {
+          "name": "Engineer",
+          "profession": "Student Engineer",
+          "ws": "true",
+          "bs": "",
+          "s": "",
+          "t": "",
+          "i": "",
+          "agi": "",
+          "dex": "",
+          "int": "true",
+          "wp": "true",
+          "fel": ""
+        },
+        {
+          "name": "Master Engineer",
+          "profession": "Student Engineer",
+          "ws": "true",
+          "bs": "",
+          "s": "",
+          "t": "",
+          "i": "",
+          "agi": "",
+          "dex": "",
+          "int": "true",
+          "wp": "true",
+          "fel": ""
+        },
+        {
+          "name": "Master Engineer",
+          "profession": "Student Engineer",
+          "ws": "true",
+          "bs": "",
+          "s": "",
+          "t": "",
+          "i": "",
+          "agi": "",
+          "dex": "",
+          "int": "true",
+          "wp": "true",
+          "fel": ""
+        }
+      ]
+      },
+      {
+        "name": "Wizard",
+        "levels": [
           {
-            "Wizard’s Apprentice": [
-              {
-                "profession": "Trapper",
-                "ws": "true",
-                "bs": "",
-                "s": "",
-                "t": "",
-                "i": "",
-                "agi": "",
-                "dex": "",
-                "int": "true",
-                "wp": "true",
-                "fel": ""
-              }
-            ],
-            "Journeyman wizard": [
-              {
-                "profession": "Trapper",
-                "ws": "true",
-                "bs": "",
-                "s": "",
-                "t": "",
-                "i": "",
-                "agi": "true",
-                "dex": "",
-                "int": "true",
-                "wp": "true",
-                "fel": ""
-              }
-            ],
-            "Master Wizard": [
-              {
-                "profession": "Master Wizard",
-                "ws": "",
-                "bs": "true",
-                "s": "true",
-                "t": "true",
-                "i": "true",
-                "agi": "",
-                "dex": "true",
-                "int": "true",
-                "wp": "",
-                "fel": "true"
-              }
-            ],
-            "Wizard Lord": [
-              {
-                "profession": "Wizard Lord ",
-                "ws": "",
-                "bs": "true",
-                "s": "true",
-                "t": "true",
-                "i": "true",
-                "agi": "",
-                "dex": "true",
-                "int": "true",
-                "wp": "",
-                "fel": "true"
-              }
-            ]
+            "name": "Wizard’s Apprentice",
+            "profession": "Wizard’s Apprentice",
+            "ws": "true",
+            "bs": "",
+            "s": "",
+            "t": "",
+            "i": "",
+            "agi": "",
+            "dex": "",
+            "int": "true",
+            "wp": "true",
+            "fel": ""
+          },
+          {
+            "name": "Journeyman wizard",
+            "profession": "Journeyman wizard",
+            "ws": "true",
+            "bs": "",
+            "s": "",
+            "t": "",
+            "i": "",
+            "agi": "",
+            "dex": "",
+            "int": "true",
+            "wp": "true",
+            "fel": ""
+          },
+          {
+            "name": "Master Wizard",
+            "profession": "Master Wizard",
+            "ws": "true",
+            "bs": "",
+            "s": "",
+            "t": "",
+            "i": "",
+            "agi": "",
+            "dex": "",
+            "int": "true",
+            "wp": "true",
+            "fel": ""
+          },
+          {
+            "name": "Wizard Lord",
+            "profession": "Wizard Lord",
+            "ws": "true",
+            "bs": "",
+            "s": "",
+            "t": "",
+            "i": "",
+            "agi": "",
+            "dex": "",
+            "int": "true",
+            "wp": "true",
+            "fel": ""
           }
-        ],
-        "Physician": [
+        ]
+      },
+      {
+        "name": "Priest",
+        "levels": [
           {
-            "Physician’s Apprentice": [
-              {
-                "profession": "Physician’s Apprentice",
-                "ws": "true",
-                "bs": "",
-                "s": "",
-                "t": "",
-                "i": "",
-                "agi": "",
-                "dex": "",
-                "int": "true",
-                "wp": "true",
-                "fel": ""
-              }
-            ],
-            "Physician": [
-              {
-                "profession": "Physician",
-                "ws": "true",
-                "bs": "",
-                "s": "",
-                "t": "",
-                "i": "",
-                "agi": "true",
-                "dex": "",
-                "int": "true",
-                "wp": "true",
-                "fel": ""
-              }
-            ],
-            "Doktor": [
-              {
-                "profession": "Doktor",
-                "ws": "",
-                "bs": "true",
-                "s": "true",
-                "t": "true",
-                "i": "true",
-                "agi": "",
-                "dex": "true",
-                "int": "true",
-                "wp": "",
-                "fel": "true"
-              }
-            ],
-            "Court Physician": [
-              {
-                "profession": "Court Physician",
-                "ws": "",
-                "bs": "true",
-                "s": "true",
-                "t": "true",
-                "i": "true",
-                "agi": "",
-                "dex": "true",
-                "int": "true",
-                "wp": "",
-                "fel": "true"
-              }
-            ]
+            "name": "Priest",
+            "profession": "Priest",
+            "ws": "true",
+            "bs": "",
+            "s": "",
+            "t": "",
+            "i": "",
+            "agi": "",
+            "dex": "",
+            "int": "true",
+            "wp": "true",
+            "fel": ""
+          },
+          {
+            "name": "Journeyman wizard",
+            "profession": "Journeyman wizard",
+            "ws": "true",
+            "bs": "",
+            "s": "",
+            "t": "",
+            "i": "",
+            "agi": "",
+            "dex": "",
+            "int": "true",
+            "wp": "true",
+            "fel": ""
+          },
+          {
+            "name": "Master Wizard",
+            "profession": "Master Wizard",
+            "ws": "true",
+            "bs": "",
+            "s": "",
+            "t": "",
+            "i": "",
+            "agi": "",
+            "dex": "",
+            "int": "true",
+            "wp": "true",
+            "fel": ""
+          },
+          {
+            "name": "Wizard Lord",
+            "profession": "Wizard Lord",
+            "ws": "true",
+            "bs": "",
+            "s": "",
+            "t": "",
+            "i": "",
+            "agi": "",
+            "dex": "",
+            "int": "true",
+            "wp": "true",
+            "fel": ""
           }
         ]
       }
-    ],
-    "Ranger": [
+
+    ]
+  },
+  {
+    "name": "Ranger",
+    "careers": [
       {
-        "Bunty Hunter": [
+        "name": "Bounty Hunter",
+        "levels": [
           {
-            "Trapper": [
-              {
-                "profession": "Trapper",
-                "ws": "",
-                "bs": "",
-                "s": "true",
-                "t": "true",
-                "i": "",
-                "agi": "",
-                "dex": "",
-                "int": "",
-                "wp": "",
-                "fel": ""
-              }
-            ],
-            "Hunter": [
-              {
-                "profession": "Hunter",
-                "ws": "",
-                "bs": "true",
-                "s": "true",
-                "t": "true",
-                "i": "",
-                "agi": "",
-                "dex": "",
-                "int": "",
-                "wp": "",
-                "fel": ""
-              }
-            ],
-            "tracker": [
-              {
-                "profession": "tracker",
-                "ws": "",
-                "bs": "true",
-                "s": "true",
-                "t": "true",
-                "i": "true",
-                "agi": "",
-                "dex": "true",
-                "int": "true",
-                "wp": "",
-                "fel": ""
-              }
-            ]
-          }
-        ],
-        "Entertainer": [
+            "name": "Thief-taker",
+            "profession": "Thief-taker",
+            "ws": "",
+            "bs": "",
+            "s": "true",
+            "t": "true",
+            "i": "",
+            "agi": "",
+            "dex": "",
+            "int": "",
+            "wp": "",
+            "fel": ""
+          },
           {
-            "Trapper": [
-              {
-                "profession": "Trapper",
-                "ws": "",
-                "bs": "",
-                "s": "true",
-                "t": "true",
-                "i": "",
-                "agi": "",
-                "dex": "",
-                "int": "",
-                "wp": "",
-                "fel": ""
-              }
-            ],
-            "Hunter": [
-              {
-                "profession": "Hunter",
-                "ws": "",
-                "bs": "true",
-                "s": "true",
-                "t": "true",
-                "i": "",
-                "agi": "",
-                "dex": "",
-                "int": "",
-                "wp": "",
-                "fel": ""
-              }
-            ],
-            "tracker": [
-              {
-                "profession": "tracker",
-                "ws": "",
-                "bs": "true",
-                "s": "true",
-                "t": "true",
-                "i": "true",
-                "agi": "",
-                "dex": "true",
-                "int": "true",
-                "wp": "",
-                "fel": ""
-              }
-            ]
-          }
-        ],
-        "Road Warden": [
+            "name": "Bounty Hunter",
+            "profession": "Bounty Hunter",
+            "ws": "",
+            "bs": "true",
+            "s": "true",
+            "t": "true",
+            "i": "",
+            "agi": "",
+            "dex": "",
+            "int": "",
+            "wp": "",
+            "fel": ""
+          },
           {
-            "Toll Keeper": [
-              {
-                "Custodian": "Toll Keeper",
-                "ws": "",
-                "bs": "",
-                "s": "true",
-                "t": "true",
-                "i": "",
-                "agi": "",
-                "dex": "",
-                "int": "",
-                "wp": "",
-                "fel": ""
-              }
-            ],
-            "Hunter": [
-              {
-                "Road Warden": "Road Warden",
-                "ws": "",
-                "bs": "true",
-                "s": "true",
-                "t": "true",
-                "i": "",
-                "agi": "",
-                "dex": "",
-                "int": "",
-                "wp": "",
-                "fel": ""
-              }
-            ],
-            "Road Sergeant ": [
-              {
-                "profession": "Road Sergeant",
-                "ws": "",
-                "bs": "true",
-                "s": "true",
-                "t": "true",
-                "i": "true",
-                "agi": "",
-                "dex": "true",
-                "int": "true",
-                "wp": "",
-                "fel": ""
-              }
-            ],
-            "Road Captain": [
-              {
-                "profession": "Road Captain",
-                "ws": "",
-                "bs": "true",
-                "s": "true",
-                "t": "true",
-                "i": "true",
-                "agi": "",
-                "dex": "true",
-                "int": "true",
-                "wp": "",
-                "fel": ""
-              }
-            ]
-          }
-        ],
-        "Witch Hunter": [
+            "name": "Master Bounty Hunter",
+            "profession": "Master Bounty Hunter",
+            "ws": "",
+            "bs": "true",
+            "s": "true",
+            "t": "true",
+            "i": "",
+            "agi": "",
+            "dex": "",
+            "int": "",
+            "wp": "",
+            "fel": ""
+          },
           {
-            "Interrogator ": [
-              {
-                "profession": "Interrogator ",
-                "ws": "",
-                "bs": "",
-                "s": "true",
-                "t": "true",
-                "i": "",
-                "agi": "",
-                "dex": "",
-                "int": "",
-                "wp": "",
-                "fel": ""
-              }
-            ],
-            "Witch Hunter": [
-              {
-                "profession": "Witch Hunter",
-                "ws": "",
-                "bs": "true",
-                "s": "true",
-                "t": "true",
-                "i": "",
-                "agi": "",
-                "dex": "",
-                "int": "",
-                "wp": "",
-                "fel": ""
-              }
-            ],
-            "Inquisitor": [
-              {
-                "profession": "Inquisitor",
-                "ws": "",
-                "bs": "true",
-                "s": "true",
-                "t": "true",
-                "i": "true",
-                "agi": "",
-                "dex": "true",
-                "int": "true",
-                "wp": "",
-                "fel": ""
-              }
-            ],
-            "Witchfinder General": [
-              {
-                "profession": "Witchfinder General",
-                "ws": "",
-                "bs": "true",
-                "s": "true",
-                "t": "true",
-                "i": "true",
-                "agi": "",
-                "dex": "true",
-                "int": "true",
-                "wp": "",
-                "fel": ""
-              }
-            ]
+            "name": "Bounty Hunter General",
+            "profession": "Bounty Hunter General",
+            "ws": "",
+            "bs": "true",
+            "s": "true",
+            "t": "true",
+            "i": "",
+            "agi": "",
+            "dex": "",
+            "int": "",
+            "wp": "",
+            "fel": ""
           }
         ]
-      }
-    ],
-    "Rouges": [
+      },
       {
-        "Bawd": [
+        "name": "Entertainer",
+        "levels": [
           {
-            "Hustler": [
-              {
-                "profession": "Trapper",
-                "ws": "",
-                "bs": "",
-                "s": "true",
-                "t": "true",
-                "i": "",
-                "agi": "",
-                "dex": "",
-                "int": "",
-                "wp": "",
-                "fel": ""
-              }
-            ],
-            "Bawd": [
-              {
-                "profession": "Hunter",
-                "ws": "",
-                "bs": "true",
-                "s": "true",
-                "t": "true",
-                "i": "",
-                "agi": "",
-                "dex": "",
-                "int": "",
-                "wp": "",
-                "fel": ""
-              }
-            ],
-            "Procurer": [
-              {
-                "profession": "tracker",
-                "ws": "",
-                "bs": "true",
-                "s": "true",
-                "t": "true",
-                "i": "true",
-                "agi": "",
-                "dex": "true",
-                "int": "true",
-                "wp": "",
-                "fel": ""
-              }
-            ],
-            "Ringleader": [
-              {
-                "profession": "tracker",
-                "ws": "",
-                "bs": "true",
-                "s": "true",
-                "t": "true",
-                "i": "true",
-                "agi": "",
-                "dex": "true",
-                "int": "true",
-                "wp": "",
-                "fel": ""
-              }
-            ]
-          }
-        ],
-        "Charlatan": [
+            "name": "Busker",
+            "profession": "Busker",
+            "ws": "true",
+            "bs": "",
+            "s": "",
+            "t": "",
+            "i": "",
+            "agi": "",
+            "dex": "",
+            "int": "true",
+            "wp": "true",
+            "fel": ""
+          },
           {
-            "Swindler": [
-              {
-                "profession": "Trapper",
-                "ws": "",
-                "bs": "",
-                "s": "true",
-                "t": "true",
-                "i": "",
-                "agi": "",
-                "dex": "",
-                "int": "",
-                "wp": "",
-                "fel": ""
-              }
-            ],
-            "Charlatan": [
-              {
-                "profession": "Trapper",
-                "ws": "",
-                "bs": "",
-                "s": "true",
-                "t": "true",
-                "i": "",
-                "agi": "",
-                "dex": "",
-                "int": "",
-                "wp": "",
-                "fel": ""
-              }
-            ],
-            "Con Artist ": [
-              {
-                "profession": "Hunter",
-                "ws": "",
-                "bs": "true",
-                "s": "true",
-                "t": "true",
-                "i": "",
-                "agi": "",
-                "dex": "",
-                "int": "",
-                "wp": "",
-                "fel": ""
-              }
-            ],
-            "Scoundrel": [
-              {
-                "profession": "tracker",
-                "ws": "",
-                "bs": "true",
-                "s": "true",
-                "t": "true",
-                "i": "true",
-                "agi": "",
-                "dex": "true",
-                "int": "true",
-                "wp": "",
-                "fel": ""
-              }
-            ]
-          }
-        ],
-        "Fence": [
+            "name": "Entertainer",
+            "profession": "Entertainer",
+            "ws": "true",
+            "bs": "",
+            "s": "",
+            "t": "",
+            "i": "",
+            "agi": "",
+            "dex": "",
+            "int": "true",
+            "wp": "true",
+            "fel": ""
+          },
           {
-            "Fencer": [
-              {
-                "profession": "Trapper",
-                "ws": "",
-                "bs": "",
-                "s": "true",
-                "t": "true",
-                "i": "",
-                "agi": "",
-                "dex": "",
-                "int": "",
-                "wp": "",
-                "fel": ""
-              }
-            ],
-            "Duellist": [
-              {
-                "profession": "Hunter",
-                "ws": "",
-                "bs": "true",
-                "s": "true",
-                "t": "true",
-                "i": "",
-                "agi": "",
-                "dex": "",
-                "int": "",
-                "wp": "",
-                "fel": ""
-              }
-            ],
-            "Duelmaster": [
-              {
-                "profession": "tracker",
-                "ws": "",
-                "bs": "true",
-                "s": "true",
-                "t": "true",
-                "i": "true",
-                "agi": "",
-                "dex": "true",
-                "int": "true",
-                "wp": "",
-                "fel": ""
-              }
-            ],
-            "Duelmaster": [
-              {
-                "profession": "Judicial Champion ",
-                "ws": "",
-                "bs": "true",
-                "s": "true",
-                "t": "true",
-                "i": "true",
-                "agi": "",
-                "dex": "true",
-                "int": "true",
-                "wp": "",
-                "fel": ""
-              }
-            ]
-          }
-        ],
-        "Grave Robber": [
+            "name": "Troubadour",
+            "profession": "Troubadour",
+            "ws": "true",
+            "bs": "",
+            "s": "",
+            "t": "",
+            "i": "",
+            "agi": "",
+            "dex": "",
+            "int": "true",
+            "wp": "true",
+            "fel": ""
+          },
           {
-            "Body Snatcher": [
-              {
-                "profession": "Trapper",
-                "ws": "",
-                "bs": "",
-                "s": "true",
-                "t": "true",
-                "i": "",
-                "agi": "",
-                "dex": "",
-                "int": "",
-                "wp": "",
-                "fel": ""
-              }
-            ],
-            "Grave Robber": [
-              {
-                "profession": "Hunter",
-                "ws": "",
-                "bs": "true",
-                "s": "true",
-                "t": "true",
-                "i": "",
-                "agi": "",
-                "dex": "",
-                "int": "",
-                "wp": "",
-                "fel": ""
-              }
-            ],
-            "Tomb Robber ": [
-              {
-                "profession": "tracker",
-                "ws": "",
-                "bs": "true",
-                "s": "true",
-                "t": "true",
-                "i": "true",
-                "agi": "",
-                "dex": "true",
-                "int": "true",
-                "wp": "",
-                "fel": ""
-              }
-            ]
+            "name": "Troupe Leader",
+            "profession": "Troupe Leader",
+            "ws": "true",
+            "bs": "",
+            "s": "",
+            "t": "",
+            "i": "",
+            "agi": "",
+            "dex": "",
+            "int": "true",
+            "wp": "true",
+            "fel": ""
           }
         ]
-      }
-    ],
-    "Warrior": [
+      },
       {
-        "Cavalryman": [
+        "name": "Road Warden",
+        "levels": [
           {
-            "Horseman": [
-              {
-                "profession": "Trapper",
-                "ws": "",
-                "bs": "",
-                "s": "true",
-                "t": "true",
-                "i": "",
-                "agi": "",
-                "dex": "",
-                "int": "",
-                "wp": "",
-                "fel": ""
-              }
-            ],
-            "Cavalryman": [
-              {
-                "profession": "Hunter",
-                "ws": "",
-                "bs": "true",
-                "s": "true",
-                "t": "true",
-                "i": "",
-                "agi": "",
-                "dex": "",
-                "int": "",
-                "wp": "",
-                "fel": ""
-              }
-            ],
-            "Cavalry Sergeant": [
-              {
-                "profession": "tracker",
-                "ws": "",
-                "bs": "true",
-                "s": "true",
-                "t": "true",
-                "i": "true",
-                "agi": "",
-                "dex": "true",
-                "int": "true",
-                "wp": "",
-                "fel": ""
-              }
-            ],
-            "Cavalry Officer": [
-              {
-                "profession": "tracker",
-                "ws": "",
-                "bs": "true",
-                "s": "true",
-                "t": "true",
-                "i": "true",
-                "agi": "",
-                "dex": "true",
-                "int": "true",
-                "wp": "",
-                "fel": ""
-              }
-            ]
+            "name": "Toll Keeper",
+            "profession": "Toll Keeper",
+            "ws": "",
+            "bs": "",
+            "s": "true",
+            "t": "true",
+            "i": "",
+            "agi": "",
+            "dex": "",
+            "int": "",
+            "wp": "",
+            "fel": ""
+          },
+          {
+            "name": "Hunter",
+            "ws": "",
+            "bs": "true",
+            "s": "true",
+            "t": "true",
+            "i": "",
+            "agi": "",
+            "dex": "",
+            "int": "",
+            "wp": "",
+            "fel": ""
+          },
+          {
+            "name": "Road Sergeant",
+            "profession": "Road Sergeant",
+            "ws": "",
+            "bs": "true",
+            "s": "true",
+            "t": "true",
+            "i": "true",
+            "agi": "",
+            "dex": "true",
+            "int": "true",
+            "wp": "",
+            "fel": ""
+          },
+          {
+            "name": "Road Captain",
+            "profession": "Road Captain",
+            "ws": "",
+            "bs": "true",
+            "s": "true",
+            "t": "true",
+            "i": "true",
+            "agi": "",
+            "dex": "true",
+            "int": "true",
+            "wp": "",
+            "fel": ""
           }
-        ],
-        "Guard": [
+        ]
+      },
+      {
+        "name": "Witch Hunter",
+        "levels": [
           {
-            "Sentry": [
-              {
-                "profession": "Sentry — Silver 1",
-                "ws": "",
-                "bs": "",
-                "s": "true",
-                "t": "true",
-                "i": "",
-                "agi": "",
-                "dex": "",
-                "int": "",
-                "wp": "",
-                "fel": ""
-              }
-            ],
-            "Guard": [
-              {
-                "profession": "Hunter",
-                "ws": "",
-                "bs": "true",
-                "s": "true",
-                "t": "true",
-                "i": "",
-                "agi": "",
-                "dex": "",
-                "int": "",
-                "wp": "",
-                "fel": ""
-              }
-            ],
-            "Honour Guard": [
-              {
-                "profession": "tracker",
-                "ws": "",
-                "bs": "true",
-                "s": "true",
-                "t": "true",
-                "i": "true",
-                "agi": "",
-                "dex": "true",
-                "int": "true",
-                "wp": "",
-                "fel": ""
-              }
-            ],
-            "Guard Officer": [
-              {
-                "profession": "tracker",
-                "ws": "",
-                "bs": "true",
-                "s": "true",
-                "t": "true",
-                "i": "true",
-                "agi": "",
-                "dex": "true",
-                "int": "true",
-                "wp": "",
-                "fel": ""
-              }
-            ]
-          }
-        ],
-        "Knight": [
+            "name": "Interrogator",
+            "profession": "Interrogator",
+            "ws": "",
+            "bs": "",
+            "s": "true",
+            "t": "true",
+            "i": "",
+            "agi": "",
+            "dex": "",
+            "int": "",
+            "wp": "",
+            "fel": ""
+          },
           {
-            "Squire": [
-              {
-                "profession": "Trapper",
-                "ws": "",
-                "bs": "",
-                "s": "true",
-                "t": "true",
-                "i": "",
-                "agi": "",
-                "dex": "",
-                "int": "",
-                "wp": "",
-                "fel": ""
-              }
-            ],
-            "Knight": [
-              {
-                "profession": "Hunter",
-                "ws": "",
-                "bs": "true",
-                "s": "true",
-                "t": "true",
-                "i": "",
-                "agi": "",
-                "dex": "",
-                "int": "",
-                "wp": "",
-                "fel": ""
-              }
-            ],
-            "First Knight ": [
-              {
-                "profession": "tracker",
-                "ws": "",
-                "bs": "true",
-                "s": "true",
-                "t": "true",
-                "i": "true",
-                "agi": "",
-                "dex": "true",
-                "int": "true",
-                "wp": "",
-                "fel": ""
-              }
-            ],
-            "Knight of the Inner Circle": [
-              {
-                "profession": "tracker",
-                "ws": "",
-                "bs": "true",
-                "s": "true",
-                "t": "true",
-                "i": "true",
-                "agi": "",
-                "dex": "true",
-                "int": "true",
-                "wp": "",
-                "fel": ""
-              }
-            ]
-          }
-        ],
-        "Pit Fighter": [
+            "name": "Witch Hunter",
+            "profession": "Interrogator",
+            "ws": "",
+            "bs": "true",
+            "s": "true",
+            "t": "true",
+            "i": "",
+            "agi": "",
+            "dex": "",
+            "int": "",
+            "wp": "",
+            "fel": ""
+          },
           {
-            "Squire": [
-              {
-                "profession": "Trapper",
-                "ws": "",
-                "bs": "",
-                "s": "true",
-                "t": "true",
-                "i": "",
-                "agi": "",
-                "dex": "",
-                "int": "",
-                "wp": "",
-                "fel": ""
-              }
-            ],
-            "Knight": [
-              {
-                "profession": "Hunter",
-                "ws": "",
-                "bs": "true",
-                "s": "true",
-                "t": "true",
-                "i": "",
-                "agi": "",
-                "dex": "",
-                "int": "",
-                "wp": "",
-                "fel": ""
-              }
-            ],
-            "First Knight ": [
-              {
-                "profession": "tracker",
-                "ws": "",
-                "bs": "true",
-                "s": "true",
-                "t": "true",
-                "i": "true",
-                "agi": "",
-                "dex": "true",
-                "int": "true",
-                "wp": "",
-                "fel": ""
-              }
-            ],
-            "Knight of the Inner Circle": [
-              {
-                "profession": "tracker",
-                "ws": "",
-                "bs": "true",
-                "s": "true",
-                "t": "true",
-                "i": "true",
-                "agi": "",
-                "dex": "true",
-                "int": "true",
-                "wp": "",
-                "fel": ""
-              }
-            ]
+            "name": "Inquisitor",
+            "profession": "Inquisitor",
+            "ws": "",
+            "bs": "true",
+            "s": "true",
+            "t": "true",
+            "i": "true",
+            "agi": "",
+            "dex": "true",
+            "int": "true",
+            "wp": "",
+            "fel": ""
+          },
+          {
+            "name": "Witchfinder General",
+            "profession": "Witchfinder General",
+            "ws": "",
+            "bs": "true",
+            "s": "true",
+            "t": "true",
+            "i": "true",
+            "agi": "",
+            "dex": "true",
+            "int": "true",
+            "wp": "",
+            "fel": ""
           }
         ]
       }
     ]
-}
+  },
+  {
+    "name": "Rouges",
+    "careers": [
+      {
+        "name": "Bawd",
+        "levels": [
+          {
+            "name": "Hustler",
+            "profession": "Hustler",
+            "ws": "",
+            "bs": "true",
+            "s": "true",
+            "t": "true",
+            "i": "",
+            "agi": "",
+            "dex": "",
+            "int": "",
+            "wp": "",
+            "fel": ""
+          },
+
+          {
+            "name": "Bawd",
+            "profession": "Bawd",
+            "ws": "",
+            "bs": "true",
+            "s": "true",
+            "t": "true",
+            "i": "",
+            "agi": "",
+            "dex": "",
+            "int": "",
+            "wp": "",
+            "fel": ""
+          },
+          {
+            "name": "Procurer",
+            "profession": "Procurer",
+            "ws": "",
+            "bs": "true",
+            "s": "true",
+            "t": "true",
+            "i": "true",
+            "agi": "",
+            "dex": "true",
+            "int": "true",
+            "wp": "",
+            "fel": ""
+          },
+          {
+            "name": "Ringleader",
+            "profession": "Ringleader",
+            "ws": "",
+            "bs": "true",
+            "s": "true",
+            "t": "true",
+            "i": "true",
+            "agi": "",
+            "dex": "true",
+            "int": "true",
+            "wp": "",
+            "fel": ""
+          }
+        ]
+      },
+      {
+        "name": "Charlatan",
+        "levels": [
+          {
+            "name": "Swindler",
+            "profession": "Swindler",
+            "ws": "true",
+            "bs": "",
+            "s": "",
+            "t": "",
+            "i": "",
+            "agi": "",
+            "dex": "",
+            "int": "true",
+            "wp": "true",
+            "fel": ""
+          },
+          {
+            "name": "Charlatan",
+            "profession": "Charlatan",
+            "ws": "true",
+            "bs": "",
+            "s": "",
+            "t": "",
+            "i": "",
+            "agi": "",
+            "dex": "",
+            "int": "true",
+            "wp": "true",
+            "fel": ""
+          },
+          {
+            "name": "Con Artist",
+            "profession": "Con Artist",
+            "ws": "true",
+            "bs": "",
+            "s": "",
+            "t": "",
+            "i": "",
+            "agi": "",
+            "dex": "",
+            "int": "true",
+            "wp": "true",
+            "fel": ""
+          },
+          {
+            "name": "Scoundrel",
+            "profession": "Scoundrel",
+            "ws": "true",
+            "bs": "",
+            "s": "",
+            "t": "",
+            "i": "",
+            "agi": "",
+            "dex": "",
+            "int": "true",
+            "wp": "true",
+            "fel": ""
+          }
+        ]
+      },
+      {
+        "name": "Fence",
+        "levels": [
+          {
+            "name": "Fencer",
+            "profession": "Fencer",
+            "ws": "",
+            "bs": "",
+            "s": "true",
+            "t": "true",
+            "i": "",
+            "agi": "",
+            "dex": "",
+            "int": "",
+            "wp": "",
+            "fel": ""
+          },
+          {
+            "name": "Duellist",
+            "profession": "Duellist",
+            "ws": "",
+            "bs": "true",
+            "s": "true",
+            "t": "true",
+            "i": "",
+            "agi": "",
+            "dex": "",
+            "int": "",
+            "wp": "",
+            "fel": ""
+          },
+          {
+            "name": "Duelmaster",
+            "profession": "Duelmaster",
+            "ws": "",
+            "bs": "true",
+            "s": "true",
+            "t": "true",
+            "i": "true",
+            "agi": "",
+            "dex": "true",
+            "int": "true",
+            "wp": "",
+            "fel": ""
+          },
+          {
+            "name": "Judicial Champion",
+            "profession": "Judicial Champion",
+            "ws": "",
+            "bs": "true",
+            "s": "true",
+            "t": "true",
+            "i": "true",
+            "agi": "",
+            "dex": "true",
+            "int": "true",
+            "wp": "",
+            "fel": ""
+          }
+        ]
+      },
+      {
+        "name": "Grave Robber",
+        "levels": [
+          {
+            "name": "Body Snatcher",
+            "profession": "Body Snatcher",
+            "ws": "",
+            "bs": "",
+            "s": "true",
+            "t": "true",
+            "i": "",
+            "agi": "",
+            "dex": "",
+            "int": "",
+            "wp": "",
+            "fel": ""
+          },
+          {
+            "name": "Grave Robber",
+            "profession": "Grave Robber",
+            "ws": "",
+            "bs": "true",
+            "s": "true",
+            "t": "true",
+            "i": "",
+            "agi": "",
+            "dex": "",
+            "int": "",
+            "wp": "",
+            "fel": ""
+          },
+          {
+            "name": "Tomb Robber",
+            "profession": "Tomb Robber",
+            "ws": "",
+            "bs": "true",
+            "s": "true",
+            "t": "true",
+            "i": "true",
+            "agi": "",
+            "dex": "true",
+            "int": "true",
+            "wp": "",
+            "fel": ""
+          },
+          {
+            "name": "Treasure Hunter",
+            "profession": "Treasure Hunter",
+            "ws": "",
+            "bs": "true",
+            "s": "true",
+            "t": "true",
+            "i": "true",
+            "agi": "",
+            "dex": "true",
+            "int": "true",
+            "wp": "",
+            "fel": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Warrior",
+    "careers": [
+      {
+        "name": "Cavalryman",
+        "levels": [
+          {
+            "name": "Horseman",
+            "profession": "Horseman",
+            "ws": "",
+            "bs": "true",
+            "s": "true",
+            "t": "true",
+            "i": "",
+            "agi": "",
+            "dex": "",
+            "int": "",
+            "wp": "",
+            "fel": ""
+          },
+
+          {
+            "name": "Cavalryman",
+            "profession": "Cavalryman",
+            "ws": "",
+            "bs": "true",
+            "s": "true",
+            "t": "true",
+            "i": "",
+            "agi": "",
+            "dex": "",
+            "int": "",
+            "wp": "",
+            "fel": ""
+          },
+          {
+            "name": "Cavalry Sergeant",
+            "profession": "Cavalry Sergeant",
+            "ws": "",
+            "bs": "true",
+            "s": "true",
+            "t": "true",
+            "i": "true",
+            "agi": "",
+            "dex": "true",
+            "int": "true",
+            "wp": "",
+            "fel": ""
+          },
+          {
+            "name": "Cavalry Officer",
+            "profession": "Cavalry Officer",
+            "ws": "",
+            "bs": "true",
+            "s": "true",
+            "t": "true",
+            "i": "true",
+            "agi": "",
+            "dex": "true",
+            "int": "true",
+            "wp": "",
+            "fel": ""
+          }
+        ]
+      },
+      {
+        "name": "Guard",
+        "levels": [
+          {
+            "name": "Sentry",
+            "profession": "Sentry",
+            "ws": "true",
+            "bs": "",
+            "s": "",
+            "t": "",
+            "i": "",
+            "agi": "",
+            "dex": "",
+            "int": "true",
+            "wp": "true",
+            "fel": ""
+          },
+          {
+            "name": "Guard",
+            "profession": "Guard",
+            "ws": "true",
+            "bs": "",
+            "s": "",
+            "t": "",
+            "i": "",
+            "agi": "",
+            "dex": "",
+            "int": "true",
+            "wp": "true",
+            "fel": ""
+          },
+          {
+            "name": "Honour Guard",
+            "profession": "Honour Guard",
+            "ws": "true",
+            "bs": "",
+            "s": "",
+            "t": "",
+            "i": "",
+            "agi": "",
+            "dex": "",
+            "int": "true",
+            "wp": "true",
+            "fel": ""
+          },
+          {
+            "name": "Guard Officer",
+            "profession": "Guard Officer",
+            "ws": "true",
+            "bs": "",
+            "s": "",
+            "t": "",
+            "i": "",
+            "agi": "",
+            "dex": "",
+            "int": "true",
+            "wp": "true",
+            "fel": ""
+          }
+        ]
+      },
+      {
+        "name": "Knight",
+        "levels": [
+          {
+            "name": "Squire",
+            "profession": "Squire",
+            "ws": "",
+            "bs": "",
+            "s": "true",
+            "t": "true",
+            "i": "",
+            "agi": "",
+            "dex": "",
+            "int": "",
+            "wp": "",
+            "fel": ""
+          },
+          {
+            "name": "Knight",
+            "profession": "Knight",
+            "ws": "",
+            "bs": "true",
+            "s": "true",
+            "t": "true",
+            "i": "",
+            "agi": "",
+            "dex": "",
+            "int": "",
+            "wp": "",
+            "fel": ""
+          },
+          {
+            "name": "First Knight",
+            "profession": "First Knight",
+            "ws": "",
+            "bs": "true",
+            "s": "true",
+            "t": "true",
+            "i": "true",
+            "agi": "",
+            "dex": "true",
+            "int": "true",
+            "wp": "",
+            "fel": ""
+          },
+          {
+            "name": "Knight of the Inner Circle",
+            "profession": "Knight of the Inner Circle",
+            "ws": "",
+            "bs": "true",
+            "s": "true",
+            "t": "true",
+            "i": "true",
+            "agi": "",
+            "dex": "true",
+            "int": "true",
+            "wp": "",
+            "fel": ""
+          }
+        ]
+      },
+      {
+        "name": "Pit Fighter",
+        "levels": [
+          {
+            "name": "Pugilist",
+            "profession": "Body Snatcher",
+            "ws": "",
+            "bs": "",
+            "s": "true",
+            "t": "true",
+            "i": "",
+            "agi": "",
+            "dex": "",
+            "int": "",
+            "wp": "",
+            "fel": ""
+          },
+          {
+            "name": "Pit Fighter",
+            "profession": "Grave Robber",
+            "ws": "",
+            "bs": "true",
+            "s": "true",
+            "t": "true",
+            "i": "",
+            "agi": "",
+            "dex": "",
+            "int": "",
+            "wp": "",
+            "fel": ""
+          },
+          {
+            "name": "Pit Champion",
+            "profession": "Tomb Robber",
+            "ws": "",
+            "bs": "true",
+            "s": "true",
+            "t": "true",
+            "i": "true",
+            "agi": "",
+            "dex": "true",
+            "int": "true",
+            "wp": "",
+            "fel": ""
+          },
+          {
+            "name": "Pit Legend ",
+            "profession": "Treasure Hunter",
+            "ws": "",
+            "bs": "true",
+            "s": "true",
+            "t": "true",
+            "i": "true",
+            "agi": "",
+            "dex": "true",
+            "int": "true",
+            "wp": "",
+            "fel": ""
+          }
+        ]
+      }
+    ]
+  }
+
+]
 

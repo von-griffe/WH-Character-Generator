@@ -1,16 +1,18 @@
 import React from 'react';
+import Select from './shared/Select.jsx'
+import Checkbox from './shared/Checkbox.jsx'
+import CheckBox from "@material-ui/core/es/internal/svg-icons/CheckBox";
 
 class Careers extends React.Component {
     constructor(props) {
         super(props);
         console.log(props);
         this.state = {
-            value: "",
+            value: [],
             warrior: "Warrior",
             ranger: "Ranger",
             academics: "Academics",
             rouges: "Rouges",
-            props: props.propsData,
             characteristics: [{
                 race: "choose race:",
                 ws: "10",
@@ -24,145 +26,216 @@ class Careers extends React.Component {
                 wp: "10",
                 fel: "10",
             }],
+            titleType: "Wybierz typ postaci",
+            titleProfession: "Wybierz profesje",
         };
+
     }
+
 
     handleChange = (event) => {
         return this.setState({
             value: (event.target.value)
+
         });
     };
 
-    renderClass = () => {
-        return Object.keys(this.state.props.default).map((key,  index) => {
+
+    getClassName = () => {
+        return Object.keys(this.props.propsData).map((key, index) => {
+            let objCareers = this.props.propsData[key];
+            return objCareers.name;
+        });
+    };
+
+
+    getCareerName = () => {
+        return Object.keys(this.props.propsData).map((key, index) => {
+            return this.props.propsData[key].careers
+        });
+    };
+
+    renderCareersClass = () => {
+        return this.getClassName().map((key, index) => {
             return <option key={index} value={key}>{key}</option>
+        });
+    };
+
+    renderCareer = () => {
+        return this.getClassName().map((key, index) => {
+            if (this.state.value === key) {
+                return (this.props.propsData[index].careers).map((key, index) => {
+                    return <option key={index} value={key.name}>{key.name}</option>
+                })
+            }
         })
     };
 
-    renderCareers = (value) => {
-
-        if (value === undefined) {
-
-            if ((this.getKeyCareer()[0]).hasOwnProperty(this.state.value)){
-
-                return Object.keys(this.state.props.default["Academics"][0]).map((key, i) => {
-                    return <option key={i} value={key}>{key}</option>
-                });
-            } else if ((this.getKeyCareer()[1]).hasOwnProperty(this.state.value)){
-
-                return Object.keys(this.state.props.default["Ranger"][0]).map((key, i) => {
-                    return <option key={i} value={key}>{key}</option>
-                });
-            } else if ((this.getKeyCareer()[2]).hasOwnProperty(this.state.value)){
-
-                return Object.keys(this.state.props.default["Rouges"][0]).map((key, i) => {
-                    return <option key={i} value={key}>{key}</option>
-                });
-            } else if ((this.getKeyCareer()[3]).hasOwnProperty(this.state.value)) {
-
-                return Object.keys(this.state.props.default["Warrior"][0]).map((key, i) => {
-                    return <option key={i} value={key}>{key}</option>
-                });
-            }
-
-        } else {
-            return Object.keys(this.state.props.default[value][0]).map((key, i) => {
-                return <option key={i} value={key}>{key}</option>
-            });
-        }
+    getAllCareersNames = () => {
+        return this.getCareerName().map((key, index) => {
+            return key.map((keys, index) => {
+                return keys.name
+            })
+        })
     };
 
-    getKeyCareer = () => {
-        return Object.keys(this.state.props.default).map((key, index) => {
-            let objCareers = this.state.props.default[key][0];
-            return objCareers;
-        });
-    };
-
-    getCareerLevel = () => {
-
-        if ((this.getKeyCareer()[0]).hasOwnProperty(this.state.value)){
-
-            return Object.keys((this.state.props.default["Academics"][0])[this.state.value][0]).map((key, index) => {
-                return <div key={index} value={key} > <span>{index + 1}</span> {key }</div>
-            });
-
-        } else if ((this.getKeyCareer()[1]).hasOwnProperty(this.state.value)){
-
-            return Object.keys((this.state.props.default["Ranger"][0])[this.state.value][0]).map((key, index) => {
-                return <div key={index} value={key} > <span>{index + 1}</span> {key}</div>
-            });
-
-        } else if ((this.getKeyCareer()[2]).hasOwnProperty(this.state.value)){
-
-            return Object.keys((this.state.props.default["Rouges"][0])[this.state.value][0]).map((key, index) => {
-                return <div key={index} value={key} > <span>{index + 1}</span> {key }</div>
-            });
-
-        } else if ((this.getKeyCareer()[3]).hasOwnProperty(this.state.value)) {
-
-            return Object.keys((this.state.props.default["Warrior"][0])[this.state.value][0]).map((key, index) => {
-                return <div key={index} value={key} > <span>{index + 1}</span> {key }</div>
-            });
-        }
+    getCareersTab = () => {
+        return this.getAllCareersNames().map((key, index) => {
+            return key
+        })
     };
 
 
-    renderAllCareers = () => {
-
-        return Object.keys(this.state.props.default).map((key, i) => {
-            return Object.keys(this.state.props.default[key][0]).map((key, i) => {
-                return <option key={i} value={key}>{key}</option>
-            });
-        });
+    getProfessionStats = () => {
+        return this.getCareerName().map((el, index) => {
+            el.map((item,index) => {
+                return
+                if (item.name === this.state.value) {
+                    return item.levels.map((el, index) => {
+                        console.log(el.name);
+                        return <div> { el.name } </div>
+                    })
+                }
+            })
+        })
     };
+
+    // renderProfessionState = () => {
+    //     return this.getProfessionStats().map((el, i) => {
+    //         console.log(el);
+    //     })
+    // };
+
 
     render() {
 
-        console.log(this.getKeyCareer());
-
-        if (this.state.props.default.hasOwnProperty(this.state.value)) {
+        if (this.getClassName().indexOf(this.state.value) > -1) {
             return <div>
-                <select onChange={this.handleChange}>
-                    <option value="" disabled selected>Wybierz klasę</option>
-                    {this.renderClass()}
-                </select>
-                <select onChange={this.handleChange}>
-                    <option value="" disabled selected>Wybierz profesję</option>
-                    {this.renderCareers(this.state.value)}
-                </select>
 
+                <Select
+                    onChange={this.handleChange}
+                    render={this.renderCareersClass()}
+                    title={this.state.titleType}
+                />
+
+                <Select
+                    onChange={this.handleChange}
+                    render={this.renderCareer()}
+                    title={this.state.titleProfession}
+                />
             </div>
 
-        } else if ((this.getKeyCareer()[0]).hasOwnProperty(this.state.value) ||
-            (this.getKeyCareer()[1]).hasOwnProperty(this.state.value) ||
-            (this.getKeyCareer()[2]).hasOwnProperty(this.state.value) ||
-            (this.getKeyCareer()[3]).hasOwnProperty(this.state.value)
-        ) {
+        } else if (this.getCareersTab()[0].indexOf(this.state.value) > -1 ||
+            this.getCareersTab()[1].indexOf(this.state.value) > -1 ||
+            this.getCareersTab()[2].indexOf(this.state.value) > -1 ||
+            this.getCareersTab()[3].indexOf(this.state.value) > -1) {
 
             return <div>
-                <select onChange={this.handleChange}>
-                    <option value="" disabled selected>Wybierz klasę</option>
-                    {this.renderClass()}
-                </select>
+                <Select
+                    onChange={this.handleChange}
+                    render={this.renderCareersClass()}
+                    title={this.state.titleType}
+                />
+                <Select
+                    onChange={this.handleChange}
+                    render={this.renderCareer()}
+                    title={this.state.titleProfession}
+                />
 
-                <select onChange={this.handleChange}>
-                    <option value="" disabled selected>Wybierz profesję</option>
-                    {this.renderCareers()}
-                </select>
-
-                <div>{"wybrana profesja: "} {this.state.value}</div>
-                <div>{"poziom postaci: "}  {this.getCareerLevel()}</div>
+                <div>
+                    {"wybrana profesja:"}
+                    {this.state.value}
+                </div>
+                <div>
+                    <CheckBox
+                        type="checkbox"
+                        onChange={this.handleInputChange}
+                    />
+                    {this.getProfessionStats()}
+                </div>
 
             </div>
         }
-
         return <div>
-            <select onChange={this.handleChange}>
-                <option value="" disabled selected>Wybierz klase</option>
-                {this.renderClass()}
-            </select>
+            <Select
+                onChange={this.handleChange}
+                render={this.renderCareersClass()}
+                title={this.state.titleType}
+            />
         </div>
     }
 }
+
 export default Careers
+
+
+// renderCareersClass = () => {
+//     const keyCareers = this.getClassName();
+//     const { value } = this.state;
+//
+//     const foundCareer = keyCareers.find((keyCareer) => {
+//
+//         console.log(keyCareer.hasOwnProperty(value));
+//         return keyCareer.hasOwnProperty(value);
+//     });
+// };
+
+
+//
+// getCareerLevel = () => {
+
+//     if ((this.getClassName()[0]).hasOwnProperty(this.state.value)){
+//
+//         return Object.keys((this.props.propsData["Academics"][0])[this.state.value][0]).map((key, index) => {
+//             return <div key={index} value={key} >  <span>{index + 1}</span> {this.createCheckbox()} {key}</div>
+//         });
+//
+//     } else if ((this.getClassName()[1]).hasOwnProperty(this.state.value)){
+//
+//         return Object.keys((this.props.propsData["Ranger"][0])[this.state.value][0]).map((key, index) => {
+//             return <div key={index} value={key} > <span>{index + 1}</span> {this.createCheckbox()} {key} </div>
+//         });
+//
+//     } else if ((this.getClassName()[2]).hasOwnProperty(this.state.value)){
+//
+//         return Object.keys((this.props.propsData["Rouges"][0])[this.state.value][0]).map((key, index) => {
+//             return <div key={index} value={key} > <span>{index + 1}</span> {this.createCheckbox()} {key}</div>
+//         });
+//
+//     } else if ((this.getClassName()[3]).hasOwnProperty(this.state.value)) {
+//
+//         return Object.keys((this.props.propsData["Warrior"][0])[this.state.value][0]).map((key, index) => {
+//             return <div key={index} value={key} > <span>{index + 1}</span> {this.createCheckbox()} {key} </div>
+//         });
+//     }
+// };
+//
+
+
+//
+//
+// renderAllCareers = () => {
+//
+//     return Object.keys(this.props.propsData).map((key, i) => {
+//         return Object.keys(this.props.propsData[key][0]).map((key, i) => {
+//             return <option key={i} value={key}>{key}</option>
+//         });
+//     });
+// };
+//
+//
+// createCheckbox = (label) => {
+//     return <Checkbox
+//         label={"label"}
+//         handleCheckboxChange={this.toggleCheckbox}
+//         key={label}
+//     />
+// }
+//
+//
+// compareKeyCareer= () => {
+//     return Object.keys(this.props.propsData).map((key, index) => {
+//         console.log(key);
+//         console.log("klucze", Object.keys(this.props.propsData));
+//     });
+// };

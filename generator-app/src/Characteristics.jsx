@@ -1,18 +1,19 @@
 import React from 'react';
 import Careers from "./Careers";
-import * as data from "./data/careers";
+import Select from "./shared/Select";
 
 // const data = require("./data/careers.json")
 
 class Characteristics extends React.Component {
     constructor(props) {
         super(props);
+        // console.log(props);
         this.state = {
             human: "Human",
             elf: "Elf",
             dwarf: "Dwarf",
             value: [],
-            props: props.propsData,
+            checkRace:"Wybierz rase",
             characteristics: [{
                 race: "choose your race",
                 ws: "10",
@@ -119,22 +120,20 @@ class Characteristics extends React.Component {
 
     render() {
         return <div>
-            <select onChange={this.handleChange}>
-                <option value="" disabled selected>Wybierz rasę</option>
-                {this.getRace()}
-            </select>
-
+            <Select
+                onChange={this.handleChange}
+                render={this.getRace()}
+                title={this.state.checkRace}
+            />
+            <Careers
+                propsData={this.props.propsData}
+            />
             <div>
                 <button onClick={this.handleClick}>Wylosuj cechy</button>
             </div>
-
             <div>
                 <div> {this.getBaseNumbers()} </div>
             </div>
-            <div>
-                <Careers propsData={data}/>
-            </div>
-
         </div>
     }
 }
