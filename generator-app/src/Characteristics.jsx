@@ -51,7 +51,7 @@ class Characteristics extends React.Component {
             return Object.keys(quotes).map((key, index) => {
                 if (index > 0) {
                     return <div key={index}>
-                        <p>{key.toUpperCase()} | {parseInt(quotes[key])} | </p>
+                        <div>{key.toUpperCase()} | {parseInt(quotes[key])} | </div>
                     </div>;
                 }
                 else if (index === 0) {
