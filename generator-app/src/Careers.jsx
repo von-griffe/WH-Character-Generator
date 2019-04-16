@@ -2,6 +2,7 @@ import React from 'react';
 import Select from './shared/Select.jsx'
 import Checkbox from './shared/Checkbox.jsx'
 import CheckBox from "@material-ui/core/es/internal/svg-icons/CheckBox";
+import NativeSelect from "./shared/MultiSelect";
 
 class Careers extends React.Component {
     constructor(props) {

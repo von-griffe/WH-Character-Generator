@@ -1,18 +1,23 @@
-import React from 'react';
+import React from "react";
 import careerData from "../data/careers";
-import PropTypes from 'prop-types';
-import {withStyles} from '@material-ui/core/styles';
-import Stepper from '@material-ui/core/Stepper';
-import Step from '@material-ui/core/Step';
-import StepLabel from '@material-ui/core/StepLabel';
-import StepContent from '@material-ui/core/StepContent';
-import Button from '@material-ui/core/Button';
-import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
+import PropTypes from "prop-types";
+import {withStyles} from "@material-ui/core/styles";
+import Stepper from "@material-ui/core/Stepper";
+import Step from "@material-ui/core/Step";
+import StepLabel from "@material-ui/core/StepLabel";
+import StepContent from "@material-ui/core/StepContent";
+import Button from "@material-ui/core/Button";
+import Paper from "@material-ui/core/Paper";
+import Typography from "@material-ui/core/Typography";
 import Characteristics from "../Characteristics";
+import { getStepContent } from "../apiUtilities/helpers.jsx";
+import TextFields from "../shared/Inputs.jsx";
+import RadioButtons from "./RadioButtons.jsx";
+import NativeSelect from "./MultiSelect";
+
 
 const data = careerData;
-const races = ["Human", "Elf", "Dwarf"]
+const races = ["Human", "Elf", "Dwarf"];
 
 const styles = theme => ({
     root: {
@@ -21,7 +26,6 @@ const styles = theme => ({
         borderRadius: "5px",
         boxShadow: "0 2px 2px 1px rgba(0, 0, 0, 0.15)"
     },
-
     button: {
         marginTop: theme.spacing.unit,
         marginRight: theme.spacing.unit,
@@ -34,31 +38,63 @@ const styles = theme => ({
     },
 });
 
-function getSteps() {
-    return ['Select Gender', 'Choose name ', 'add description'];
+const getSteps = () => {
+    return ["Select Gender:", "Choose name: ", "Age: ", "Choose your race: "];
 }
 
-function getStepContent(step) {
-    switch (step) {
-        case 0:
-            return `female / male`;
-        case 1:
-            return 'input';
-        case 2:
-            return `textaera`;
-        default:
-            return 'Unknown step';
-    }
-}
+
 
 class VerticalLinearStepper extends React.Component {
+
     state = {
         activeStep: 0,
+        label: "Choose hero name",
+        labelAge: "Past age",
+        femaleLabel: "Female",
+        maleLabel: "Male",
+        holderName: "Name of Hero",
+        holderAge: "Age of Hero",
+        value: "value",
+        number: "number",
+        text: "text",
+        name:"",
+        gender: "male",
+        age: "",
+        race: "",
+
     };
+
+
+
+
+    handleChange = name => event => {
+        this.setState({ [name]: event.target.value });
+    };
+
+
+    renderSection = () => {
+        return (this.state.value === false) ?
+            <NativeSelect
+                // onChange={this.handleChange('value')}
+                // renderRace={this.getRace}
+                onChange={this.handleChange('name')}
+                value={this.state.name}
+            />
+            :
+            <div>
+                <NativeSelect
+                    onChange={this.handleChange('value')}
+                    value={this.state.name}
+                    // renderRace={this.getRace}
+                />
+            </div>
+    };
+
 
     handleNext = () => {
         this.setState(state => ({
             activeStep: state.activeStep + 1,
+            value: this.state.value,
         }));
     };
 
@@ -72,23 +108,65 @@ class VerticalLinearStepper extends React.Component {
 
         this.setState({
             activeStep: 0,
-
+            name: "",
+            value: "",
+            age:"",
+            gender:"",
+            race:""
         });
     };
 
     render() {
+        const gender = <div>
+
+            <RadioButtons
+                onChange={this.handleChange('gender')}
+                value={this.state.gender}
+                label = {this.state.femaleLabel}
+            />
+
+        </div>;
+        const inputName = <div>
+
+            <TextFields
+                onChange={this.handleChange('name')}
+                value={this.state.name}
+                label = {this.state.label}
+                placeholder={this.state.holderName}
+                type={this.state.text}
+
+            />
+        </div>;
+        const inputAge = <div>
+
+            <TextFields
+                onChange={this.handleChange('age')}
+                value={this.state.age}
+                label = {this.state.labelAge}
+                placeholder={this.state.holderAge}
+                type={this.state.number}
+
+            />
+        </div>;
+        const selectRace =  this.renderSection();
 
         const {classes} = this.props;
         const steps = getSteps();
         const {activeStep} = this.state;
-
         const stepperElements = <div className={classes.root}>
             <Stepper activeStep={activeStep} orientation="vertical">
                 {steps.map((label, index) => (
-                    <Step key={label}>
-                        <StepLabel>{label}</StepLabel>
+                    <Step key={label} >
+                        <StepLabel>{label} {
+                            index===0? this.state.gender:
+                                index === 1? this.state.name:
+                                    index===2? this.state.age:
+                                        index===3? this.state.race:null
+                        }
+                        </StepLabel>
                         <StepContent>
-                            <Typography>{getStepContent(index)}</Typography>
+                            <div> {getStepContent(index, gender, inputName, inputAge, selectRace )}</div>
+
                             <div className={classes.actionsContainer}>
                                 <div>
                                     <Button
@@ -110,6 +188,8 @@ class VerticalLinearStepper extends React.Component {
                             </div>
                         </StepContent>
                     </Step>
+
+
                 ))}
             </Stepper>
             {activeStep === steps.length && (
@@ -123,10 +203,9 @@ class VerticalLinearStepper extends React.Component {
             )}
         </div>;
 
-        return this.state.activeStep === 3 ? <div> {stepperElements}
+        return this.state.activeStep === steps.length ? <div> {stepperElements}
             <Characteristics propsData={data} propsRace={races}/>
         </div> : stepperElements;
-
     }
 }
 

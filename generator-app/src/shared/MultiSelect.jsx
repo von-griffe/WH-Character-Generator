@@ -24,15 +24,13 @@ const styles = theme => ({
 
 class NativeSelect extends React.Component {
     state = {
-        age: '',
-        name: 'hai',
         labelWidth: 0,
 
     };
 
-    handleChange = name => event => {
-        this.setState({ [name]: event.target.value });
-    };
+    // handleChange = name => event => {
+    //     this.setState({ [name]: event.target.value });
+    // };
 
 
     render() {
@@ -44,19 +42,21 @@ class NativeSelect extends React.Component {
             <div className={classes.root}>
                 <FormControl required className={classes.formControl}>
                     <InputLabel htmlFor="age-native-required">
-                    {this.props.title}
+                    {/*{this.props.title}*/}
                     </InputLabel>
                     <Select
                         native
                         value={this.state.age}
-                        // onChange={this.handleChange('Race')}
                         onChange={this.props.onChange}
+                        // onChange={this.handleChange('Race')}
+
+
                         inputProps={{
                             id: 'age-native-required',
                         }}
                     >
-                        <option value="" />
-                        {this.props.renderRace()}
+                        <option value={this.props.value} />
+                        {/*{this.props.renderRace()}*/}
                     </Select>
                     <FormHelperText>Required</FormHelperText>
                 </FormControl>
