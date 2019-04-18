@@ -6,6 +6,7 @@ import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 
+const races = ["choose your race","Human", "Elf", "Dwarf"];
 
 
 const styles = theme => ({
@@ -23,40 +24,44 @@ const styles = theme => ({
 });
 
 class NativeSelect extends React.Component {
-    state = {
-        labelWidth: 0,
+    constructor(props) {
+        super(props);
+        this.state = {
+            value: "",
+            name:"",
+            mode: undefined
+        }
+    }
 
-    };
+    componentWillMount() {
+        let mode;
+            mode = this.props.data;
+        this.setState({ mode });
+    }
 
-    // handleChange = name => event => {
-    //     this.setState({ [name]: event.target.value });
-    // };
+
+
 
 
     render() {
-        console.log("props", this.props.renderRace);
-
-        const { classes } = this.props;
+        console.log(this.state.mode);
 
         return (
-            <div className={classes.root}>
-                <FormControl required className={classes.formControl}>
+            <div>
+                <FormControl>
                     <InputLabel htmlFor="age-native-required">
-                    {/*{this.props.title}*/}
                     </InputLabel>
                     <Select
                         native
-                        value={this.state.age}
                         onChange={this.props.onChange}
-                        // onChange={this.handleChange('Race')}
-
-
                         inputProps={{
                             id: 'age-native-required',
                         }}
                     >
-                        <option value={this.props.value} />
-                        {/*{this.props.renderRace()}*/}
+                        {races.map((label, index) => {
+                            return<option key={index} value={label}>{label}</option>
+                            })
+                        }
                     </Select>
                     <FormHelperText>Required</FormHelperText>
                 </FormControl>

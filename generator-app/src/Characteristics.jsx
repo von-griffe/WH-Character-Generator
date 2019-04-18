@@ -4,7 +4,12 @@ import {withStyles} from "@material-ui/core";
 import NativeSelect from "./shared/MultiSelect.jsx";
 import Button from '@material-ui/core/Button';
 import PropTypes from "prop-types";
+import TextFields from "./shared/Inputs";
+import Radio from "@material-ui/core/Radio";
 
+
+
+const races = ["choose your race","Human", "Elf", "Dwarf"];
 
 const styles = theme => ({
     root: {
@@ -69,8 +74,7 @@ class Characteristics extends React.Component {
                     fel: parseInt("20") + Math.floor((Math.random() * 10) + 1) + Math.floor((Math.random() * 10) + 1),
                 }]
             }));
-        }
-        else if (this.state.value === "Dwarf") {
+        } else if (this.state.value === "Dwarf") {
             this.setState(() => ({
                 characteristics: [{
                     race: "Dwarf",
@@ -86,8 +90,7 @@ class Characteristics extends React.Component {
                     fel: parseInt("10") + Math.floor((Math.random() * 10) + 1) + Math.floor((Math.random() * 10) + 1),
                 }]
             }));
-        }
-        else if (this.state.value === "Human") {
+        } else if (this.state.value === "Human") {
             this.setState(() => ({
                 characteristics: [{
                     race: "Human",
@@ -106,11 +109,6 @@ class Characteristics extends React.Component {
         }
     };
 
-    getRace = () => {
-        return this.props.propsRace.map((key,index) => {
-            return <option key={index} value={key}>{key}</option>
-        })
-    };
 
     handleChange = name => (event) => {
         this.setState({[name]: event.target.value});
@@ -124,50 +122,64 @@ class Characteristics extends React.Component {
     getBaseNumbers = () => {
         return this.state.characteristics.map((quotes) => {
             return Object.keys(quotes).map((key, index) => {
-              return (index > 0) ?
-                  <div key={index}>
-                      <div>{key.toUpperCase()} | {parseInt(quotes[key])} |</div>
-                  </div>
-                  :
-                  <div key={index}>
-                      <span> rasa: </span>
-                      <p>{(quotes[key])}</p>
-                  </div>
+                return (index > 0) ?
+                    <div key={index}>
+                        <div>{key.toUpperCase()} | {parseInt(quotes[key])} |</div>
+                    </div>
+                    :
+                    <div key={index}>
+                        <span> rasa: </span>
+                        <p>{(quotes[key])}</p>
+                    </div>
             })
         })
     };
 
-    renderSection = () => {
-       return (this.state.value === false) ?
+    rollPlayerStats = () => {
+        const selectRaceDisabledButton = <div>
             <NativeSelect
+                placeholder={"choose your race"}
                 onChange={this.handleChange('value')}
-                renderRace={this.getRace}
-                title={this.state.value}
+                data = {races}
+
             />
-            :
-           <div>
-               <NativeSelect onChange={this.handleChange('value')}
-                             renderRace={this.getRace}
-                             title={this.state.value}/>
-                             <Button
-                                 onClick={this.handleClick}
-                                 variant="contained"
-                                 color="secondary">
-                                 Roll stats
-                             </Button>
-           </div>
+            <Button
+                onClick={this.handleClick}
+                variant={"contained"}
+                disabled
+                color={"secondary"}>
+                Roll stats
+            </Button>
+        </div>;
+
+        const selectRace = <div>
+            <NativeSelect
+                placeholder={"choose your race"}
+                onChange={this.handleChange('value')}
+                data = {races}
+            />
+            <Button
+                onClick={this.handleClick}
+                variant={"contained"}
+                color={"secondary"}>
+
+                Roll stats
+            </Button>
+        </div>;
+
+        return this.state.value ==="choose your race" ||
+        this.state.value === false? selectRaceDisabledButton : selectRace
     };
 
     render() {
-        const { classes } = this.props;
+        const {classes} = this.props;
 
-        return <div className={classes.root} >
-                <div className={classes.resetContainer} >
-                    {this.renderSection()}
-                    <Careers
-                    onChange={this.handleInputChange('checked')}
+        return <div className={classes.root}>
+            <div className={classes.resetContainer}>
+                {this.rollPlayerStats()}
+                <Careers
+                    // onChange={this.handleInputChange('checked')}
                     propsData={this.props.propsData}
-                    props
                 />
                 <div> {this.getBaseNumbers()} </div>
             </div>
