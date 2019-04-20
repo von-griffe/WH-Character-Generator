@@ -6,9 +6,6 @@ import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 
-const races = ["choose your race","Human", "Elf", "Dwarf"];
-
-
 const styles = theme => ({
     root: {
         display: 'flex',
@@ -27,45 +24,76 @@ class NativeSelect extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            value: "",
-            name:"",
-            mode: undefined
+            value: "componentValue",
+            name:"componentName",
+            data: [],
+            pathCareers: []
         }
     }
-
-    componentWillMount() {
-        let mode;
-            mode = this.props.data;
-        this.setState({ mode });
-    }
-
-
-
-
+ componentDidMount() {
+        this.setState({
+            data : this.props.data,
+            pathCareers:  this.props.pathCareers
+        })
+ }
 
     render() {
-        console.log(this.state.mode);
+
+        const propsPathCareers = this.props.pathCareers;
+        const renderClassCareers = <div>
+
+            <FormControl>
+                <InputLabel htmlFor="age-native-required">
+                </InputLabel>
+                <Select
+                    native
+                    data = {this.props.data}
+                    onChange={this.props.onChange}
+                    value={this.props.value}
+                >
+                    {propsPathCareers ?
+                        propsPathCareers.map((item, index) => {
+                            return <option
+                                value={item.name}
+                                key={index+item}
+                            >
+                                {item.name}
+                            </option>;
+                        }):null
+                    }
+                </Select>
+            </FormControl>
+        </div>;
 
         return (
+            this.props.data?
             <div>
                 <FormControl>
                     <InputLabel htmlFor="age-native-required">
                     </InputLabel>
                     <Select
                         native
+                        data = {this.props.data}
                         onChange={this.props.onChange}
-                        inputProps={{
-                            id: 'age-native-required',
-                        }}
                     >
-                        {races.map((label, index) => {
-                            return<option key={index} value={label}>{label}</option>
+                        {this.props.data.map((label,index) => {
+                            return <option
+                                key={index}
+                                value={label}
+                                onChange={this.props.onChange}
+                            >
+                                {label}
+                            </option>
                             })
                         }
                     </Select>
                     <FormHelperText>Required</FormHelperText>
                 </FormControl>
             </div>
+                : propsPathCareers ? renderClassCareers
+
+            :null
+
         );
     }
 }

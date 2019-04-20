@@ -7,7 +7,8 @@ class RadioButtons extends React.Component {
         this.state = {
             value: "",
             name:"",
-            checked:""
+            checked:"",
+            onChange:""
         }
     }
 
@@ -19,15 +20,15 @@ class RadioButtons extends React.Component {
 
         return<div>
             { propsLabel.map((item, index)=> {
-                    return <div>
+                    return <div  key={item + index + item } >
                         <Radio
                             color="default"
                             checked={this.state.value === this.props.value}
                             onChange={this.props.onChange}
                             value={item}
-                            key={index}
+                            key={index + item}
                         />
-                        <span key={index+item} >{item}</span>
+                        <span key={item + index }>{item}</span>
                     </div>
                 })}
             </div>

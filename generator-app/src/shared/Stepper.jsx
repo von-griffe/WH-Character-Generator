@@ -15,8 +15,7 @@ import TextFields from "../shared/Inputs.jsx";
 import RadioButtons from "./RadioButtons.jsx";
 
 
-const data = careerData;
-const races = ["Human", "Elf", "Dwarf"];
+const careerPath = careerData;
 
 const styles = theme => ({
     root: {
@@ -182,6 +181,15 @@ class VerticalLinearStepper extends React.Component {
             {activeStep === steps.length && (
                 <Paper square elevation={0} className={classes.resetContainer}>
                     <Typography>First steps completed, prepare to roll your stats</Typography>
+                    <Button
+                        disabled={activeStep === 0}
+                        onClick={this.handleBack}
+                        className={classes.button}
+                    >
+                        Back
+                    </Button>
+
+
                     <Button onClick={this.handleReset} className={classes.button}>
                         Reset
                     </Button>
@@ -192,7 +200,7 @@ class VerticalLinearStepper extends React.Component {
 
         return (
             this.state.activeStep === steps.length ? <div> {stepperElements}
-            <Characteristics propsData={data} races={races}/>
+            <Characteristics careerPath={careerPath} />
         </div> : stepperElements
         );
     }
