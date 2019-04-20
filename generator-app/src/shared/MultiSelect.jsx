@@ -40,8 +40,9 @@ class NativeSelect extends React.Component {
     render() {
 
         const propsPathCareers = this.props.pathCareers;
-        const renderClassCareers = <div>
+        console.log("props",propsPathCareers);
 
+        const renderClassCareers = <div>
             <FormControl>
                 <InputLabel htmlFor="age-native-required">
                 </InputLabel>
@@ -75,6 +76,8 @@ class NativeSelect extends React.Component {
                         native
                         data = {this.props.data}
                         onChange={this.props.onChange}
+                        value={this.props.value}
+
                     >
                         {this.props.data.map((label,index) => {
                             return <option

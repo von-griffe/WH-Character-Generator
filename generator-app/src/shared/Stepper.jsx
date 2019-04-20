@@ -52,7 +52,7 @@ class VerticalLinearStepper extends React.Component {
         maleLabel: "Male",
         holderName: "Name of Hero",
         holderAge: "Age of Hero",
-        value: "value",
+        value: true,
         number: "number",
         text: "text",
         name:"",
@@ -61,15 +61,12 @@ class VerticalLinearStepper extends React.Component {
         age: "",
         race: "",
         player: ["Player", "NPC"],
-        playerResult:""
-
-
+        playerResult:true,
     };
 
     handleChange = name => event => {
         this.setState({ [name]: event.target.value });
     };
-
 
     handleNext = () => {
         this.setState(state => ({
@@ -100,17 +97,17 @@ class VerticalLinearStepper extends React.Component {
     render() {
         const gender = <div>
             <RadioButtons
-                onChange={this.handleChange('genderResult')}
-                value={this.state.gender}
-                label = {this.state.gender}
+                onChange={this.handleChange('value')}
+                data = {this.state.gender}
+                value={this.state.value}
             />
         </div>;
 
         const playerCharacter = <div>
             <RadioButtons
                 onChange={this.handleChange('playerResult')}
-                value={this.state.player}
-                label = {this.state.player}
+                data = {this.state.player}
+                value={this.state.playerResult}
             />
         </div>;
 
@@ -137,6 +134,7 @@ class VerticalLinearStepper extends React.Component {
         </div>;
 
         const {classes} = this.props;
+
         const steps = getSteps();
         const {activeStep} = this.state;
         const stepperElements = <div className={classes.root}>
@@ -144,7 +142,7 @@ class VerticalLinearStepper extends React.Component {
                 {steps.map((label, index) => (
                     <Step key={label} >
                         <StepLabel>{label} {
-                            index===0? this.state.genderResult:
+                            index===0? this.state.value:
                                 index === 1? this.state.name:
                                     index===2? this.state.age:
                                         index===3? this.state.playerResult:null
@@ -209,5 +207,4 @@ class VerticalLinearStepper extends React.Component {
 VerticalLinearStepper.propTypes = {
     classes: PropTypes.object,
 };
-
 export default withStyles(styles)(VerticalLinearStepper);
