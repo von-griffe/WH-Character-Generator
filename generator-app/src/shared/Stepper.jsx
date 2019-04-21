@@ -52,13 +52,14 @@ class VerticalLinearStepper extends React.Component {
         maleLabel: "Male",
         holderName: "Name of Hero",
         holderAge: "Age of Hero",
-        value: true,
-        number: "number",
+        number: false,
+
+        value: false,
+        name: "",
+        age: "",
         text: "text",
-        name:"",
         genderResult:"",
         gender: ["Male", "Female"],
-        age: "",
         race: "",
         player: ["Player", "NPC"],
         playerResult:true,
@@ -68,11 +69,27 @@ class VerticalLinearStepper extends React.Component {
         this.setState({ [name]: event.target.value });
     };
 
+
+    //#### event do dodania dla przycisku enter
+    // onKeyPress = (e) => {
+    //     if(e.key === 13){
+    //         console.log("something");
+    //     }
+    // };
+
+
+
     handleNext = () => {
-        this.setState(state => ({
-            activeStep: state.activeStep + 1,
-            value: this.state.value,
-        }));
+        if ( this.state.value === false) {
+            console.log("stop!")
+
+        }  else {
+
+            this.setState(state => ({
+                activeStep: state.activeStep + 1,
+                value: this.state.value,
+            }));
+        }
     };
 
     handleBack = () => {
@@ -86,7 +103,7 @@ class VerticalLinearStepper extends React.Component {
         this.setState({
             activeStep: 0,
             name: "",
-            value: "",
+            value: false,
             race:"",
             age:"",
             genderResult:"",
@@ -153,17 +170,21 @@ class VerticalLinearStepper extends React.Component {
 
                             <div className={classes.actionsContainer}>
                                 <div>
+
                                     <Button
-                                        disabled={activeStep === 0}
+                                        disabled={activeStep === 0 || this.state.value === false }
                                         onClick={this.handleBack}
                                         className={classes.button}
                                     >
                                         Back
                                     </Button>
                                     <Button
+                                        disabled={this.state.value === false }
                                         variant="contained"
                                         color="primary"
                                         onClick={this.handleNext}
+                                        // onKeyPress={this.onKeyPress}
+
                                         className={classes.button}
                                     >
                                         {activeStep === steps.length - 1 ? 'Finish' : 'Next'}

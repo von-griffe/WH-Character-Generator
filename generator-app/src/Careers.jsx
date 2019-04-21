@@ -8,7 +8,9 @@ class Careers extends React.Component {
         super(props);
         this.state = {
             value: false,
+            professions: false,
             checked: false,
+            level: "",
             propsArray: [],
             characteristics: [{
                 race: "choose race:",
@@ -28,31 +30,35 @@ class Careers extends React.Component {
         }
     }
 
+
     handleCheckboxChange = event => {
-        this.setState({ checked: event.target.checked })
+        this.setState({checked: event.target.checked})
     };
 
     handleChange = name => event => {
-        this.setState({ [name]: event.target.value });
+        this.setState({[name]: event.target.value});
     };
 
     getClassProfessionsObj = () => {
-        return this.props.careerPath.map((itemClass,index)=> {
+        return this.props.careerPath.map((itemClass, index) => {
                 return itemClass;
             }
-        )};
+        )
+    };
+
     getClassProfessionsVal = () => {
-        return this.props.careerPath.map((itemClass,index)=> {
+        return this.props.careerPath.map((itemClass, index) => {
                 return itemClass.name;
             }
-        )};
+        )
+    };
 
     getProfessionsName = () => {
         const result = [];
 
-        (this.getClassProfessionsObj()).forEach( (el, index) => {
-            if(el.name === this.state.value) {
-                (el.careers).forEach( (item,  index) => {
+        (this.getClassProfessionsObj()).forEach((el, index) => {
+            if (el.name === this.state.value) {
+                (el.careers).forEach((item, index) => {
                     result.push(item.name);
                 });
             }
@@ -60,12 +66,25 @@ class Careers extends React.Component {
         return result
     };
 
+
+    // ### Dodanie wszystkich profesji do tablicy (do usunięcia ? )
+    // getAllProfessions = () => {
+    //     const result = [];
+    //     (this.getClassProfessionsObj()).forEach((el, index) => {
+    //         el.careers.forEach((el, index) => {
+    //             result.push(el.name)
+    //         })
+    //     });
+    //     return result
+    // };
+
+
     getProfessionsLevels = () => {
         const result = [];
-        (this.getClassProfessionsObj()).forEach( (el, index) => {
-            if(this.getClassProfessionsVal().indexOf(el.name) > -1) {
-                (el.careers).forEach( (item,  index) => {
-                    if(item.name === this.state.value) {
+        (this.getClassProfessionsObj()).forEach((el, index) => {
+            if (this.getClassProfessionsVal().indexOf(el.name) > -1) {
+                (el.careers).forEach((item, index) => {
+                    if (item.name === this.state.professions) {
                         item.levels.forEach((item, index) => {
                             result.push(item.name)
                         })
@@ -77,23 +96,60 @@ class Careers extends React.Component {
     };
 
 
+    propsDataToArray = () => {
+        const result = [];
+        this.props.careerPath.forEach((el) => {
+            result.push(el.name)
+        });
+        return result
+    };
+
+
     render() {
 
-        const selectPlayerClass = <div>
-                <NativeSelect
-                    onChange={this.handleChange('value')}
-                    pathCareers={this.props.careerPath}
-                    value = {this.state.value}
-                />
-            </div>;
 
-        const selectPlayerProfession = <div>
+        const selectPlayerClass = (
+            <div>
                 <NativeSelect
                     onChange={this.handleChange('value')}
-                    data={this.getProfessionsName()}
-                    value = {this.state.value}
+                    data={this.propsDataToArray()}
+                    value={this.state.value}
                 />
-            </div>;
+            </div>
+        );
+
+
+        const selectPlayerProfession = (
+            <div>
+                <NativeSelect
+                    onChange={this.handleChange('professions')}
+                    data={this.getProfessionsName()}
+                    value={this.state.professions}
+                />
+            </div>
+        );
+
+
+        const selectProfessionLevel = (
+            <div>
+                <ul>{this.getProfessionsLevels().map((item, index) => {
+                    return (
+                        <li key={item + index}>
+                            <Checkbox
+                                id={index}
+                                title={index + item}
+                                checked={this.state.checked}
+                                onChange={this.handleCheckboxChange}
+                                value={item}
+                                key={item + "-" + index}
+                            />
+                        </li>
+                    );
+                })}
+                </ul>
+            </div>
+        );
+
 
         return this.state.value === false ? selectPlayerClass
             :
@@ -101,26 +157,12 @@ class Careers extends React.Component {
                 <div>
                     {selectPlayerClass}
                     {selectPlayerProfession}
+                    {selectProfessionLevel}
+                    <div>  {"Class :"} {this.state.value}</div>
+                    <div> {"Profession :"} {this.state.professions}</div>
                 </div>
-                :
-                <div>
-                    {selectPlayerClass}
-                    {selectPlayerProfession}
-                    <ul>{this.getProfessionsLevels().map( (item,  index) => {
-                        return <li key={item+index}>
-                            
-                            <Checkbox
-                                id={index}
-                                title={index+item}
-                                checked={this.state.checked}
-                                onChange={this.handleCheckboxChange}
-                                value={item}
-                                key={item+"-"+index}
-                            />
-                        </li>
-                    })}
-                    </ul>
-                </div>
+                : null
     }
+
 }
 export default Careers

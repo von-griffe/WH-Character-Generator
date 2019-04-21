@@ -39,33 +39,6 @@ class NativeSelect extends React.Component {
 
     render() {
 
-        const propsPathCareers = this.props.pathCareers;
-        console.log("props",propsPathCareers);
-
-        const renderClassCareers = <div>
-            <FormControl>
-                <InputLabel htmlFor="age-native-required">
-                </InputLabel>
-                <Select
-                    native
-                    data = {this.props.data}
-                    onChange={this.props.onChange}
-                    value={this.props.value}
-                >
-                    {propsPathCareers ?
-                        propsPathCareers.map((item, index) => {
-                            return <option
-                                value={item.name}
-                                key={index+item}
-                            >
-                                {item.name}
-                            </option>;
-                        }):null
-                    }
-                </Select>
-            </FormControl>
-        </div>;
-
         return (
             this.props.data?
             <div>
@@ -93,8 +66,6 @@ class NativeSelect extends React.Component {
                     <FormHelperText>Required</FormHelperText>
                 </FormControl>
             </div>
-                : propsPathCareers ? renderClassCareers
-
             :null
 
         );

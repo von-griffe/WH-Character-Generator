@@ -13,7 +13,6 @@ class Checkbox extends React.Component {
             <div>
                 <label>
                     <input
-
                         name="level"
                         type="checkbox"
                         checked={this.props.checked}

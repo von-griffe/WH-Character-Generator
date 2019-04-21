@@ -22,7 +22,6 @@ class RadioButtons extends React.Component {
                             value={item}
                             key={index + item}
                             checked = {this.props.value === item}
-
                         />
                         <span key={item + index }>{item}</span>
                     </div>
