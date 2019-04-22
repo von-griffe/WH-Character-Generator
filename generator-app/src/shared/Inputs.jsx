@@ -1,7 +1,7 @@
-import React from "react";
-import TextField from "@material-ui/core/TextField";
-import {withStyles} from "@material-ui/core/styles";
-import PropTypes from "prop-types";
+import React from 'react';
+import TextField from '@material-ui/core/TextField';
+import {withStyles} from '@material-ui/core/styles';
+import PropTypes from 'prop-types';
 
 
 const styles = theme => ({
@@ -34,16 +34,16 @@ class TextFields extends React.Component {
 
         return (
             <div>
-                <form className={classes.container} noValidate autoComplete="off">
+                <form className={classes.container} noValidate autoComplete='off'>
 
                     <TextField
-                        id="standard-with-placeholder"
+                        id='standard-with-placeholder'
                         label={this.props.label}
                         placeholder={this.props.placeholder}
                         className={classes.textField}
                         onChange={this.props.onChange}
                         value={this.props.value}
-                        margin="normal"
+                        margin='normal'
                         type={this.props.type}
                     />
 

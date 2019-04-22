@@ -34,22 +34,18 @@
             "fel": ""
           },
           {
-            "Doktor": [
-              {
-                "name": "Doktor",
-                "profession": "Doktor",
-                "ws": "",
-                "bs": "true",
-                "s": "true",
-                "t": "true",
-                "i": "true",
-                "agi": "",
-                "dex": "true",
-                "int": "true",
-                "wp": "",
-                "fel": "true"
-              }
-            ]
+            "name": "Doktor",
+            "profession": "Doktor",
+            "ws": "",
+            "bs": "true",
+            "s": "true",
+            "t": "true",
+            "i": "true",
+            "agi": "",
+            "dex": "true",
+            "int": "true",
+            "wp": "",
+            "fel": "true"
           },
           {
             "name": "Court Physician",
@@ -68,65 +64,65 @@
         ]
       },
       {
-      "name": "Engineer",
-      "levels": [
-        {
-          "name": "Student Engineer",
-          "profession": "Student Engineer",
-          "ws": "true",
-          "bs": "",
-          "s": "",
-          "t": "",
-          "i": "",
-          "agi": "",
-          "dex": "",
-          "int": "true",
-          "wp": "true",
-          "fel": ""
-        },
-        {
-          "name": "Engineer",
-          "profession": "Student Engineer",
-          "ws": "true",
-          "bs": "",
-          "s": "",
-          "t": "",
-          "i": "",
-          "agi": "",
-          "dex": "",
-          "int": "true",
-          "wp": "true",
-          "fel": ""
-        },
-        {
-          "name": "Master Engineer",
-          "profession": "Student Engineer",
-          "ws": "true",
-          "bs": "",
-          "s": "",
-          "t": "",
-          "i": "",
-          "agi": "",
-          "dex": "",
-          "int": "true",
-          "wp": "true",
-          "fel": ""
-        },
-        {
-          "name": "Master Engineer",
-          "profession": "Student Engineer",
-          "ws": "true",
-          "bs": "",
-          "s": "",
-          "t": "",
-          "i": "",
-          "agi": "",
-          "dex": "",
-          "int": "true",
-          "wp": "true",
-          "fel": ""
-        }
-      ]
+        "name": "Engineer",
+        "levels": [
+          {
+            "name": "Student Engineer",
+            "profession": "Student Engineer",
+            "ws": "true",
+            "bs": "",
+            "s": "",
+            "t": "",
+            "i": "",
+            "agi": "",
+            "dex": "",
+            "int": "true",
+            "wp": "true",
+            "fel": ""
+          },
+          {
+            "name": "Engineer",
+            "profession": "Student Engineer",
+            "ws": "true",
+            "bs": "",
+            "s": "",
+            "t": "",
+            "i": "",
+            "agi": "",
+            "dex": "",
+            "int": "true",
+            "wp": "true",
+            "fel": ""
+          },
+          {
+            "name": "Master Engineer",
+            "profession": "Student Engineer",
+            "ws": "true",
+            "bs": "",
+            "s": "",
+            "t": "",
+            "i": "",
+            "agi": "",
+            "dex": "",
+            "int": "true",
+            "wp": "true",
+            "fel": ""
+          },
+          {
+            "name": "Chartered Engineer",
+            "profession": "Chartered Engineer",
+            "ws": "true",
+            "bs": "",
+            "s": "",
+            "t": "",
+            "i": "",
+            "agi": "",
+            "dex": "",
+            "int": "true",
+            "wp": "true",
+            "fel": ""
+          }
+        ]
       },
       {
         "name": "Wizard",
@@ -192,6 +188,21 @@
       {
         "name": "Priest",
         "levels": [
+
+          {
+            "name": " Initiate",
+            "profession": "Initiate",
+            "ws": "true",
+            "bs": "",
+            "s": "",
+            "t": "",
+            "i": "",
+            "agi": "",
+            "dex": "",
+            "int": "true",
+            "wp": "true",
+            "fel": ""
+          },
           {
             "name": "Priest",
             "profession": "Priest",
@@ -207,8 +218,8 @@
             "fel": ""
           },
           {
-            "name": "Journeyman wizard",
-            "profession": "Journeyman wizard",
+            "name": "High Priest",
+            "profession": "High Priest",
             "ws": "true",
             "bs": "",
             "s": "",
@@ -221,22 +232,8 @@
             "fel": ""
           },
           {
-            "name": "Master Wizard",
-            "profession": "Master Wizard",
-            "ws": "true",
-            "bs": "",
-            "s": "",
-            "t": "",
-            "i": "",
-            "agi": "",
-            "dex": "",
-            "int": "true",
-            "wp": "true",
-            "fel": ""
-          },
-          {
-            "name": "Wizard Lord",
-            "profession": "Wizard Lord",
+            "name": "Lector",
+            "profession": "Lector",
             "ws": "true",
             "bs": "",
             "s": "",
@@ -250,9 +247,9 @@
           }
         ]
       }
-
     ]
   },
+
   {
     "name": "Ranger",
     "careers": [
@@ -323,13 +320,13 @@
           {
             "name": "Busker",
             "profession": "Busker",
-            "ws": "true",
+            "ws": "",
             "bs": "",
             "s": "",
             "t": "",
             "i": "",
             "agi": "",
-            "dex": "",
+            "dex": "true",
             "int": "true",
             "wp": "true",
             "fel": ""
@@ -397,6 +394,7 @@
           },
           {
             "name": "Hunter",
+            "profession": "Hunter",
             "ws": "",
             "bs": "true",
             "s": "true",
@@ -501,6 +499,8 @@
       }
     ]
   },
+
+
   {
     "name": "Rouges",
     "careers": [

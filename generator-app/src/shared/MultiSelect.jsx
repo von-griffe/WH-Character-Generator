@@ -24,8 +24,8 @@ class NativeSelect extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            value: "componentValue",
-            name:"componentName",
+            value: 'componentValue',
+            name:'componentName',
             data: [],
             pathCareers: []
         }
@@ -43,7 +43,7 @@ class NativeSelect extends React.Component {
             this.props.data?
             <div>
                 <FormControl>
-                    <InputLabel htmlFor="age-native-required">
+                    <InputLabel htmlFor='age-native-required'>
                     </InputLabel>
                     <Select
                         native

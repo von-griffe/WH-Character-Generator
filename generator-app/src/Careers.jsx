@@ -1,6 +1,6 @@
 import React from 'react';
-import NativeSelect from "./shared/MultiSelect";
-import Checkbox from "./shared/Checkbox";
+import NativeSelect from './shared/MultiSelect';
+import Checkbox from './shared/Checkbox';
 
 
 class Careers extends React.Component {
@@ -8,35 +8,69 @@ class Careers extends React.Component {
         super(props);
         this.state = {
             value: false,
-            professions: false,
             checked: false,
-            level: "",
-            propsArray: [],
+            level: false,
             characteristics: [{
-                race: "choose race:",
-                ws: "10",
-                bs: "10",
-                s: "10",
-                t: "10",
-                i: "10",
-                agi: "10",
-                dex: "10",
-                int: "10",
-                wp: "10",
-                fel: "10",
+                race: 'choose race:',
+                ws: '10',
+                bs: '10',
+                s: '10',
+                t: '10',
+                i: '10',
+                agi: '10',
+                dex: '10',
+                int: '10',
+                wp: '10',
+                fel: '10',
             }],
-            titleType: "Wybierz typ postaci",
-            titleProfession: "Wybierz profesje",
+            // professions: false
+
         }
     }
 
-
-    handleCheckboxChange = event => {
-        this.setState({checked: event.target.checked})
+    handleCheckbox = name => event => {
+        this.setState({
+            [name]: event.target.value
+        });
+        this.getBoolean()
     };
 
+    getBoolean = () => {
+        console.log('index of array', this.getLevelsBoolean())
+       return this.getLevelsBoolean()
+
+    };
+
+     //function return index of JSON value === true
+
+    getLevelsBoolean = () => {
+        const result = [];
+        (this.getClassProfessionsObj()).forEach((el, index) => {
+            if (this.getClassProfessionsVal().indexOf(el.name) > -1) {
+                (el.careers).forEach((item, index) => {
+                    if (item.name === this.state.professions) {
+                        item.levels.forEach((item, index) => {
+                            console.log(item);
+                            if( (Object.values(item) === true)) {
+                                console.log('dipa')
+                            }
+
+                            // console.log( 'array' ,(Object.values(item)));
+                            // console.log('index',(Object.values(item)).indexOf('true'));
+                            result.push((Object.values(item)).indexOf('true'));
+                        })
+                    }
+                });
+            }
+        });
+        return result
+    };
+
+
     handleChange = name => event => {
-        this.setState({[name]: event.target.value});
+        this.setState(
+            {[name]: event.target.value
+            })
     };
 
     getClassProfessionsObj = () => {
@@ -67,7 +101,7 @@ class Careers extends React.Component {
     };
 
 
-    // ### Dodanie wszystkich profesji do tablicy (do usunięcia ? )
+    // ### Add all professions to array (do usunięcia ? )
     // getAllProfessions = () => {
     //     const result = [];
     //     (this.getClassProfessionsObj()).forEach((el, index) => {
@@ -106,6 +140,13 @@ class Careers extends React.Component {
 
 
     render() {
+        console.log(this.getLevelsBoolean());
+        console.log('state level', this.state.level);
+        console.log('state checked', this.state.checked);
+        console.log('state professions',this.state.professions);
+        console.log('state value', this.state.value);
+
+
 
 
         const selectPlayerClass = (
@@ -132,16 +173,20 @@ class Careers extends React.Component {
 
         const selectProfessionLevel = (
             <div>
-                <ul>{this.getProfessionsLevels().map((item, index) => {
+                <ul>
+                    {this.getProfessionsLevels().map((item, index) => {
                     return (
                         <li key={item + index}>
                             <Checkbox
-                                id={index}
-                                title={index + item}
-                                checked={this.state.checked}
-                                onChange={this.handleCheckboxChange}
+                                type='checkbox'
+                                onChange={this.handleCheckbox('checked')}
                                 value={item}
-                                key={item + "-" + index}
+                                name={item}
+                                title={index + item}
+                                defaultChecked={this.state.checked}
+                                key={item + '-' + index}
+                                id={index}
+
                             />
                         </li>
                     );
@@ -153,13 +198,13 @@ class Careers extends React.Component {
 
         return this.state.value === false ? selectPlayerClass
             :
-            this.getClassProfessionsVal().indexOf(this.state.value) > -1 ?
+            this.getClassProfessionsVal().indexOf(this.state.value) > -1?
                 <div>
                     {selectPlayerClass}
                     {selectPlayerProfession}
                     {selectProfessionLevel}
-                    <div>  {"Class :"} {this.state.value}</div>
-                    <div> {"Profession :"} {this.state.professions}</div>
+                    <div>  {'Class :'} {this.state.value}</div>
+                    <div> {'Profession :'} {this.state.professions}</div>
                 </div>
                 : null
     }

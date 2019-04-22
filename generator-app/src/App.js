@@ -1,13 +1,12 @@
 import React from 'react';
 import Stepper from "./shared/Stepper.jsx";
-import styles from "./characteristics.scss";
 
 class App extends React.Component {
 
     render() {
-        return <div  >
+        return <div>
             <section>
-            <Stepper />
+            <Stepper/>
             </section>
         </div>
     }

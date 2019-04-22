@@ -16,7 +16,7 @@ class RadioButtons extends React.Component {
             { propsLabel.map((item, index)=> {
                     return <div  key={item + index + item } >
                         <Radio
-                            color="default"
+                            color='default'
                             onChange={this.props.onChange}
                             label = {item}
                             value={item}

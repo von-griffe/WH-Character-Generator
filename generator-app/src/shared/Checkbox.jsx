@@ -13,8 +13,8 @@ class Checkbox extends React.Component {
             <div>
                 <label>
                     <input
-                        name="level"
-                        type="checkbox"
+                        name='level'
+                        type='checkbox'
                         checked={this.props.checked}
                         onChange={this.props.onChange} />
                     {this.props.value}
