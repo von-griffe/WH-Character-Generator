@@ -52,6 +52,8 @@ class NativeSelect extends React.Component {
                         value={this.props.value}
 
                     >
+                        {/*<option disabled={this.props.disabled}> {"text" }</option>*/}
+
                         {this.props.data.map((label,index) => {
                             return <option
                                 key={index}

@@ -8,12 +8,10 @@ import Step from '@material-ui/core/Step';
 import StepContent from '@material-ui/core/StepContent';
 import Button from '@material-ui/core/Button';
 import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
 import Characteristics from '../Characteristics';
 import {getStepContent} from '../apiUtilities/helpers.jsx';
 import TextFields from '../shared/Inputs.jsx';
 import RadioButtons from './RadioButtons.jsx';
-
 
 const careerPath = careerData;
 
@@ -39,7 +37,11 @@ const styles = theme => ({
         padding: theme.spacing.unit * 3,
         fontWeight:'600',
         color: 'lightGray'
-
+    },
+    info: {
+        color: '#3f51b5',
+        fontWeight:'400',
+        fontSize: '15px'
     },
 });
 
@@ -198,7 +200,10 @@ class VerticalLinearStepper extends React.Component {
                 </Stepper>
                 {activeStep === steps.length && (
                     <Paper square elevation={0} className={classes.resetContainer}>
-                        <Typography>First steps completed, prepare to roll your stats</Typography>
+                        <div>
+                            <p className={classes.info}>First steps completed, prepare to roll your stats</p>
+                        </div>
+
                         <Button
                             disabled={activeStep === 0}
                             onClick={this.handleBack}

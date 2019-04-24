@@ -4,8 +4,6 @@ class Checkbox extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {
-        }
     }
 
     render() {
@@ -13,10 +11,13 @@ class Checkbox extends React.Component {
             <div>
                 <label>
                     <input
-                        name='level'
-                        type='checkbox'
-                        checked={this.props.checked}
-                        onChange={this.props.onChange} />
+                        name={this.props.name}
+                        type= {this.props.type}
+                        onChange={this.props.onChange}
+                        value={this.props.value}
+                        key={this.props.key}
+                    />
+
                     {this.props.value}
                 </label>
             </div>

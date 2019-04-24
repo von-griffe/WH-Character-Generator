@@ -50,6 +50,8 @@ class Characteristics extends React.Component {
                 wp: '10',
                 fel: '10',
             }],
+            counter: 0
+
         }
     }
 
@@ -136,23 +138,23 @@ class Characteristics extends React.Component {
         this.setState({[name]: event.target.value});
     };
 
-
     getBaseNumbers = () => {
-        return this.state.characteristics.map((quotes) => {
-            return Object.keys(quotes).map((key, index) => {
-                return (index > 0) ?
+        const button = <button
+        >+1</button>;
+
+        return this.state.characteristics.map((item) => {
+            return Object.keys(item).map((key, index) => {
+               return index > 0 ?
                     <div key={index + key}>
-                        <div>{key.toUpperCase()} | {parseInt(quotes[key])} |</div>
+                        <div>{key.toUpperCase()} | {parseInt(item[key])} | {button} </div>
                     </div>
                     :
                     <div key={index}>
-                        <span> rasa: </span>
-                        <p>{(quotes[key])}</p>
+                        <div> rasa: {(item[key])}</div>
                     </div>
             })
         })
     };
-
 
     render() {
         const {classes} = this.props;
@@ -162,7 +164,6 @@ class Characteristics extends React.Component {
             variant: 'contained',
             color: 'secondary',
         };
-        ;
 
         return <div className={classes.root}>
             <div className={classes.resetContainer}>
