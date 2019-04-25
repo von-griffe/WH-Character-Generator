@@ -23,8 +23,6 @@ const styles = theme => ({
 class TextFields extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-        }
     }
 
 

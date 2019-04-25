@@ -196,7 +196,6 @@ class Characteristics extends React.Component {
                     </div>
                 }
                 <Careers
-                    // onChange={this.handleInputChange('checked')}
                     careerPath={this.props.careerPath}
                     data={races}
                 />

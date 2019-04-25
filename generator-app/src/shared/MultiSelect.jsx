@@ -24,8 +24,6 @@ class NativeSelect extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            value: 'componentValue',
-            name:'componentName',
             data: [],
             pathCareers: []
         }
@@ -50,7 +48,6 @@ class NativeSelect extends React.Component {
                         data = {this.props.data}
                         onChange={this.props.onChange}
                         value={this.props.value}
-
                     >
                         {/*<option disabled={this.props.disabled}> {"text" }</option>*/}
 

@@ -24,7 +24,7 @@ class Careers extends React.Component {
         this.state = {
             value: false,
             checked: false,
-            level: 'none',
+            level: [],
             characteristics: [{
                 race: 'choose race:',
                 ws: '10',
@@ -42,15 +42,31 @@ class Careers extends React.Component {
     }
 
     handleCheckbox = name => event => {
-        this.setState({
-            [name]: event.target.value,
-            level: event.target.title
-        });
+
+        let resultLevels = this.state.level;
+        let targetValue = event.target.value;
+
+        if(event.target.checked === true) {
+            resultLevels.push(targetValue);
+
+            this.setState({
+                resultLevels: this.state.level
+            });
+
+        } else {
+            let indexValue = resultLevels.indexOf(event.target.value);
+
+            resultLevels.splice(indexValue,1);
+
+                this.setState({
+                resultLevels: this.state.level
+            });
+        }
         this.getBoolean()
     };
 
     getBoolean = () => {
-        console.log('index of array', this.getLevelsBoolean())
+        console.log('index of array', this.getLevelsBoolean());
        return this.getLevelsBoolean()
 
     };
@@ -147,13 +163,6 @@ class Careers extends React.Component {
 
     render() {
 
-        console.log(this.getLevelsBoolean());
-        console.log('state level:', this.state.level);
-        console.log('state checked:', this.state.checked);
-        console.log('state professions:',this.state.professions);
-        console.log('state value:', this.state.value);
-
-
         const {classes} = this.props;
 
         const selectPlayerClass = (
@@ -166,7 +175,6 @@ class Careers extends React.Component {
                 />
             </div>
         );
-
 
         const selectPlayerProfession = (
             <div>
@@ -183,8 +191,6 @@ class Careers extends React.Component {
         const selectProfessionLevel = (
             <div>
                 <ul className={classes.list}>
-
-
 
                     {this.getProfessionsLevels().map((item, index) => {
                     return (
@@ -212,7 +218,7 @@ class Careers extends React.Component {
 
                     <div>  {'Class :'} <span className={classes.result}> {this.state.value}</span></div>
                     <div> {'Profession :'} <span className={classes.result}> {this.state.professions} </span></div>
-                    <div> {'Level :'} <span className={classes.result}> {this.state.checked} </span> </div>
+                    <div> {'Level :'} <span className={classes.result}> {this.state.level.toString()} </span> </div>
 
                     {selectPlayerClass}
                     {selectPlayerProfession}
