@@ -25,6 +25,7 @@ class Careers extends React.Component {
             value: false,
             checked: false,
             level: [],
+            professions:"",
             characteristics: [{
                 race: 'choose race:',
                 ws: '10',
@@ -90,8 +91,9 @@ class Careers extends React.Component {
 
 
     handleChange = name => event => {
-        this.setState(
-            {[name]: event.target.value
+        this.setState({
+            [name]: event.target.value,
+            level: []
             })
     };
 
@@ -201,7 +203,7 @@ class Careers extends React.Component {
                                 type={'checkbox'}
                                 onChange={this.handleCheckbox('checked')}
                                 value={item}
-                                key={item + '-' + index}
+                                key={item + index}
                             />
                         </li>
                     );
@@ -216,8 +218,8 @@ class Careers extends React.Component {
             this.getClassProfessionsVal().indexOf(this.state.value) > -1?
                 <div className={classes.professions}>
 
-                    <div>  {'Class :'} <span className={classes.result}> {this.state.value}</span></div>
-                    <div> {'Profession :'} <span className={classes.result}> {this.state.professions} </span></div>
+                    <div>  {'Class :'} <span className={classes.result}> {this.state.value}</span> </div>
+                    <div> {'Profession :'} <span className={classes.result}> {this.state.professions} </span> </div>
                     <div> {'Level :'} <span className={classes.result}> {this.state.level.toString()} </span> </div>
 
                     {selectPlayerClass}

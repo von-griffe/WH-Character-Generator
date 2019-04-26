@@ -150,7 +150,7 @@ class Characteristics extends React.Component {
                     </div>
                     :
                     <div key={index}>
-                        <div> rasa: {(item[key])}</div>
+                        <div> Race: {(item[key])}</div>
                     </div>
             })
         })
@@ -195,11 +195,11 @@ class Characteristics extends React.Component {
                         </Button>
                     </div>
                 }
+                <div> {this.getBaseNumbers()} </div>
                 <Careers
                     careerPath={this.props.careerPath}
                     data={races}
                 />
-                <div> {this.getBaseNumbers()} </div>
             </div>
         </div>
     }
