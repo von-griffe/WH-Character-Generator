@@ -10,7 +10,6 @@ import TableCell from '@material-ui/core/TableCell';
 
 
 const races = ['choose your race', 'Human', 'Elf', 'Dwarf', 'Halfling'];
-
 const reset = {
     race: 'if you choose your race button "Roll stats"',
     ws: '10',
@@ -24,7 +23,6 @@ const reset = {
     wp: '10',
     fel: '10',
 };
-
 
 const CustomTableCell = withStyles(theme => ({
     head: {
@@ -192,7 +190,6 @@ class Characteristics extends React.Component {
         })
     };
 
-
     getBaseNumbersAdvance = () => {
 
         return this.state.characteristics.map((item) => {
@@ -209,7 +206,6 @@ class Characteristics extends React.Component {
             })
         })
     };
-
 
 
     render() {

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
+import {withStyles} from '@material-ui/core/styles';
 import InputLabel from '@material-ui/core/InputLabel';
 import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
@@ -29,44 +29,44 @@ class NativeSelect extends React.Component {
             pathCareers: []
         }
     }
- componentDidMount() {
+
+    componentDidMount() {
         this.setState({
-            data : this.props.data,
-            pathCareers:  this.props.pathCareers
+            data: this.props.data,
+            pathCareers: this.props.pathCareers
         })
- }
+    }
 
     render() {
 
         return (
-            this.props.data?
-            <div>
-                <FormControl>
-                    <InputLabel htmlFor='age-native-required'>
-                    </InputLabel>
-                    <Select
-                        native
-                        data = {this.props.data}
-                        onChange={this.props.onChange}
-                        value={this.props.value}
-                    >
-                        {/*<option disabled={this.props.disabled}> {"text" }</option>*/}
+            this.props.data ?
+                <div>
+                    <FormControl>
+                        <InputLabel htmlFor='age-native-required'>
+                        </InputLabel>
+                        <Select
+                            native
+                            data={this.props.data}
+                            onChange={this.props.onChange}
+                            value={this.props.value}
+                        >
 
-                        {this.props.data.map((label,index) => {
-                            return <option
-                                key={index}
-                                value={label}
-                                onChange={this.props.onChange}
-                            >
-                                {label}
-                            </option>
+                            {this.props.data.map((label, index) => {
+                                return <option
+                                    key={index}
+                                    value={label}
+                                    onChange={this.props.onChange}
+                                >
+                                    {label}
+                                </option>
                             })
-                        }
-                    </Select>
-                    <FormHelperText>Required</FormHelperText>
-                </FormControl>
-            </div>
-            :null
+                            }
+                        </Select>
+                        <FormHelperText>Required</FormHelperText>
+                    </FormControl>
+                </div>
+                : null
 
         );
     }

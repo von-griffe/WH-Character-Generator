@@ -7,10 +7,8 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+import Tooltip from "@material-ui/core/Tooltip";
 
-
-
-const longText = `weapon skill`;
 
 const CustomTableCell = withStyles(theme => ({
     head: {
@@ -37,25 +35,40 @@ const styles = theme => ({
         minWidth: 200,
 
     },
-    cols:{
+    cols: {
         height: '80px',
         width: '10px',
 
     },
-    cell:{
+    cell: {
         width: '10px',
         padding: '0px'
 
+    },
+    toolTip: {
+        backgroundColor: 'red'
     }
+
 });
 
 
 class StatsTable extends React.Component {
 
     createData = (value) => {
-        return value.map((item, index) => {
-           return <CustomTableCell>{item}</CustomTableCell>
-        })
+        const characteristicsTooltips = ['Race of your hero', 'Weapon Skill', 'Ballistic Skill', 'Strength', 'Toughness', 'Initiative', 'Agility', 'Dexterity', 'Intelligence', 'Willpower', 'Fellowship'].map((item, index) => {
+            return item
+        });
+        return (
+            value.map((item, index) => {
+                return (
+                    <Tooltip
+                        title={characteristicsTooltips[index] + ': ' + item}
+                    >
+                        <CustomTableCell>{item}</CustomTableCell>
+                    </Tooltip>
+                )
+            })
+        )
     };
 
 
@@ -63,29 +76,23 @@ class StatsTable extends React.Component {
 
         const {classes} = this.props;
 
-        const rows = [
-            this.createData(...this.props.keys()),
-            this.createData(...this.props.values()),
-            this.props.advance
-        ];
-
         return (
 
             <Paper className={classes.root}>
                 <Table className={classes.table}>
                     <TableHead>
                         <TableRow className={classes.cols}>
-                            {rows[0]}
+                            {this.createData(...this.props.keys())}
                         </TableRow>
                     </TableHead>
                     <TableBody>
                         <TableRow className={classes.cols}>
-                            {rows[1]}
+                            {this.createData(...this.props.values())}
                         </TableRow>
                     </TableBody>
                     <TableBody>
                         <TableRow className={classes.cols}>
-                            {(rows[2])()}
+                            {this.props.advance(0)}
                         </TableRow>
                     </TableBody>
                 </Table>

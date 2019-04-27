@@ -42,7 +42,8 @@ class AdvanceStats extends React.Component {
         this.setState(prevState => {
 
             return {
-                expPoint:  prevState.value >= 0 && prevState.value <= 5? (prevState.value * 25)
+                expPoint: prevState.value >= 0 && prevState.value <= 5? (prevState.value * 25):
+                    prevState.value >= 0 && prevState.value <= 5? (prevState.value * 25)
                     : prevState.value > 5 && prevState.value <= 10? (prevState.value * 30)
                         :  prevState.value > 10 && prevState.value <= 15? (prevState.value * 40)
                             : prevState.value > 15 && prevState.value <= 20? (prevState.value * 50)
@@ -50,7 +51,6 @@ class AdvanceStats extends React.Component {
                                     : prevState.value > 25 && prevState.value <= 30?  (prevState.value * 90)
                                         : prevState.value > 30 && prevState.value <= 35? (prevState.value * 120)
                                             : null
-
             }
         });
     };

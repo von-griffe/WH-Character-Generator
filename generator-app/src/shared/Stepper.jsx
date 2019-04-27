@@ -35,12 +35,12 @@ const styles = theme => ({
     },
     h1: {
         padding: theme.spacing.unit * 3,
-        fontWeight:'600',
+        fontWeight: '600',
         color: 'lightGray'
     },
     info: {
         color: '#3f51b5',
-        fontWeight:'400',
+        fontWeight: '400',
         fontSize: '15px'
     },
 });
@@ -72,19 +72,11 @@ class VerticalLinearStepper extends React.Component {
     };
 
 
-    //#### add event for enter key
-    // onKeyPress = (e) => {
-    //     if(e.key === 13){
-    //         console.log('something');
-    //     }
-    // };
-
-
     handleNext = () => {
-            this.setState(state => ({
-                activeStep: state.activeStep + 1,
-                value: this.state.value,
-            }));
+        this.setState(state => ({
+            activeStep: state.activeStep + 1,
+            value: this.state.value,
+        }))
     };
 
     handleBack = () => {
@@ -145,7 +137,6 @@ class VerticalLinearStepper extends React.Component {
         </div>;
 
         const {classes} = this.props;
-
         const steps = getSteps();
         const {activeStep} = this.state;
         const stepperElements = (
@@ -171,14 +162,14 @@ class VerticalLinearStepper extends React.Component {
                                     <div>
 
                                         <Button
-                                            disabled={activeStep === 0 }
+                                            disabled={activeStep === 0}
                                             onClick={this.handleBack}
                                             className={classes.button}
                                         >
                                             Back
                                         </Button>
                                         <Button
-                                            disabled={ activeStep === 0  && this.state.value === false ||
+                                            disabled={activeStep === 0 && this.state.value === false ||
                                             activeStep === 1 && this.state.name === "" ||
                                             activeStep === 3 && this.state.playerResult === false
                                             }
@@ -197,6 +188,7 @@ class VerticalLinearStepper extends React.Component {
                 </Stepper>
                 {activeStep === steps.length && (
                     <Paper square elevation={0} className={classes.resetContainer}>
+
                         <div>
                             <p className={classes.info}>First steps completed, prepare to roll your stats</p>
                         </div>
@@ -217,8 +209,8 @@ class VerticalLinearStepper extends React.Component {
                     </Paper>
 
                 )}
-            </div>);
-
+            </div>
+        );
 
         return (
             this.state.activeStep === steps.length ? <div> {stepperElements}
