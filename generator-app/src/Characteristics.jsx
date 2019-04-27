@@ -4,7 +4,7 @@ import {withStyles} from '@material-ui/core';
 import NativeSelect from './shared/MultiSelect.jsx';
 import Button from '@material-ui/core/Button';
 import PropTypes from 'prop-types';
-import AdvanceStats from './advanceStats';
+import AdvanceStats from './AdvanceStats.jsx';
 import StatsTable from './shared/StatsTable.jsx';
 import TableCell from '@material-ui/core/TableCell';
 
@@ -28,7 +28,7 @@ const CustomTableCell = withStyles(theme => ({
 
 const styles = theme => ({
     root: {
-        width: '70%',
+        width: '80%',
         margin: 'auto',
         borderRadius: '5px',
         boxShadow: '0 2px 2px 1px rgba(0, 0, 0, 0.15)'
@@ -74,7 +74,6 @@ class Characteristics extends React.Component {
     }
 
     handleClick = () => {
-
 
         const characterElfProps = {
             race: 'Elf',
@@ -196,7 +195,6 @@ class Characteristics extends React.Component {
     render() {
 
         const {classes} = this.props;
-
         const btnRollProps = {
             onClick: this.handleClick,
             variant: 'contained',

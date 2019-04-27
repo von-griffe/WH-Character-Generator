@@ -15,15 +15,38 @@ const CustomTableCell = withStyles(theme => ({
         padding: '4px 4px 4px 4px',
         width: '30px'
     },
+
 }))(TableCell);
 
 const styles = theme => ({
+
+    buttonContainer: {
+        display: 'flex'
+},
     button: {
         marginTop: theme.spacing.unit,
-        marginRight: theme.spacing.unit,
         padding:'0px 0px 0px 0px',
-        width: '10px'
+        width: '25px',
+        height: '25px',
+        borderRadius: '5px',
+        border: 'none',
+        background: '#3f51b5',
+        color: 'white',
+        outline: 'none',
+        lineHeight: '5px',
+        marginLeft: '2px'
+
+},
+    skillImprovement: {
+        color:  '#3f51b5',
+        fontWeight: 600,
+        height: '35px',
+        lineHeight: '30px',
+
     }
+
+
+
 });
 
 class ImprovementButtons extends React.Component {
@@ -53,6 +76,8 @@ class ImprovementButtons extends React.Component {
             }
         });
         this.props.onDecrement()
+        this.props.onExperience();
+
     };
 
     render() {
@@ -63,10 +88,11 @@ class ImprovementButtons extends React.Component {
 
             <div>
                 <CustomTableCell>
-                <div>{this.props.data + this.state.counter}</div>
-                    <div>
+                <div className={classes.skillImprovement }>{this.props.data + this.state.counter}</div>
+                    <div className={classes.buttonContainer}>
 
                         <button
+                            className={classes.button}
                             onClick={this.increment}> +
                         </button>
 

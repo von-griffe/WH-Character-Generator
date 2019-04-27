@@ -28,7 +28,6 @@ class AdvanceStats extends React.Component {
                 value: prevState.value + 1
             }
         });
-
     };
 
     decrement = () => {
@@ -50,7 +49,7 @@ class AdvanceStats extends React.Component {
                                 : prevState.value > 20 && prevState.value <= 25? (prevState.value * 70)
                                     : prevState.value > 25 && prevState.value <= 30?  (prevState.value * 90)
                                         : prevState.value > 30 && prevState.value <= 35? (prevState.value * 120)
-                                            : 'już uspokuj sie!'
+                                            : null
 
             }
         });
@@ -83,7 +82,7 @@ class AdvanceStats extends React.Component {
                     {' Advances:' + this.state.value}
                 </div>
                 <div className={classes.subText} >
-                    {' Cost : ' +  this.state.expPoint + 'exp.'}
+                    {' Cost : ' +  this.state.expPoint}
                 </div>
             </div>
 

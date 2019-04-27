@@ -17,7 +17,7 @@ const careerPath = careerData;
 
 const styles = theme => ({
     root: {
-        width: '70%',
+        width: '80%',
         margin: 'auto',
         marginTop: '20px',
         borderRadius: '5px',
@@ -209,7 +209,9 @@ class VerticalLinearStepper extends React.Component {
                             Back
                         </Button>
 
-                        <Button onClick={this.handleReset} className={classes.button}>
+                        <Button onClick={this.handleReset}
+                                className={classes.button}
+                        >
                             Reset
                         </Button>
                     </Paper>
