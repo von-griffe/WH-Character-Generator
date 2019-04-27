@@ -4,13 +4,31 @@ import {withStyles} from '@material-ui/core';
 import NativeSelect from './shared/MultiSelect.jsx';
 import Button from '@material-ui/core/Button';
 import PropTypes from 'prop-types';
+import AdvanceStats from './advanceStats';
+import StatsTable from './shared/StatsTable.jsx';
+import TableCell from '@material-ui/core/TableCell';
 
 
 const races = ['choose your race', 'Human', 'Elf', 'Dwarf', 'Halfling'];
 
+
+
+
+const CustomTableCell = withStyles(theme => ({
+    head: {
+        backgroundColor: theme.palette.common.white,
+        color: theme.palette.common.black,
+        padding: '4px 4px 4px 4px',
+    },
+    body: {
+        fontSize: 14,
+        padding: '4px 4px 4px 4px',
+
+    },}))(TableCell);
+
 const styles = theme => ({
     root: {
-        width: '50%',
+        width: '70%',
         margin: 'auto',
         borderRadius: '5px',
         boxShadow: '0 2px 2px 1px rgba(0, 0, 0, 0.15)'
@@ -33,10 +51,11 @@ class Characteristics extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            name: "",
+            name: '',
             value: false,
             checked: false,
             checkRace: 'Wybierz rase',
+            experience: 0,
             characteristics: [{
                 race: 'choose your race',
                 ws: '10',
@@ -51,7 +70,6 @@ class Characteristics extends React.Component {
                 fel: '10',
             }],
             counter: 0
-
         }
     }
 
@@ -111,7 +129,6 @@ class Characteristics extends React.Component {
             fel: parseInt('30') + Math.floor((Math.random() * 10) + 1) + Math.floor((Math.random() * 10) + 1),
         };
 
-
         switch (this.state.value) {
             case  'Elf':
                 return this.setState(() => ({
@@ -138,25 +155,46 @@ class Characteristics extends React.Component {
         this.setState({[name]: event.target.value});
     };
 
-    getBaseNumbers = () => {
-        const button = <button
-        >+1</button>;
+    getBaseNumbersKey = () => {
 
         return this.state.characteristics.map((item) => {
             return Object.keys(item).map((key, index) => {
-               return index > 0 ?
-                    <div key={index + key}>
-                        <div>{key.toUpperCase()} | {parseInt(item[key])} | {button} </div>
-                    </div>
-                    :
-                    <div key={index}>
-                        <div> Race: {(item[key])}</div>
-                    </div>
+                return key.toUpperCase()
             })
         })
     };
 
+    getBaseNumbersValue = () => {
+
+        return this.state.characteristics.map((item) => {
+            return Object.keys(item).map((key, index) => {
+                return index === 0? item[key] :  parseInt(item[key])
+            })
+        })
+    };
+
+
+    getBaseNumbersAdvance = () => {
+
+        return this.state.characteristics.map((item) => {
+            return Object.keys(item).map((key, index) => {
+
+                return index === 0? <CustomTableCell> {'skill improvement'} </CustomTableCell>
+                    :
+                    <CustomTableCell>
+                        <AdvanceStats
+                        data={parseInt(item[key])}
+                        experience={this.state.experience}
+                        />
+                    </CustomTableCell>
+            })
+        })
+    };
+
+
+
     render() {
+
         const {classes} = this.props;
 
         const btnRollProps = {
@@ -188,6 +226,7 @@ class Characteristics extends React.Component {
                             onChange={this.handleChange('value')}
                             data={races}
                         />
+
                         <Button
                             {...btnRollProps}
                         >
@@ -195,7 +234,17 @@ class Characteristics extends React.Component {
                         </Button>
                     </div>
                 }
-                <div> {this.getBaseNumbers()} </div>
+                <div>
+                    <span>{'Experience = ' + this.state.experience}</span>
+
+                    <StatsTable
+                        keys={this.getBaseNumbersKey}
+                        values = {this.getBaseNumbersValue}
+                        advance = {this.getBaseNumbersAdvance}
+                        experience={this.state.experience}
+                    />
+
+                </div>
                 <Careers
                     careerPath={this.props.careerPath}
                     data={races}

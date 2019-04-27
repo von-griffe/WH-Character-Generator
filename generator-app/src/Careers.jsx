@@ -9,12 +9,12 @@ const styles = theme => ({
         listStyle: 'none',
 
     },
-    professions:{
+    professions: {
         marginTop: '20px'
     },
     result: {
         color: '#3f51b5',
-        fontWeight:'600'
+        fontWeight: '600'
     }
 });
 
@@ -25,7 +25,7 @@ class Careers extends React.Component {
             value: false,
             checked: false,
             level: [],
-            professions:"",
+            professions: "",
             characteristics: [{
                 race: 'choose race:',
                 ws: '10',
@@ -47,7 +47,7 @@ class Careers extends React.Component {
         let resultLevels = this.state.level;
         let targetValue = event.target.value;
 
-        if(event.target.checked === true) {
+        if (event.target.checked === true) {
             resultLevels.push(targetValue);
 
             this.setState({
@@ -57,9 +57,9 @@ class Careers extends React.Component {
         } else {
             let indexValue = resultLevels.indexOf(event.target.value);
 
-            resultLevels.splice(indexValue,1);
+            resultLevels.splice(indexValue, 1);
 
-                this.setState({
+            this.setState({
                 resultLevels: this.state.level
             });
         }
@@ -68,11 +68,11 @@ class Careers extends React.Component {
 
     getBoolean = () => {
         console.log('index of array', this.getLevelsBoolean());
-       return this.getLevelsBoolean()
+        return this.getLevelsBoolean()
 
     };
 
-     //function return index of JSON value === true
+    //function return index of JSON value === true
     getLevelsBoolean = () => {
         const result = [];
         (this.getClassProfessionsObj()).forEach((el, index) => {
@@ -94,7 +94,7 @@ class Careers extends React.Component {
         this.setState({
             [name]: event.target.value,
             level: []
-            })
+        })
     };
 
     getClassProfessionsObj = () => {
@@ -195,19 +195,19 @@ class Careers extends React.Component {
                 <ul className={classes.list}>
 
                     {this.getProfessionsLevels().map((item, index) => {
-                    return (
-                        <li key={item + index}>
+                        return (
+                            <li key={item + index}>
 
-                            <Checkbox
-                                name={item}
-                                type={'checkbox'}
-                                onChange={this.handleCheckbox('checked')}
-                                value={item}
-                                key={item + index}
-                            />
-                        </li>
-                    );
-                })}
+                                <Checkbox
+                                    name={item}
+                                    type={'checkbox'}
+                                    onChange={this.handleCheckbox('checked')}
+                                    value={item}
+                                    key={item + index}
+                                />
+                            </li>
+                        );
+                    })}
                 </ul>
             </div>
         );
@@ -215,12 +215,12 @@ class Careers extends React.Component {
 
         return this.state.value === false ? selectPlayerClass
             :
-            this.getClassProfessionsVal().indexOf(this.state.value) > -1?
+            this.getClassProfessionsVal().indexOf(this.state.value) > -1 ?
                 <div className={classes.professions}>
 
-                    <div>  {'Class :'} <span className={classes.result}> {this.state.value}</span> </div>
-                    <div> {'Profession :'} <span className={classes.result}> {this.state.professions} </span> </div>
-                    <div> {'Level :'} <span className={classes.result}> {this.state.level.toString()} </span> </div>
+                    <div> {'Class :'} <span className={classes.result}> {this.state.value}</span></div>
+                    <div> {'Profession :'} <span className={classes.result}> {this.state.professions} </span></div>
+                    <div> {'Level :'} <span className={classes.result}> {this.state.level.toString()} </span></div>
 
                     {selectPlayerClass}
                     {selectPlayerProfession}

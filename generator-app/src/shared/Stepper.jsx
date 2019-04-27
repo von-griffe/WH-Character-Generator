@@ -17,7 +17,7 @@ const careerPath = careerData;
 
 const styles = theme => ({
     root: {
-        width: '50%',
+        width: '70%',
         margin: 'auto',
         marginTop: '20px',
         borderRadius: '5px',
@@ -182,13 +182,10 @@ class VerticalLinearStepper extends React.Component {
                                             activeStep === 1 && this.state.name === "" ||
                                             activeStep === 3 && this.state.playerResult === false
                                             }
-
                                             variant='contained'
                                             color='primary'
                                             onClick={this.handleNext}
                                             className={classes.button}
-                                            // onKeyPress={this.onKeyPress}
-
                                         >
                                             {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
                                         </Button>
