@@ -12,7 +12,7 @@ import TableCell from '@material-ui/core/TableCell';
 const races = ['choose your race', 'Human', 'Elf', 'Dwarf', 'Halfling'];
 
 const reset = {
-    race: 'if you choose your race press button "Roll stats"',
+    race: 'if you choose your race button "Roll stats"',
     ws: '10',
     bs: '10',
     s: '10',
