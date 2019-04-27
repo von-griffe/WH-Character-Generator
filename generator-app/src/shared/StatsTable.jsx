@@ -8,6 +8,10 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 
+
+
+const longText = `weapon skill`;
+
 const CustomTableCell = withStyles(theme => ({
     head: {
         backgroundColor: theme.palette.common.white,
@@ -43,7 +47,6 @@ const styles = theme => ({
         padding: '0px'
 
     }
-
 });
 
 

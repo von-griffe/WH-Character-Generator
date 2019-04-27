@@ -11,7 +11,19 @@ import TableCell from '@material-ui/core/TableCell';
 
 const races = ['choose your race', 'Human', 'Elf', 'Dwarf', 'Halfling'];
 
-
+const reset = {
+    race: 'if you choose your race press button "Roll stats"',
+    ws: '10',
+    bs: '10',
+    s: '10',
+    t: '10',
+    i: '10',
+    agi: '10',
+    dex: '10',
+    int: '10',
+    wp: '10',
+    fel: '10',
+};
 
 
 const CustomTableCell = withStyles(theme => ({
@@ -130,18 +142,24 @@ class Characteristics extends React.Component {
 
         switch (this.state.value) {
             case  'Elf':
+
                 return this.setState(() => ({
-                    characteristics: [{...characterElfProps}]
+                    characteristics: [{...characterElfProps}],
                 }));
+
             case 'Dwarf':
+
                 return this.setState(() => ({
                     characteristics: [{...characterDwarfProps}]
                 }));
             case 'Human':
+
                 return this.setState(() => ({
                     characteristics: [{...characterHumanfProps}]
+
                 }));
             case 'Halfling':
+
                 return this.setState(() => ({
                     characteristics: [{...characterHalflingProps}]
                 }));
@@ -151,6 +169,8 @@ class Characteristics extends React.Component {
     };
 
     handleChange = name => (event) => {
+
+        this.state.characteristics = [{...reset}];
         this.setState({[name]: event.target.value});
     };
 
@@ -211,6 +231,7 @@ class Characteristics extends React.Component {
                             data={races}
                         />
                         <Button
+                            onChange={this.handleChange('characteristics')}
                             {...btnRollProps}
                             disabled>
                             {'Roll stat'}
