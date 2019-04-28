@@ -9,6 +9,7 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import Tooltip from '@material-ui/core/Tooltip';
 
+
 const CustomTableCell = withStyles((theme) => ({
   head: {
     backgroundColor: theme.palette.common.white,
@@ -86,17 +87,12 @@ class StatsTable extends React.Component {
         <Table className={classes.table}>
           <TableHead>
             <TableRow className={classes.cols}>
-              {this.createData(...this.props.keys())}
+              {this.createData(...this.props.getKeys())}
             </TableRow>
           </TableHead>
           <TableBody>
-            <TableRow className={classes.cols}>
-              {this.createData(...this.props.values())}
-            </TableRow>
-          </TableBody>
-          <TableBody>
-            <TableRow className={classes.cols}>
-              {this.props.advance(0)}
+            <TableRow className={classes.cols} >
+              {this.props.getAdvance(0)}
             </TableRow>
           </TableBody>
         </Table>

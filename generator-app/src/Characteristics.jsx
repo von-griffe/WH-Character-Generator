@@ -11,7 +11,7 @@ import Chip from '@material-ui/core/Chip';
 
 const races = ['choose your race', 'Human', 'Elf', 'Dwarf', 'Halfling'];
 const reset = {
-  race: 'Click "Roll stats"',
+  race: 'Click "Roll stats',
   ws: '10',
   bs: '10',
   s: '10',
@@ -309,10 +309,9 @@ class Characteristics extends React.Component {
 
   handleChange = (name) => (event) => {
     this.state.characteristics = [{ ...reset }];
-
     this.setState({ [name]: event.target.value });
   };
-
+  //
   getBaseNumbersKey = () => {
     return this.state.characteristics.map((item) => {
       return Object.keys(item).map((key, index) => {
@@ -321,25 +320,19 @@ class Characteristics extends React.Component {
     });
   };
 
-  getBaseNumbersValue = () => {
-    return this.state.characteristics.map((item) => {
-      return Object.keys(item).map((key, index) => {
-        return index === 0 ? item[key] : parseInt(item[key]);
-      });
-    });
-  };
-
   getBaseNumbersAdvance = () => {
     return this.state.characteristics.map((item) => {
       return Object.keys(item).map((key, index) => {
         return index === 0 ? (
-          <CustomTableCell> {'Improvement'} </CustomTableCell>
-        ) : (
-          <CustomTableCell>
+          <CustomTableCell key={index + key}> {item[key]} </CustomTableCell>
+            ) :
+            (
+          <CustomTableCell key={index +key}>
             <AdvanceStats
               data={parseInt(item[key])}
               onExperience={this.globalIncrement}
               onGlobalExperience={this.globalExperience}
+              key={index +key}
             />
           </CustomTableCell>
         );
@@ -395,9 +388,8 @@ class Characteristics extends React.Component {
             </div>
 
             <StatsTable
-              keys={this.getBaseNumbersKey}
-              values={this.getBaseNumbersValue}
-              advance={this.getBaseNumbersAdvance}
+              getKeys={this.getBaseNumbersKey}
+              getAdvance={this.getBaseNumbersAdvance}
             />
           </div>
           <Careers careerPath={this.props.careerPath} data={races} />

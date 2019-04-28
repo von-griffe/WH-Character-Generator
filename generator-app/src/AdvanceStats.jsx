@@ -1,7 +1,7 @@
 import React from 'react';
 import ImprovementButtons from './shared/ImprovmentButtons.jsx';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core';
+import { withStyles } from '@material-ui/core/styles';
 
 const styles = (theme) => ({
   subText: {

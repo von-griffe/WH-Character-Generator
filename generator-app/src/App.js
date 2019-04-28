@@ -4,11 +4,12 @@ import Stepper from './shared/Stepper.jsx';
 class App extends React.Component {
   render() {
     return (
-      <div>
+        <div>
         <section>
           <Stepper />
         </section>
       </div>
+
     );
   }
 }
