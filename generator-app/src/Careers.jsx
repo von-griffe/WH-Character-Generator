@@ -177,7 +177,7 @@ class Careers extends React.Component {
                   type={'checkbox'}
                   onChange={this.handleCheckbox('checked')}
                   value={item}
-                  key={index+item}
+                  key={index + item}
                 />
               </li>
             );

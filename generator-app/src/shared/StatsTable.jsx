@@ -68,12 +68,11 @@ class StatsTable extends React.Component {
 
     return value.map((item, index) => {
       return (
-        <Tooltip key ={index+item}
-                 title={characteristicsTooltips[index] + ': ' + item}
+        <Tooltip
+          key={index + item}
+          title={characteristicsTooltips[index] + ': ' + item}
         >
-          <CustomTableCell
-          >{item}
-          </CustomTableCell>
+          <CustomTableCell>{item}</CustomTableCell>
         </Tooltip>
       );
     });
