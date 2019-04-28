@@ -170,7 +170,7 @@ class VerticalLinearStepper extends React.Component {
             className={classes.button}
             disabled={activeStep === 4}
           >
-            {activeStep === 0 ? 'Resolve first steps' : 'Done'}
+            {activeStep === 0 ? 'Resolve first steps' : 'Solved'}
           </Button>
         </div>
 
