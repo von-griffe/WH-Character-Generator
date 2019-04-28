@@ -2,6 +2,7 @@ import React from 'react';
 import TextField from '@material-ui/core/TextField';
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
+import Checkbox from './Checkbox';
 
 const styles = (theme) => ({
   container: {
@@ -20,21 +21,25 @@ const styles = (theme) => ({
 });
 
 class TextFields extends React.Component {
+  onSubmit = (event) => {
+    event.preventDefault();
+  };
+
   render() {
     const { classes } = this.props;
 
     return (
       <div>
-        <form className={classes.container} noValidate autoComplete="off">
+        <form className={classes.container} onSubmit={this.onSubmit}>
           <TextField
             id="standard-with-placeholder"
+            type={this.props.type}
+            onChange={this.props.onChange}
+            value={this.props.value}
             label={this.props.label}
             placeholder={this.props.placeholder}
             className={classes.textField}
-            onChange={this.props.onChange}
-            value={this.props.value}
             margin="normal"
-            type={this.props.type}
           />
         </form>
       </div>
@@ -42,6 +47,12 @@ class TextFields extends React.Component {
   }
 }
 TextFields.propTypes = {
-  classes: PropTypes.object,
+  type: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  placeholder: PropTypes.string.isRequired,
+  classes: PropTypes.object.isRequired,
 };
+
 export default withStyles(styles)(TextFields);

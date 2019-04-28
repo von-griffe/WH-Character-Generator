@@ -1,16 +1,17 @@
 import React from 'react';
 import Careers from './Careers';
 import { withStyles } from '@material-ui/core';
-import NativeSelect from './shared/MultiSelect.jsx';
+import NativeSelect from './shared/NativeSelect.jsx';
 import Button from '@material-ui/core/Button';
 import PropTypes from 'prop-types';
 import AdvanceStats from './AdvanceStats.jsx';
 import StatsTable from './shared/StatsTable.jsx';
 import TableCell from '@material-ui/core/TableCell';
+import Chip from '@material-ui/core/Chip';
 
 const races = ['choose your race', 'Human', 'Elf', 'Dwarf', 'Halfling'];
 const reset = {
-  race: 'if you choose your race button "Roll stats"',
+  race: 'Click "Roll stats"',
   ws: '10',
   bs: '10',
   s: '10',
@@ -53,6 +54,15 @@ const styles = (theme) => ({
   resetContainer: {
     padding: theme.spacing.unit * 3,
   },
+
+  container: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    padding: '5px',
+  },
+  containerResult: {
+    padding: '5px',
+  },
 });
 
 class Characteristics extends React.Component {
@@ -63,7 +73,8 @@ class Characteristics extends React.Component {
       value: false,
       checked: false,
       checkRace: 'Wybierz rase',
-      experience: 0,
+      globalExperience: 0,
+      expPoint: 0,
       characteristics: [
         {
           race: 'choose your race',
@@ -82,6 +93,22 @@ class Characteristics extends React.Component {
       counter: 0,
     };
   }
+
+  globalIncrement = () => {
+    this.setState((prevState) => {
+      return {
+        expPoint: prevState.expPoint + 1,
+      };
+    });
+  };
+
+  globalExperience = (value) => {
+    this.setState((prevState) => {
+      return {
+        globalExperience: prevState.globalExperience + value,
+      };
+    });
+  };
 
   handleClick = () => {
     const characterElfProps = {
@@ -282,6 +309,7 @@ class Characteristics extends React.Component {
 
   handleChange = (name) => (event) => {
     this.state.characteristics = [{ ...reset }];
+
     this.setState({ [name]: event.target.value });
   };
 
@@ -305,12 +333,13 @@ class Characteristics extends React.Component {
     return this.state.characteristics.map((item) => {
       return Object.keys(item).map((key, index) => {
         return index === 0 ? (
-          <CustomTableCell> {'skill improvement'} </CustomTableCell>
+          <CustomTableCell> {'Improvement'} </CustomTableCell>
         ) : (
           <CustomTableCell>
             <AdvanceStats
               data={parseInt(item[key])}
-              experience={this.state.experience}
+              onExperience={this.globalIncrement}
+              onGlobalExperience={this.globalExperience}
             />
           </CustomTableCell>
         );
@@ -331,7 +360,7 @@ class Characteristics extends React.Component {
         <div className={classes.resetContainer}>
           {this.state.value === 'choose your race' ||
           this.state.value === false ? (
-            <div>
+            <div className={classes.container}>
               <NativeSelect
                 onChange={this.handleChange('value')}
                 data={races}
@@ -345,23 +374,40 @@ class Characteristics extends React.Component {
               </Button>
             </div>
           ) : (
-            <div>
+            <div className={classes.container}>
               <NativeSelect
                 onChange={this.handleChange('value')}
                 data={races}
               />
-
               <Button {...btnRollProps}>{'Roll stat'}</Button>
             </div>
           )}
           <div>
-            <span>{'Experience = ' + this.state.experience}</span>
+            <div>
+              <div>
+                {'Number of improvement: '}
+                <Chip
+                  label={this.state.expPoint}
+                  className={classes.chip}
+                  variant="outlined"
+                />
+              </div>
+
+              <div>
+                {'Experience: '}
+
+                <Chip
+                  label={this.state.globalExperience}
+                  className={classes.chip}
+                  variant="outlined"
+                />
+              </div>
+            </div>
 
             <StatsTable
               keys={this.getBaseNumbersKey}
               values={this.getBaseNumbersValue}
               advance={this.getBaseNumbersAdvance}
-              experience={this.state.experience}
             />
           </div>
           <Careers careerPath={this.props.careerPath} data={races} />

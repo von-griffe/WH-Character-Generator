@@ -1,5 +1,5 @@
 import React from 'react';
-import NativeSelect from './shared/MultiSelect';
+import NativeSelect from './shared/NativeSelect';
 import Checkbox from './shared/Checkbox';
 import { withStyles } from '@material-ui/core';
 import PropTypes from 'prop-types';
@@ -118,17 +118,6 @@ class Careers extends React.Component {
     });
     return result;
   };
-
-  // ### Add all professions to array (do usunięcia ? )
-  // getAllProfessions = () => {
-  //     const result = [];
-  //     (this.getClassProfessionsObj()).forEach((el, index) => {
-  //         el.careers.forEach((el, index) => {
-  //             result.push(el.name)
-  //         })
-  //     });
-  //     return result
-  // };
 
   getProfessionsLevels = () => {
     const result = [];

@@ -50,15 +50,14 @@ class ImprovementButtons extends React.Component {
   }
 
   increment = () => {
+    this.props.onIncrement();
+    this.props.onExperiences(this.props.stateValue);
+
     this.setState((prevState) => {
       return {
         counter: prevState.counter + 1,
       };
     });
-
-    this.props.onIncrement();
-    this.props.onExperience();
-    this.props.onExperiencesSum();
   };
 
   decrement = () => {
@@ -68,7 +67,7 @@ class ImprovementButtons extends React.Component {
       };
     });
     this.props.onDecrement();
-    this.props.onExperience();
+    this.props.onExperiences(this.props.stateValue);
   };
 
   render() {
@@ -82,12 +81,10 @@ class ImprovementButtons extends React.Component {
           </div>
           <div className={classes.buttonContainer}>
             <button className={classes.button} onClick={this.increment}>
-              {' '}
               +
             </button>
 
             <button className={classes.button} onClick={this.decrement}>
-              {' '}
               -
             </button>
           </div>

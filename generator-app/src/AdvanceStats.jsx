@@ -9,6 +9,9 @@ const styles = (theme) => ({
     color: 'LightGray',
     padding: '5px 0 5px 0',
   },
+  chip: {
+    margin: theme.spacing.unit,
+  },
 });
 
 class AdvanceStats extends React.Component {
@@ -16,8 +19,9 @@ class AdvanceStats extends React.Component {
     super(props);
     this.state = {
       value: 0,
-      expPoint: props.experience,
-      expPointSum: 0,
+      expPoint: 0,
+      experience: 0,
+      expTab: [],
     };
   }
 
@@ -37,10 +41,8 @@ class AdvanceStats extends React.Component {
     });
   };
 
-  experiences = () => {
+  experiences = (value) => {
     this.setState((prevState) => {
-      const moduloFive = prevState.value % 5;
-
       return {
         expPoint:
           prevState.value >= 0 && prevState.value <= 5
@@ -60,14 +62,9 @@ class AdvanceStats extends React.Component {
             : null,
       };
     });
-  };
 
-  experiencesSum = () => {
-    this.setState((prevState) => {
-      return {
-        expPointSum: prevState.expPoint + this.state.expPoint,
-      };
-    });
+    this.props.onExperience();
+    this.props.onGlobalExperience(value);
   };
 
   render() {
@@ -79,8 +76,8 @@ class AdvanceStats extends React.Component {
           data={this.props.data}
           onIncrement={this.increment}
           onDecrement={this.decrement}
-          onExperience={this.experiences}
-          onExperiencesSum={this.experiencesSum}
+          onExperiences={this.experiences}
+          stateValue={this.state.expPoint}
         />
         <div className={classes.subText}>{' Advances:' + this.state.value}</div>
         <div className={classes.subText}>

@@ -43,6 +43,9 @@ const styles = (theme) => ({
     fontWeight: '400',
     fontSize: '15px',
   },
+  finishBtn: {
+    padding: '20px',
+  },
 });
 
 const getSteps = () => {
@@ -77,6 +80,13 @@ class VerticalLinearStepper extends React.Component {
   handleNext = () => {
     this.setState((state) => ({
       activeStep: state.activeStep + 1,
+      value: this.state.value,
+    }));
+  };
+
+  handleFinish = () => {
+    this.setState((state) => ({
+      activeStep: 4,
       value: this.state.value,
     }));
   };
@@ -149,8 +159,19 @@ class VerticalLinearStepper extends React.Component {
     const stepperElements = (
       <div className={classes.root}>
         <div className={classes.h1}>
-          {' '}
-          {'Character Generator Warhammer: 4th Edition'}{' '}
+          {'Character Generator Warhammer: 4th Edition'}
+        </div>
+
+        <div className={classes.finishBtn}>
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={this.handleFinish}
+            className={classes.button}
+            disabled={activeStep === 4}
+          >
+            {activeStep === 0 ? 'Resolve first steps' : 'Done'}
+          </Button>
         </div>
 
         <Stepper activeStep={activeStep} orientation="vertical">
@@ -171,7 +192,6 @@ class VerticalLinearStepper extends React.Component {
 
               <StepContent>
                 <div>
-                  {' '}
                   {getStepContent(
                     index,
                     radioBtnGender,
@@ -235,7 +255,6 @@ class VerticalLinearStepper extends React.Component {
 
     return this.state.activeStep === steps.length ? (
       <div>
-        {' '}
         {stepperElements}
         <Characteristics careerPath={careerPath} />
       </div>

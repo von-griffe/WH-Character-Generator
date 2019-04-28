@@ -45,6 +45,10 @@ const styles = (theme) => ({
 });
 
 class StatsTable extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   createData = (value) => {
     const characteristicsTooltips = [
       'Race of your hero',
@@ -61,6 +65,7 @@ class StatsTable extends React.Component {
     ].map((item, index) => {
       return item;
     });
+
     return value.map((item, index) => {
       return (
         <Tooltip title={characteristicsTooltips[index] + ': ' + item}>
