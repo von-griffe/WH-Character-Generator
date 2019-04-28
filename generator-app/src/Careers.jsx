@@ -66,11 +66,9 @@ class Careers extends React.Component {
   };
 
   getBoolean = () => {
-    console.log('index of array', this.getLevelsBoolean());
     return this.getLevelsBoolean();
   };
 
-  //function return index of JSON value === true
   getLevelsBoolean = () => {
     const result = [];
     this.getClassProfessionsObj().forEach((el, index) => {

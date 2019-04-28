@@ -392,16 +392,6 @@ class Characteristics extends React.Component {
                   variant="outlined"
                 />
               </div>
-
-              <div>
-                {'Experience: '}
-
-                <Chip
-                  label={this.state.globalExperience}
-                  className={classes.chip}
-                  variant="outlined"
-                />
-              </div>
             </div>
 
             <StatsTable
