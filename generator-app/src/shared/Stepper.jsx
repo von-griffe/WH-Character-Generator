@@ -9,7 +9,7 @@ import StepContent from '@material-ui/core/StepContent';
 import Button from '@material-ui/core/Button';
 import Paper from '@material-ui/core/Paper';
 import Characteristics from '../Characteristics';
-import { getStepContent } from '../apiUtilities/helpers.jsx';
+import { getStepContent } from '../apiUtilities/helpers.js';
 import TextFields from '../shared/Inputs.jsx';
 import RadioButtons from './RadioButtons.jsx';
 
