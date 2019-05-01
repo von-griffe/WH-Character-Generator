@@ -65,6 +65,11 @@ const styles = (theme) => ({
   },
 });
 
+////////////////////////////////////////////////////////////////////
+/*/////////////////// Default Characteristics ///////////////////*/
+//////////////////////////////////////////////////////////////////
+
+
 class Characteristics extends React.Component {
   constructor(props) {
     super(props);
@@ -74,7 +79,7 @@ class Characteristics extends React.Component {
       checked: false,
       checkRace: 'Wybierz rase',
       globalExperience: 0,
-      expPoint: 0,
+      improvement: 0,
       characteristics: [
         {
           race: 'choose your race',
@@ -94,10 +99,21 @@ class Characteristics extends React.Component {
     };
   }
 
+  ///////////////////////////////////////////////////////////////////////////
+  /*/////////////////// Method of Global improvement: ////////////////////*/
+  /////////////////////////////////////////////////////////////////////////
+
   globalIncrement = () => {
     this.setState((prevState) => {
       return {
-        expPoint: prevState.expPoint + 1,
+        improvement: prevState.improvement + 1,
+      };
+    });
+  };
+  globalDecrement = () => {
+    this.setState((prevState) => {
+      return {
+        improvement: prevState.improvement - 1,
       };
     });
   };
@@ -303,7 +319,7 @@ class Characteristics extends React.Component {
           characteristics: [{ ...characterHalflingProps }],
         }));
       default:
-        return 'UFO';
+        return 'SLAN';
     }
   };
 
@@ -330,7 +346,8 @@ class Characteristics extends React.Component {
           <CustomTableCell key={index +key}>
             <AdvanceStats
               data={parseInt(item[key])}
-              onExperience={this.globalIncrement}
+              onGlobalIncrement={this.globalIncrement}
+              onGlobalDecrement={this.globalDecrement}
               onGlobalExperience={this.globalExperience}
               key={index +key}
             />
@@ -380,7 +397,7 @@ class Characteristics extends React.Component {
               <div>
                 {'Number of improvement: '}
                 <Chip
-                  label={this.state.expPoint}
+                  label={this.state.improvement}
                   className={classes.chip}
                   variant="outlined"
                 />

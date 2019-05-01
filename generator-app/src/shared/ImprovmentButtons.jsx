@@ -51,7 +51,8 @@ class ImprovementButtons extends React.Component {
 
   increment = () => {
     this.props.onIncrement();
-    this.props.onExperiences(this.props.stateValue);
+    this.props.onGlobalIncrement();
+    this.props.onLocalExperiences(this.props.stateValue);
 
     this.setState((prevState) => {
       return {
@@ -67,11 +68,14 @@ class ImprovementButtons extends React.Component {
       };
     });
     this.props.onDecrement();
-    this.props.onExperiences(this.props.stateValue);
+    this.props.onGlobalDecrement();
+    this.props.onLocalExperiences(this.props.stateValue);
   };
 
   render() {
     const { classes } = this.props;
+
+    console.log(this.props.onGlobalIncrement);
 
     return (
       <div>

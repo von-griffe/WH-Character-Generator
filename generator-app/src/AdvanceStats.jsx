@@ -63,8 +63,10 @@ class AdvanceStats extends React.Component {
       };
     });
 
-    this.props.onExperience();
+    // this.props.onGlobalIncrement();
+    // this.props.onGlobalDecrement();
     this.props.onGlobalExperience(value);
+
   };
 
   render() {
@@ -76,7 +78,9 @@ class AdvanceStats extends React.Component {
           data={this.props.data}
           onIncrement={this.increment}
           onDecrement={this.decrement}
-          onExperiences={this.experiences}
+          onGlobalIncrement={this.props.onGlobalIncrement}
+          onGlobalDecrement={this.props.onGlobalDecrement}
+          onLocalExperiences={this.experiences}
           stateValue={this.state.expPoint}
         />
         <div className={classes.subText}>{' Advances:' + this.state.value}</div>
